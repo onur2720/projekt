@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div class="login-page">
+    <div class="form">
+        <form class="Register-form">
+            <input type="text" placeholder="Brugernavn"/>
+            <input type="text" placeholder="Adgangskode"/>
+            <input type="text" placeholder="E-Mail"/>
+            <button>Opret</button>
+            <p class="message">Allerede oprettet? <a href="#"> Login </a>
+            </p>
+        </form>
+        <form class="login-form">
+            <input type="text" placeholder="Brugernavn"/>
+            <input type="password" placeholder="Adgangskode"/>
+            <button>login</button>
+            <p class="message">Ikke oprettet? <a href="#">Lav en bruger!</a></p>
+        </form>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $(".message a").click(function(){
+        $("form").animate({height: "toggle", opacity: "toggle"}, "slow")
+    });
+</script>
 </body>
 </html>

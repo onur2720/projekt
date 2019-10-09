@@ -1,0 +1,5 @@
+var objPeople = [
+    {
+      username
+}
+]
