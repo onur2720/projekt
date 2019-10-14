@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    backgrond-color: black;
 }
 
 ul {
@@ -7,12 +8,12 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #2ecc71;
 }
 
 li {
     float: left;
-    background-color: #fff;
+    background-color: #2E8B57;
     margin: 8px;
 }
 
@@ -29,8 +30,8 @@ li a:hover {
 }
 
 .active {
-    color: white;
-    background-color: #4CAF50;
+    color: black;
+    background-color: #2E8B57;
 }
 
 li:last-child {
@@ -38,5 +39,5 @@ li:last-child {
 }
 
 .content {
-    margin: 20px;
+    margin: 30px;
 }
