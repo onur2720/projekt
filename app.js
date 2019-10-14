@@ -7,6 +7,7 @@ function storeLogin() {
     localStorage.setItem('username', username.value);
     localStorage.setItem('password', password.value);
     alert('New user has been created.');
+    var result = str.link(index.html)
 }
 
 // Function to list user in localStorage
@@ -28,8 +29,19 @@ function checkLogin() {
 
     // Check if stored data from registration form is equal to entered data from login form
     if(enteredName.value == storedName && enteredPass.value == storedPass) {
-        alert('You are logged in.');
+        window.location.href = "http://www.google.com";
+        alert("You are logged in");
+
+
+
+
     }else {
         alert('Error. Wrong login.');
     }
+}
+
+// Function to clear user from localStorage
+function clearUser() {
+    localStorage.clear();
+    alert('User has been cleared from localStorage.');
 }
