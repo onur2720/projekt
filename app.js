@@ -2,6 +2,17 @@
 var username = document.getElementById('username');
 var password = document.getElementById('password');
 
+class admin {
+    constructor(adminUsername,adminPassword) {
+        this.adminUsername = adminUsername;
+        this.adminPassword = adminPassword;
+    }
+}
+   var admin1 = new admin("Peder","jegergod");
+var admin2 = new admin("Onur","prololspiller");
+var admin3 = new admin("Leila","giderikkeatmodeoptiltiden");
+var admin4 = new admin("Jonas","huskdinoplader");
+       console.log(admin1);
 // Store input from registration form in localStorage
 function storeLogin() {
     localStorage.setItem('username', username.value);
@@ -40,7 +51,44 @@ function checkLogin() {
     }
 }
 
-// Function to clear user from localStorage
+function checkAdminLogin() {
+
+  
+  
+  
+
+    // Entered data in the login form
+    var enteredAdminName = document.getElementById('enteredAdminName');
+    var enteredAdminPass = document.getElementById('enteredAdminPass');
+
+    // Check if stored data from registration form is equal to entered data from login form
+    if ((enteredAdminName.value == "Peder" && enteredAdminPass.value == "jegergod") || (enteredAdminName.value == "Leila" && enteredAdminPass.value == "jegerdoven")
+    || (enteredAdminName.value == "Onur" && enteredAdminPass.value == "profortnitespiller")
+    || (enteredAdminName.value == "Jonas" && enteredAdminPass.value == "ripoplader")) {
+        window.location.href = "http://www.google.com";
+        alert("You are logged in"); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     else {
+        alert('Error. Wrong login.');
+    }
+}
+
+
+
 function clearUser() {
     localStorage.clear();
     alert('User has been cleared from localStorage.');
