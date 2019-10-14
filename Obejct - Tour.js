@@ -1,0 +1,19 @@
+
+// object - Tour
+
+function tours (tourName, tourInfo, startTime, duration, meetingPoint, tourPrice, tourLocation) {
+    this.tourname = tourName;
+    this.tourInfo = tourInfo;
+    this.startTime = startTime;
+    this.duration = duration;
+    this.meetingPoint = meetingPoint;
+    this.tourPrice = tourPrice;
+    this.tourLocation = tourLocation;
+}
+let tour1 = new tours("Old Copenhagen", "The old city", "12:00", "2 HRS", "Christiansborg", "7 EUR", "Copenhagen");
+let tour2 = new tours("Copenhagen Higlights", "The little Mermaid, Amalienborg and Nyhavn", "12:00", "1 HR", "Nyhavn", "5 EUR", "Copenhagen");
+let tour3 = new tours("Rosenborg Castle and Royal Jewelry", "Museum", "11.00", "2 HRS", "Nørreport St.", "10 EUR", "Copenhagen");
+
+var tours = [tour1, tour2, tour3];
+
+console.log(tours);
