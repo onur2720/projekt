@@ -14,9 +14,12 @@ window.onload= function () {
     var dayNumber = dayName.indexOf(firstDate); // Tue
     var days = new Date(year, month+1,0).getDate();
     // get the value 31, the total number of days in the current month
-};
+    var calendar = getCalendar(dayNumber, days);
+    document.getElementById("calendar-month-year").innerHTML =monthName[month]+" "+year;
+    document.getElementById("calendar-dates").appendChild(calendar);
+}
 
-function getCalender(dayNumber, days) {
+function getCalendar(dayNumber, days) {
     var table = document.createElement('table');
     var tr = document.createElement('tr');
     // first row for the day letters
@@ -30,9 +33,40 @@ function getCalender(dayNumber, days) {
     table.appendChild(tr);
 
     //Second row//
+    tr = document.createElement('tr');
+    var c;
+    for(c=0; c<=6; c++) {
+        if(c == dayNumber) {
+            break;
+        }
+        var td = document.createElement('td');
+        td.innerHTML= "";
+        tr.appendChild(td);
+    }
 
+    var count = 1;
+    for(; c<=6; c++) {
+        var td = document.createElement('td');
+        td.innerHTML = count;
+        count++;
+        tr.appendChild(td);
+    }
+    table.appendChild(tr); //second row is appended to the table
 
+    //rest of the rows
+    for (var r=3; r<=6; r++){
+        tr = document.createElement('tr');
+        for(var c=0; c<=6; c++){
+            if(count > days){
+                table.appendChild(tr);
+                return table;
+            }
+            var td = document.createElement('td');
+            td.innerHTML = count;
+            count++;
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
 
-
-    
 }
