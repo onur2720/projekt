@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Login and Registration</title>
-    <link rel="stylesheet" href="loginStyle.css">
+    <title>My application</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="login-page">
-    <div class="form">
-        <form class="Register-form">
-            <input type="text" placeholder="Brugernavn"/>
-            <input type="text" placeholder="Adgangskode"/>
-            <input type="text" placeholder="E-Mail"/>
-            <button>Opret</button>
-            <p class="message">Allerede oprettet? <a href="#"> Login </a>
-            </p>
-        </form>
-        <form class="login-form">
-            <input type="text" placeholder="Brugernavn"/>
-            <input type="password" placeholder="Adgangskode"/>
-            <button>login</button>
-            <p class="message">Ikke oprettet? <a href="#">Lav en bruger!</a></p>
-        </form>
-    </div>
+
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li style="float:right;"><a class="active" href="login.html">Login</a></li>
+    <li style="float:right;"><a class="active" href="register.html">Register</a></li>
+
+
+</ul>
+
+<div class="content">
+
+    <h1>Login</h1>
+    <form id="login-form">
+        <input id="enteredName" type="text" placeholder="Enter Username" autocomplete="new-username" value=""/>
+        <input id="enteredPass" type="password" placeholder="Enter Password" autocomplete="new-password" value=""/>
+        <input id="login_btn" type="submit" value="Login" onClick="checkLogin()"/>
+    </form>
+
+
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<button onclick="myFunction()">Settings</button>
+
 <script>
-    $(".message a").click(function(){
-        $("form").animate({height: "toggle", opacity: "toggle"}, "slow")
-    });
+    function myFunction() {
+        location.replace("indstillinger.html")
+    }
 </script>
+
+
+<script src="app.js"> </script>
+
 </body>
 </html>
