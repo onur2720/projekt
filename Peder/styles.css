@@ -42,4 +42,8 @@ li:last-child {
 
 .content {
     margin: 30px;
+
 }
+input[type=text] {
+     width: 300px;
+ }

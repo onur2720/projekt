@@ -2,6 +2,9 @@
 var username = document.getElementById('username');
 var password = document.getElementById('password');
 
+
+
+
 class admin {
     constructor(adminUsername,adminPassword) {
         this.adminUsername = adminUsername;
@@ -83,3 +86,66 @@ function clearUser() {
     localStorage.clear();
     alert('User has been cleared from localStorage.');
 }
+
+function tours() {
+    var enteredTourName = document.getElementById('enteredTourName').value;
+    
+    var enteredTourInfos = document.getElementById('enteredTourInfo').value;
+    alert("Hi:" + enteredTourInfos+enteredTourName);
+}
+
+
+function ture (tourName, tourInfo, startTime, duration, meetingPoint, tourPrice, tourLocation) {
+    this.tourname = tourName;
+    this.tourInfo = tourInfo;
+    this.startTime = startTime;
+    this.duration = duration;
+    this.meetingPoint = meetingPoint;
+    this.tourPrice = tourPrice;
+    this.tourLocation = tourLocation;
+}
+let tours1 = new ture("Old Copenhagen", "The old city", "12:00", "2 HRS", "Christiansborg", "7 EUR", "Copenhagen");
+let tours2 = new ture("Copenhagen Higlights", "The little Mermaid, Amalienborg and Nyhavn", "12:00", "1 HR", "Nyhavn", "5 EUR", "Copenhagen");
+let tours3 = new ture("Rosenborg Castle and Royal Jewelry", "Museum", "11.00", "2 HRS", "Nørreport St.", "10 EUR", "Copenhagen");
+var alltours  = [tours1, tours2, tours3];
+
+ var clicks = 0;
+        function myFunction() {
+
+            clicks += 1;
+            document.getElementById("demo").innerHTML = clicks;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
