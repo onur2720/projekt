@@ -3,6 +3,7 @@
 <head>
     <title>My application</title>
     <link type="text/css" rel="stylesheet" href="styles.css">
+    <!-- Vi forbinder vores html dokument til vores css-fil -->
 </head>
 <body>
 
@@ -13,7 +14,7 @@
 
 
 </ul>
-
+<!-- Der laves en liste, der skaber 3 knapper. Hver knap vil fører hen til en anden html fil, når den trykkes. -->
 <div class="content">
 
     <h1>Login</h1>
@@ -22,9 +23,10 @@
         <input id="enteredPass" type="password" placeholder="Enter Password" autocomplete="new-password" value=""/>
         <input id="login_btn" type="submit" value="Login" onClick="checkLogin()"/>
     </form>
-
-
 </div>
+<!-- Der skabes en division eller "sektion" på grund af <div></div>, der går at indholdet får de elementer fra class="content" fra CSS
+ dokumentet. Efterfølgende kommer der en form, så der kan komme input fra brugeren på siden.
+ Her er der tre inputs. DU kan skrive din brugernavn, password og så en knap for login-->
 
 <div class="content">
 
@@ -34,9 +36,8 @@
         <input id="enteredAdminPass" type="password" placeholder="Enter Password" autocomplete="new-password" value=""/>
         <input id="adminlogin_btn" type="submit" value="Login" onClick="checkAdminLogin()"/>
     </form>
-
-
 </div>
+<!-- Samme form som før borset for at den er designet for admins til at logge ind-->
 
 <button onclick="myFunction()">Settings</button>
 

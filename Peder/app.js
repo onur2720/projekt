@@ -8,11 +8,13 @@ class admin {
         this.adminPassword = adminPassword;
     }
 }
-   var admin1 = new admin("Peder","jegergod");
-var admin2 = new admin("Onur","prololspiller");
-var admin3 = new admin("Leila","giderikkeatmodeoptiltiden");
-var admin4 = new admin("Jonas","huskdinoplader");
+   var admin1 = new admin("Peder","1");
+var admin2 = new admin("Onur","2");
+var admin3 = new admin("Leila","3");
+var admin4 = new admin("Jonas","3");
        console.log(admin1);
+       //Under forsøg
+
 // Store input from registration form in localStorage
 function storeLogin() {
     localStorage.setItem('username', username.value);
@@ -40,6 +42,7 @@ function checkLogin() {
 
     // Check if stored data from registration form is equal to entered data from login form
     if(enteredName.value == storedName && enteredPass.value == storedPass) {
+
         window.location.href = "http://www.google.com";
         alert("You are logged in");
 
@@ -61,10 +64,11 @@ function checkAdminLogin() {
     var enteredAdminName = document.getElementById('enteredAdminName');
     var enteredAdminPass = document.getElementById('enteredAdminPass');
 
-    // Check if stored data from registration form is equal to entered data from login form
-    if ((enteredAdminName.value == "Peder" && enteredAdminPass.value == "jegergod") || (enteredAdminName.value == "Leila" && enteredAdminPass.value == "jegerdoven")
-    || (enteredAdminName.value == "Onur" && enteredAdminPass.value == "profortnitespiller")
-    || (enteredAdminName.value == "Jonas" && enteredAdminPass.value == "ripoplader")) {
+    // Check if stored data from registration form is equal to adminpassword and adminusername
+    if ((enteredAdminName.value == "Peder" && enteredAdminPass.value == "jegergod")
+        || (enteredAdminName.value == "Leila" && enteredAdminPass.value == "jegerdoven")
+        || (enteredAdminName.value == "Onur" && enteredAdminPass.value == "profortnitespiller")
+        || (enteredAdminName.value == "Jonas" && enteredAdminPass.value == "ripoplader")) {
         window.location.href = "http://www.google.com";
         alert("You are logged in"); }
 
