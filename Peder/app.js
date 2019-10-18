@@ -35,6 +35,7 @@ function showUser() {
 // Function to check if the stored data from the registration form is equal to the entered data in the login form
 function checkLogin() {
 
+
     // Stored data from the registration form
     var storedName = localStorage.getItem('username');
     var storedPass = localStorage.getItem('password');
@@ -47,7 +48,7 @@ function checkLogin() {
     if(enteredName.value == storedName && enteredPass.value == storedPass) {
 
         alert('You are now logged in.');
-        window.location = "indstillinger.html"
+        window.location = "booking.html"
 
 
 
@@ -95,7 +96,7 @@ function tours() {
 }
 
 
-function ture (tourName, tourInfo, startTime, duration, meetingPoint, tourPrice, tourLocation) {
+function ture (tourName, tourInfo, startTime, duration, meetingPoint, tourPrice, tourLocation, maxPatipiciants) {
     this.tourname = tourName;
     this.tourInfo = tourInfo;
     this.startTime = startTime;
@@ -103,23 +104,61 @@ function ture (tourName, tourInfo, startTime, duration, meetingPoint, tourPrice,
     this.meetingPoint = meetingPoint;
     this.tourPrice = tourPrice;
     this.tourLocation = tourLocation;
+    this.maxPartipants = maxPatipiciants
 }
-let tours1 = new ture("Old Copenhagen", "The old city", "12:00", "2 HRS", "Christiansborg", "7 EUR", "Copenhagen");
+let tours1 = new ture("Old Copenhagen", "The old city", "12:00", "2 HRS", "Christiansborg", "7 EUR", "Copenhagen", 5);
 let tours2 = new ture("Copenhagen Higlights", "The little Mermaid, Amalienborg and Nyhavn", "12:00", "1 HR", "Nyhavn", "5 EUR", "Copenhagen");
 let tours3 = new ture("Rosenborg Castle and Royal Jewelry", "Museum", "11.00", "2 HRS", "Nørreport St.", "10 EUR", "Copenhagen");
 var alltours  = [tours1, tours2, tours3];
 
+function showMoreInfo1 (){
+
+    alert("Tour name: " + tours1.tourname +"\nTour Info: "  + tours1.tourInfo + "\nStart Time: " + tours1.startTime + "\nDuration: " + tours1.duration + "\nMeeting Point; " + tours1.meetingPoint +"\nTour Location: " + tours1.tourLocation + "\nMax Participants " + tours1.maxPartipants );
+
+
+}
+
+
  var clicks = 0;
         function myFunction() {
-
+if (clicks < tours1.maxPartipants) {
             clicks += 1;
-            document.getElementById("demo").innerHTML = clicks;
-
+            document.getElementById("demo").innerHTML = clicks;}
+else {
+    alert("This tour is booked")
+}
 
         }
+var touronenames = [];
+function tournames() {
 
+    var enteredname = document.getElementById('enteredName').value;
+    touronenames.push(enteredname);
+    console.log(touronenames)
+}
 
+var tt = ""
+function hehe() {
+    var t = document.createTextNode("Deltagernes navne:");
+    document.body.appendChild(t);
+    for(var i = 0; i < touronenames.length; i ++) {
+        //var tt = document.createTextNode(touronenames[i]+", ");
+        //document.body.appendChild(tt)
+        if( tt == ""){
+            tt = document.createTextNode(touronenames[i])
+            document.body.appendChild(tt)
+        } else{
+            tt = document.createTextNode(", " + touronenames[i])
+            document.body.appendChild(tt)
+        }
 
+    }
+
+}
+
+function goToBooking() {
+    location.replace("betaling.html")
+}
 
 
 

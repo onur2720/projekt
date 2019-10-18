@@ -7,5 +7,3 @@ function tournames() {
 }
 
 
-function hehe() {
-    alert(touronenames);}
