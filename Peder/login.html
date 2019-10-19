@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My application</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <!-- Vi forbinder vores html dokument til vores css-fil -->
+</head>
+<body>
+
+<ul>
+    <li><a href="../Voreswebsite.html">Home</a></li>
+    <li style="float:right;"><a class="active" href="login.html">Login</a></li>
+    <li style="float:right;"><a class="active" href="register.html">Register</a></li>
+
+
+</ul>
+<!-- Der laves en liste, der skaber 3 knapper. Hver knap vil fører hen til en anden html fil, når den trykkes. -->
+<div class="content">
+
+    <h1>Login</h1>
+    <form id="login-form">
+        <input id="enteredName" type="text" placeholder="Enter Username" autocomplete="new-username" value=""/>
+        <input id="enteredPass" type="password" placeholder="Enter Password" autocomplete="new-password" value=""/>
+        <input id="login_btn" type="button" value="Login" onClick="checkLogin()"/>
+    </form>
+</div>
+<!-- Der skabes en division eller "sektion" på grund af <div></div>, der går at indholdet får de elementer fra class="content" fra CSS
+ dokumentet. Efterfølgende kommer der en form, så der kan komme input fra brugeren på siden.
+ Her er der tre inputs. DU kan skrive din brugernavn, password og så en knap for login-->
+
+<div class="content">
+
+    <h1>Admin Login</h1>
+    <form id="adminlogin-form">
+        <input id="enteredAdminName" type="text" placeholder="Enter Username" autocomplete="new-username" value=""/>
+        <input id="enteredAdminPass" type="password" placeholder="Enter Password" autocomplete="new-password" value=""/>
+        <input id="adminlogin_btn" type="button" value="Login" onclick="checkAdminLogin()"/>
+    </form>
+</div>
+<!-- Samme form som før borset for at den er designet for admins til at logge ind-->
+
+<button onclick="myFunction()">Settings</button>
+
+<script>
+    function myFunction() {
+        location.replace("indstillinger.html")
+    }
+</script>
+
+
+<script src="app.js"> </script>
+
+</body>
+</html>
