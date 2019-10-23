@@ -2,8 +2,17 @@
 var username = document.getElementById('username');
 var password = document.getElementById('password');
 
+class normalUsers {
+    constructor(normalUsername,normalPassword,bookedTours){
+this.normalUsername = normalUsername;
+this.normalPassword = normalPassword;
+this.bookedTours = bookedTours;
+}
+}
 
-
+var normalUser1 = new normalUsers("Simon",5,"");
+var normalUser2 = new normalUsers("Ida", 6, "");
+console.log(normalUser1.normalUsername)
 
 class admin {
     constructor(adminUsername,adminPassword) {
@@ -45,7 +54,7 @@ function checkLogin() {
     var enteredPass = document.getElementById('enteredPass');
 
     // Check if stored data from registration form is equal to entered data from login form
-    if(enteredName.value == storedName && enteredPass.value == storedPass) {
+    if((enteredName.value == storedName && enteredPass.value == storedPass) || (enteredName.value == normalUser1.normalUsername && enteredPass.value == normalUser1.normalPassword)|| (enteredName.value == normalUser2.normalUsername && enteredPass.value == normalUser2.normalPassword)) {
 
         alert('You are now logged in.');
         window.location = "booking.html"
@@ -159,6 +168,33 @@ function hehe() {
 function goToBooking() {
     location.replace("betaling.html")
 }
+
+function addmember1() {
+    if (normalUser1.bookedTours.includes(" Tur 1")) {
+        alert("You can't book twice")
+    } else {
+        normalUser1.bookedTours += " Tur 1";
+        console.log(normalUser1)
+    }
+}
+function addmember2() {
+    if (normalUser1.bookedTours.includes(" Tur 2")) {
+        alert("You can't book twice")
+    } else {
+        normalUser1.bookedTours += " Tur 2";
+        console.log(normalUser1)
+    }
+}
+function addmember3() {
+    if (normalUser1.bookedTours.includes(" Tur 3")) {
+        alert("You can't book twice")
+    } else {
+        normalUser1.bookedTours += " Tur 3";
+        console.log(normalUser1)
+    }
+}
+
+
 
 
 
