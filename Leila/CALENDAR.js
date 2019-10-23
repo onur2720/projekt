@@ -5,12 +5,12 @@ function renderDate() {
     var day = dt.getDay();
     console.log(dt.getDate());
     var endDate = new Date(dt.getFullYear(), dt.getMonth() + 1, 0).getDate();
-
     var prevDate = new Date(dt.getFullYear(), dt.getMonth(), 0).getDate();
 
     var today = new Date();
     console.log(today);
 
+    // We create an array with all the months //
     var months = [
         "January",
         "February",

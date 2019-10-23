@@ -3,28 +3,30 @@ body {
     background-color: #eee;
 }
 
-#content {
-    width: 400px;
+ /* #content {
+    width: 350px;
     background-color: #fff;
     padding: 20px;
     padding-top: 0;
-    font-family: calibri;
+    font-family: Verdana sans-serif;
     font-size: 18px;
     color:#444;
     margin: 0 auto;
 
-    max-height: 300px;
+    /* Everything over the value of max-height will be hidden
+    max-height: 200px;
     overflow: hidden;
 
-    /*transition*/
+    /*We are setting up the transition
     -webkit-transition: max-height 0.7s;
     -moz-transition: max-height 0.7s;
-    transition: max-height 0.7s
+    transition: max-height 0.7s;
 }
 
 #content.open {
+    /* when the content is open, it will show the value of max-height given below
     max-height: 1000px;
-    /*Transition*/
+    /* Set the transition up
     -webkit-transition: max-height 0.7s;
     -moz-transition: max-height 0.7s;
     transition: max-height 0.7s;
@@ -42,4 +44,4 @@ body {
     text-align: center;
     margin: 20px auto;
     cursor: pointer;
-}
+} */
