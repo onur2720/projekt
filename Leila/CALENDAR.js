@@ -51,5 +51,8 @@ function moveDate(para) {
         dt.setMonth(dt.getMonth()+ 1);
     }
     renderDate();
-
 }
+
+// 1. Rediger typegrafi //
+// 2. Rediger i knapperne //
+// 3. Dagens dato skal stå som underoverskrift //
