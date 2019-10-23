@@ -1,17 +1,21 @@
 
 // Tour class
 class Tours {
-    constructor(tourName, tourInfo, startTime, duration, meetingPoint, tourPrice, tourLocation) {
-        this.tourname = tourName;
+    constructor(tourName, tourInfo, startTime, tourDate, duration, meetingPoint, tourPrice, tourLocation) {
+        this.tourName = tourName;
         this.tourInfo = tourInfo;
+        this.tourDate = tourDate;
         this.startTime = startTime;
         this.duration = duration;
         this.meetingPoint = meetingPoint;
         this.tourPrice = tourPrice;
         this.tourLocation = tourLocation;
     }
+
     createHTML()   {
-        return "<tr><td>" + this.tourname + "</td><td>" + this.startTime + "</td><td>" + this.duration + "</td><td>"+ this.tourPrice + "</td><td>"+ this.tourname + "</td></td>"
-                }
+        var bookbutton = "<button type='button'>Book!</button>";
+        return "<tr><td>" + this.tourName + "</td><td>" + this.startTime + "</td><td>" + this.tourDate + "</td><td>"+ this.tourPrice + "</td><td>" + bookbutton + "</td></td>";
+
+    }
 
 }
