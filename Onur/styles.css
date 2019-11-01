@@ -1,19 +1,85 @@
-*
-{
-    margin:0;
-    padding:0
+html {
+  font-family: "Times New Roman", times, serif;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
 }
 
-header
-{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(COPENHAGEN.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+body {
+  background-color: #f2f2f2;
+  max-width: 750px;
 }
 
+h1,h2,h3 {
+  color: #444444;
+}
 
+section {
+  background-color: #FFF;
+	margin-bottom: 20px;
+	padding: 16px;
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px rgba(0,0,0,.1);
+}
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
 
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
 
+input[type=submit] {
+  background-color: tomato;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0,0,0,.1);
+  cursor: pointer;
+  padding: 12px 20px;
+  border: none;
+  border-bottom: 3px solid red;
+}
 
+input[type=submit]:hover {
+  background-color: #ff5233
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	background-color: #F2F2F2;
+}
+
+nav ul li {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	border-left: 1px solid #F2F2F2;
+	border-right: 1px solid #F2F2F2;
+}
+
+nav ul li a {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	padding: 4px 0;
+	text-decoration: none;
+	text-transform: capitalize;
+	color: #FFFFFF;
+	background-color: tomato;
+	border-radius: 4px;
+	transition-property: background-color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
