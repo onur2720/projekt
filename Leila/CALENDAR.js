@@ -4,6 +4,8 @@ function renderDate() {
     dt.setDate(1);
     var day = dt.getDay();
     console.log(dt.getDate());
+    console.log(dt.getMonth() + 1);
+    console.log(dt.getFullYear());
     var endDate = new Date(dt.getFullYear(), dt.getMonth() + 1, 0).getDate();
     var prevDate = new Date(dt.getFullYear(), dt.getMonth(), 0).getDate();
 
@@ -36,9 +38,9 @@ function renderDate() {
 
     for(i = 1; i <= endDate; i++){
         if(i == today.getDate() && dt.getMonth() == today.getMonth()) {
-            cells += "<div class='today'>" + i + "</div>";
+            cells += "<div class='today' id='" + i +"'>" + i + "</div>";
         } else {
-            cells += "<div>" + i + "</div>";
+            cells += "<div id='" + i + "'>" + i + "</div>";
         }
     }
     document.getElementsByClassName("days")[0].innerHTML = cells;
