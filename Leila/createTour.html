@@ -5,45 +5,35 @@
     <title>Create Tou</title>
 </head>
 <body>
-
 <div class="container">
+    <h1>Create your tour</h1>
+        <form id="create-tour">
+            <input id="tour-name" type="text" placeholder="Tourname" autocomplete="new-tourname" value=""/>
+            <br>
+            <input id="tour-info" type="text" placeholder="Tour description" autocomplete="new-tourinformation" value=""/>
+            <br>
+            <input id="tour-date" type="text" placeholder="Tour date" autocomplete="new-date" value=""/>
+            <br>
+            <input id="duration" type="text" placeholder="Duration of tour" autocomplete="new-duration" value=""/>
+            <br>
+            <input id="duration" type="text" placeholder="Duration of tour" autocomplete="new-duration" value=""/>
+            <br>
 
-    <h1>Create a new tour</h1>
 
-    Name:
-    <br/>
-    <input type="text" id="tour_name" value="" placeholder="Tour-name"/>
-    <br/>
-    <br/>
 
-    Info:
-    <br/>
-    <input type="text" id="tour_info" value="" placeholder="Tour-info"/>
-    <br/>
-    <br/>
-
-    Duration:
-    <br/>
-    <input type="text" id="tour_duration" value="" placeholder="Tour-duration"/>
-    <br/>
-    <br/>
-
-    Meeting Point:
-    <br/>
-    <input type="text" id="meeting_point" value="" placeholder="Meeting-point"/>
-    <br/>
-    <br/>
-
-    Price:
-    <br/>
-    <input type="text" id="price" value="" placeholder="Price"/>
-    <br/>
-    <br/>
+            <input id="registration_btn" type="button" value="Register" onClick="storeLogin()"/>
+            <br>
+    </form>
 
     <!--
-        this.tourDate = tourDate;
-        this.startTime = startTime;
+
+        this.duration = duration;
+        this.meetingPoint = meetingPoint;
+        this.tourPrice = tourPrice;
+        this.tourLocation = tourLocation;-->
+</div>
 
 </div>
 </body>
+<script src="createTour.js"></script>
 </html>

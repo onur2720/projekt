@@ -101,5 +101,9 @@ body {
 #hello {
     background-color: #eee;
     display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
 }
 
