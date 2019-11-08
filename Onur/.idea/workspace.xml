@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9addce15-9391-4f9f-9a91-a7e4d4f1113f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/projekt.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kontaktformular.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kontaktshed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CreditTry.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nyhavn006.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,8 +73,19 @@
       <workItem from="1571497034004" duration="66000" />
       <workItem from="1571497112497" duration="52000" />
       <workItem from="1571497175900" duration="300000" />
-      <workItem from="1572606465744" duration="250000" />
+      <workItem from="1572606465744" duration="609000" />
+      <workItem from="1572607509432" duration="105000" />
+      <workItem from="1572702142757" duration="149000" />
+      <workItem from="1572702294141" duration="1000" />
     </task>
+    <task id="LOCAL-00001" summary="Hej med jer">
+      <created>1572606892093</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572606892093</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,10 +96,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Hej med jer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hej med jer" />
   </component>
 </project>
