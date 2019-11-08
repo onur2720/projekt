@@ -38,9 +38,9 @@ function renderDate() {
 
     for(i = 1; i <= endDate; i++){
         if(i == today.getDate() && dt.getMonth() == today.getMonth()) {
-            cells += "<div class='today' id='" + i +"'>" + i + "</div>";
+            cells += "<div class='today' id='" + i +"'>" + i +  "</div>";
         } else {
-            cells += "<div id='" + i + "'>" + i + "</div>";
+            cells += "<div class='next_date' id='" + i + "'>" + i + "</div>";
         }
     }
     document.getElementsByClassName("days")[0].innerHTML = cells;
@@ -54,6 +54,16 @@ function moveDate(para) {
     }
     renderDate();
 }
+
+
+//document.getElementsByClassName("hello").style.display="block";
+
+
+/* var node = document.createElement("p");
+node.appendChild(document.createTextNode("Hello"));
+document.getElementById("output").appendChild(node); */
+
+
 
 // 1. Rediger typegrafi //
 // 2. Rediger i knapperne //

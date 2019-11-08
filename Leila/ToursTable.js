@@ -1,4 +1,4 @@
-// We create different tours with the class function in Tours.js  //
+// We create different tours with the class function in Tours.js   //
 let tour1 = new Tours("Old Copenhagen", "The old city", "12:00", "05.05.20","2 HRS", "Christiansborg", "7 EUR", "Copenhagen");
 let tour2 = new Tours("Copenhagen Higlights", "The little Mermaid, Amalienborg and Nyhavn", "12:00", "06.06.20", "1 HR", "Nyhavn", "5 EUR", "Copenhagen");
 let tour3 = new Tours("Rosenborg Castle and Royal Jewelry", "Museum", "11:00", "07.07.20", "2 HRS", "Nørreport St.", "10 EUR", "Copenhagen");
@@ -39,3 +39,13 @@ function booking() {
 
 
 
+var datesBtn = document.getElementsByClassName("days")
+/* console.log(datesBtn.length) */
+
+for(i=0; i < datesBtn.length; i++){
+    console.log("error") // we check if we enter the for loop
+    document.addEventListener('click', function() {
+            console.log("Hello") // we check if we enter the event listener. 
+        document.getElementById("hello").style.display = "block"
+    })
+}
