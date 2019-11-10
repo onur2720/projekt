@@ -11,6 +11,7 @@ class Tours {
         this.meetingPoint = meetingPoint;
         this.tourPrice = tourPrice;
         this.tourLocation = tourLocation;
+
     }
 // LT - Vi opretter HTML-kode i vores js for at oprette en 'table' for vores objecter.
 // LT - Vi har valgt at holde det på samme side, således at vi let kan finde tilbage til indholdet.
