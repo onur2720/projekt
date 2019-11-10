@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUp_and_Login</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<ul>
+    <li><a href="../../Voreswebsite.html">Home</a></li>
+    <li style="float:right;"><a class="active" href="register_login.html">Sign up and login</a></li>
+</ul>
+
+
+<div class="content">
+
+    <h1>Sign up</h1>
+    <p>Here you can make an account.</p>
+    <form id="signup_form">
+        <input id="username" type="text" placeholder="Username"  value=""/>
+        <br>
+        <input id="password" type="password" placeholder="Password"  value=""/>
+        <br>
+        <input id="registration" type="button" value="Register" onClick="storeUser()"/>
+        <br>
+    </form>
+
+    <br>
+
+    <h1>Login</h1>
+    <p>If you have made an account, you can sign in here.</p>
+    <input id="checkusername" type="text" placeholder="Username"  value=""/>
+    <br>
+    <input id="checkpassword" type="password" placeholder="Password" value=""/>
+    <br>
+    <input id="login" type="button" value="Login" onClick="login()"/>
+
+    <br>
+
+    <h1>Guide Login</h1>
+    <p> If you are a guide, you can sign in here </p>
+    <form id="adminlogin-form">
+        <input id="enteredAdminName" type="text" placeholder="Username"  value=""/> <br>
+        <input id="enteredAdminPass" type="password" placeholder="Password"  value=""/> <br>
+        <input id="adminlogin_btn" type="button" value="Login" onclick="checkAdminLogin()"/>
+    </form>
+</div>
+
+<script src="register_login_function.js"> </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User_Page</title>
+</head>
+<body>
+<div id="output"></div>
+<script>var node = document.createElement("p");
+node.appendChild(document.createTextNode("Hej "+JSON.parse(localStorage.getItem("currentUser")).Username));
+document.getElementById("output").appendChild(node);
+console.log(JSON.parse(localStorage.getItem("currentUser")).Username)
+</script>
+<p> Here you have the opportunity to change your Username and Password</p>
+<form id="change_information">
+    <input id="newusername" type="text" placeholder="Enter your new Username"  value=""/>
+    <br>
+    <input id="changeusername" type="button" value="Change your Username" onClick="setnewUsername()"/>
+    <br> <br>
+    <input id="newpassword" type="password" placeholder="Enter your new Password"  value=""/>
+    <br>
+    <input id="changepassword" type="button" value="Change your Password" onClick="setnewPassword()"/>
+    <br>
+    <p> Here you can book different tours:</p>
+    <input id="booktour1" type="button" value="Book the first tour" onClick="booktour()"/>
+    <br>
+    <input id="booktour2" type="button" value="Book the second tour" onClick="booktourtwo()"/>
+</form>
+<script src="register_login_function.js"> </script>
+</body>
+</html>
