@@ -1,0 +1,22 @@
+
+#myInput {
+    background-image: (img='searchicon.png');
+    background-position: 10px 12px; /*position the search icon */
+    background-repeat: no-repeat; /* Only show the icon one time */
+    width: 100%; /* full witdh */
+    font-size: 16px; /* */
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px; /* space below the input */
+}
+
+#myUL {
+    /* default list styling will be removed */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; /* all the links will be added a hover, expect for header*/
+}
