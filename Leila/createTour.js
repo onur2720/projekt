@@ -37,6 +37,7 @@ class Tours {
 localStorage.setItem("tours", JSON.stringify(tours));
 console.log(JSON.parse(localStorage.getItem("tours")));
 // We can now
+
 function CreateTour() {
     var tour = new Tours(tourName.value,tourInfo.value,tourDate.value,tourStartTime.value,tourDuration.value,tourMeetingPoint.value,tourPrice.value,tourLocation.value)
     oldTours = JSON.parse(localStorage.getItem("tours"));
