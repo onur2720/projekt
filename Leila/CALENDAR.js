@@ -4,13 +4,15 @@ function renderDate() {
     dt.setDate(1);
     var day = dt.getDay();
     console.log(dt.getDate());
+    console.log(dt.getMonth() + 1);
+    console.log(dt.getFullYear());
     var endDate = new Date(dt.getFullYear(), dt.getMonth() + 1, 0).getDate();
-
     var prevDate = new Date(dt.getFullYear(), dt.getMonth(), 0).getDate();
 
     var today = new Date();
     console.log(today);
 
+    // We create an array with all the months //
     var months = [
         "January",
         "February",
@@ -36,9 +38,9 @@ function renderDate() {
 
     for(i = 1; i <= endDate; i++){
         if(i == today.getDate() && dt.getMonth() == today.getMonth()) {
-            cells += "<div class='today'>" + i + "</div>";
+            cells += "<div class='today' id='" + i +"'>" + i +  "</div>";
         } else {
-            cells += "<div>" + i + "</div>";
+            cells += "<div class='next_date' id='" + i + "'>" + i + "</div>";
         }
     }
     document.getElementsByClassName("days")[0].innerHTML = cells;
@@ -52,6 +54,16 @@ function moveDate(para) {
     }
     renderDate();
 }
+
+
+//document.getElementsByClassName("hello").style.display="block";
+
+
+/* var node = document.createElement("p");
+node.appendChild(document.createTextNode("Hello"));
+document.getElementById("output").appendChild(node); */
+
+
 
 // 1. Rediger typegrafi //
 // 2. Rediger i knapperne //

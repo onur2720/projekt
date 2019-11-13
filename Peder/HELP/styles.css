@@ -10,12 +10,12 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #2ecc71;
+    background-color: black;
 }
 
 li {
     float: left;
-    background-color: #2E8B57;
+    background-color: green;
     margin: 8px;
 }
 
@@ -33,7 +33,7 @@ li a:hover {
 
 .active {
     color: black;
-    background-color: #2E8B57;
+    background-color: green;
 }
 
 li:last-child {
@@ -44,6 +44,3 @@ li:last-child {
     margin: 30px;
 
 }
-input[type=text] {
-     width: 300px;
- }
