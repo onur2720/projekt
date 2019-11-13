@@ -37,11 +37,10 @@ function booking() {
     console.log(localStorage);
 };
 
-
-
 var datesBtn = document.getElementsByClassName("days")
 /* console.log(datesBtn.length) */
 
+// We create a for-loop looping through our dates. We have addEventListener() that will display the tour table when a date i chosen.
 for(i=0; i < datesBtn.length; i++){
     console.log("error") // we check if we enter the for loop
     document.addEventListener('click', function() {
