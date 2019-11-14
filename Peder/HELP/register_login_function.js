@@ -273,12 +273,13 @@ var admin3 = new admin("Leila","3");
 var admin4 = new admin("Jonas","4");
 console.log(admin1);
 function booktouser(){
+
    var tours = JSON.parse(localStorage.getItem("tours"));
 
   var newUser= JSON.parse(localStorage.getItem("currentUser"));
    var newUsername = newUser.Username;
 
-    tours[0].participants += " " + newUsername ;
+    tours[i].participants += " " + newUsername ;
 
     localStorage.setItem("tours",JSON.stringify(tours));
     newUser.bookedTours += " " + tours[0].tourName;
@@ -320,10 +321,12 @@ for(i=0;i<array.length;i++){
     info.push(newinfo7);
     var newinfo8 = array[i].amountLimit;
     info.push(newinfo8);
-    var bookbutton = "<button type='button' onclick=booktouser()>Book!</button>";
+    var bookbutton = "<button type='button' id='"+i+"' >Book!</button>";
     info.push(bookbutton);
     newArray.push(info);
 }
+
+
 console.log(newArray);
 table = document.getElementById("table");
 //Tabellen oprettes
@@ -359,3 +362,38 @@ function deleteall(){
     }
 
 }
+//Hurtige kommentarer til Henrik
+//Variablen tours skabes, der henter værdien fra localstorage, der blev tildelt nøglen "tours"
+let tours = JSON.parse(localStorage.getItem("tours"));
+// Et loop skabes der kører den nedestående kode lige så mange gange som antal ture i tours
+for(i=0;i<tours.length;i++){
+    //Koden virker ikke, hvis vi ikke laver en variabel, der har værdien i
+let hehe = i;
+//Henter id fra html side. Den første knap har id=0. Den anden knap har id=1 osv.
+document.getElementById(i).addEventListener("click", function(){
+
+//Vi henter den nuværende bruger og hans brugernavn fra localStorage og tildeler dem variabler.
+    let User= JSON.parse(localStorage.getItem("currentUser"));
+    let Username = User.Username;
+//Turen der har samme id som knappen, vil tilføje den nuværende brugers navn til parameteren participants.
+    tours[hehe].participants += " " + Username ;
+//Vi pusher det til localstorage, og overskriver den gamle "tours" key
+    localStorage.setItem("tours",JSON.stringify(tours));
+  //Turens navn bliver tilføjet til brugeres parameter: bookedTOurs
+    User.bookedTours += " " + tours[hehe].tourName;
+    localStorage.setItem("currentUser",JSON.stringify(User));
+    //Vi pusher det til localstorage, og overskriver den gamle "currentUser" key
+    let allUsers = JSON.parse(localStorage.getItem("Users"));
+    //samme loop som brugt før i koden. Sørger for at currentUsers værdier også tilføjes til "Users" i localstorage
+    for (i = 0; i < allUsers.length; i++) {
+        if (User.Username === allUsers[i].Username) {
+
+            allUsers[i].bookedTours = User.bookedTours;
+            localStorage.setItem("Users", JSON.stringify(allUsers));
+
+            return true
+        }
+    }
+
+}); }
+
