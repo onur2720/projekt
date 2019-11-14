@@ -43,6 +43,7 @@ function renderDate() {
             cells += "<div class='next_date' id='" + i + "'>" + i + "</div>";
         }
     }
+
     document.getElementsByClassName("days")[0].innerHTML = cells;
 }
 
