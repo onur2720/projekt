@@ -22,11 +22,16 @@
         <br>
         <input id="tour-price" type="text" placeholder="Price of tour" autocomplete="new-price" value=""/>
         <br>
-        <input id="tour-location" type="text" placeholder="location" autocomplete="new-location" value=""/>
+
+        <input id="tour-location" type="text" placeholder="Location" autocomplete="new-location" value=""/>
+        <br>
+        <input id="limit" type="text" placeholder="Amount Limit" autocomplete="new-location" value=""/>
         <br>
         <input id="create_btn" type="button" value="Create" onClick="CreateTour()"/>
         <br>
-
+<p>Here you can delete your tour</p>
+        <input id="delete_name" type="text" placeholder="Name of the tour you want to delete" value=""/>
+        <input id="delete_tour" type="button" value="Delete" onClick="deleteTour()"/>
         <!-- The elements above is taken from the class/object "Tours"
           this.tourName
           this.tourInfo
