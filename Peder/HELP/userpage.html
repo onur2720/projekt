@@ -26,18 +26,44 @@ console.log(JSON.parse(localStorage.getItem("currentUser")).Username)
     <br>
     <input id="booktour2" type="button" value="Book the second tour" onClick="booktourtwo()"/>
 </form>
+
+<table id="table" border="1">
+    <!-- The Row Number 0 -->
+    <tr>
+        <th>Tour Name</th>
+        <th>Tour Info</th>
+        <th>Tour Date</th>
+        <th>Start Time</th>
+        <th>Duration</th>
+        <th>Meeting Point</th>
+        <th>Tour price</th>
+        <th>Tour location</th>
+        <th>Limit on participants</th>
+        <th>Click to book the tour!</th>
+    </tr>
+
+</table>
 <a href="../../Leila/CALENDAR.html">Book nu for faaan!</a>
+<br>
+<br>
+<br>
+<br>
 
-<p> Here you can see your upcoming tours! </p>
+<p> Your bookings: </p>
+<!-- -->
 
-<script>
-    // lav en loop der kører igennem alle tours//
-    // hvis username ikke er tilmeldt ---> "ingen booking endnu"
-    // hvis username er tilmeldt --> Hvis upcomming booking//
-</script>
-<form>
+<p>Additional comments</p>
 
-</form>
+<textarea type="text" rows="5" cols="30" id="review-tour" value="" placeholder="Review the tour here!"></textarea>
+</br>
+
+<!--Submit button to send review-->
+<button type="submit" style="cursor: pointer;">Review</button>
+<br>
+<br>
+
+<p>Delete your account</p>
+<input id="deleteaccount" type="button" value="Press here if you want to delete your account" onClick="deleteall()"/>
 <script src="register_login_function.js"> </script>
 </body>
 </html>

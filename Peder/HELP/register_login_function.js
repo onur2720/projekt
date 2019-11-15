@@ -109,7 +109,7 @@ function setnewPassword() {
             return true
         }
     }
-}
+}/*
 //Denne funktion tillader dig at booke tour 1
 function booktour() {
     var user = JSON.parse(localStorage.getItem("currentUser"));
@@ -241,10 +241,159 @@ function booktourtwo() {
         localStorage.setItem("currentUser",JSON.stringify(user));
         return true
     }}
+*/
+function checkAdminLogin() {
+
+    // Entered data in the login form
+    var enteredAdminName = document.getElementById('enteredAdminName');
+    var enteredAdminPass = document.getElementById('enteredAdminPass');
+
+    // Check if stored data from registration form is equal to adminpassword and adminusername
+    if ((enteredAdminName.value == admin1.adminUsername && enteredAdminPass.value == admin1.adminPassword)
+        || (enteredAdminName.value == admin2.adminUsername && enteredAdminPass.value == admin2.adminPassword)
+        || (enteredAdminName.value == admin3.adminUsername && enteredAdminPass.value == admin3.adminPassword)
+        || (enteredAdminName.value == admin4.adminUsername && enteredAdminPass.value == admin4.adminPassword)) {
+        alert('You are now logged in.');
+        window.location = "GuidePage.html"
+    }
+    else {
+        alert('Error. Wrong login.');
+    }
+}
+
+class admin {
+    constructor(adminUsername,adminPassword) {
+        this.adminUsername = adminUsername;
+        this.adminPassword = adminPassword;
+    }
+}
+var admin1 = new admin("Peder","1");
+var admin2 = new admin("Onur","2");
+var admin3 = new admin("Leila","3");
+var admin4 = new admin("Jonas","4");
+console.log(admin1);
+function booktouser(){
+
+   var tours = JSON.parse(localStorage.getItem("tours"));
+
+  var newUser= JSON.parse(localStorage.getItem("currentUser"));
+   var newUsername = newUser.Username;
+
+    tours[i].participants += " " + newUsername ;
+
+    localStorage.setItem("tours",JSON.stringify(tours));
+    newUser.bookedTours += " " + tours[0].tourName;
+    localStorage.setItem("currentUser",JSON.stringify(newUser));
+    var allUsers = JSON.parse(localStorage.getItem("Users"));
+    for (i = 0; i < allUsers.length; i++) {
+        if (newUser.Username === allUsers[i].Username) {
+
+            allUsers[i].bookedTours = newUser.bookedTours;
+            localStorage.setItem("Users", JSON.stringify(allUsers));
+            return true
+        }
+}}
+//Hurtige kommentarer da funktionen ikke er færdig"
+//Vi laver en variabel array, der henter den værdi fra nøglen "Tours" i local storage
+var array = JSON.parse(localStorage.getItem("tours"));
+console.log(array);
+//Vi laver et tomt array til varaiblen newArray
+var newArray =[];
+//Et loop opretters, der opretter et nyt array, hvis eneste forskel fra det gamle array er, at alle properties i klassen "Tours" bliver til numbers, så det kan bruges i det næste loop
+for(i=0;i<array.length;i++){
+   var info = [];
+    var newinfo = array[i].tourName;
+    info.push(newinfo);
+
+    var newinfo1 = array[i].tourInfo;
+    info.push(newinfo1);
+    var newinfo2 = array[i].tourDate;
+    info.push(newinfo2);
+    var newinfo3 = array[i].startTime;
+    info.push(newinfo3);
+    var newinfo4 = array[i].duration;
+    info.push(newinfo4);
+    var newinfo5 = array[i].meetingPoint;
+    info.push(newinfo5);
+    var newinfo6 = array[i].tourPrice;
+    info.push(newinfo6);
+    var newinfo7 = array[i].tourLocation;
+    info.push(newinfo7);
+    var newinfo8 = array[i].amountLimit;
+    info.push(newinfo8);
+    var bookbutton = "<button type='button' id='"+i+"' >Book!</button>";
+    info.push(bookbutton);
+    newArray.push(info);
+}
 
 
+console.log(newArray);
+table = document.getElementById("table");
+//Tabellen oprettes
+for(var i = 0; i < newArray.length; i++)
+{
+   array[i].tourDate.value = 0;
 
 
+    var newRow = table.insertRow(table.length);
+    for(var j = 0; j < newArray[i].length; j++)
+    {
+
+        var cell = newRow.insertCell(j);
 
 
+        cell.innerHTML = newArray[i][j];
+    }
+}
+
+function deleteall(){
+    var allUsers = JSON.parse(localStorage.getItem("Users"));
+    var newUser= JSON.parse(localStorage.getItem("currentUser"));
+    for (i = 0; i < allUsers.length; i++) {
+        if (newUser.Username === allUsers[i].Username) {
+            localStorage.removeItem("currentUser");
+            allUsers.splice(i,1);
+            localStorage.setItem("Users", JSON.stringify(allUsers));
+            alert("You have now deleted your account");
+
+            window.location.assign("register_login.html");
+            return true
+        }
+    }
+
+}
+//Hurtige kommentarer til Henrik
+//Variablen tours skabes, der henter værdien fra localstorage, der blev tildelt nøglen "tours"
+let tours = JSON.parse(localStorage.getItem("tours"));
+// Et loop skabes der kører den nedestående kode lige så mange gange som antal ture i tours
+for(i=0;i<tours.length;i++){
+    //Koden virker ikke, hvis vi ikke laver en variabel, der har værdien i
+let hehe = i;
+//Henter id fra html side. Den første knap har id=0. Den anden knap har id=1 osv.
+document.getElementById(i).addEventListener("click", function(){
+
+//Vi henter den nuværende bruger og hans brugernavn fra localStorage og tildeler dem variabler.
+    let User= JSON.parse(localStorage.getItem("currentUser"));
+    let Username = User.Username;
+//Turen der har samme id som knappen, vil tilføje den nuværende brugers navn til parameteren participants.
+    tours[hehe].participants += " " + Username ;
+//Vi pusher det til localstorage, og overskriver den gamle "tours" key
+    localStorage.setItem("tours",JSON.stringify(tours));
+  //Turens navn bliver tilføjet til brugeres parameter: bookedTOurs
+    User.bookedTours += " " + tours[hehe].tourName;
+    localStorage.setItem("currentUser",JSON.stringify(User));
+    //Vi pusher det til localstorage, og overskriver den gamle "currentUser" key
+    let allUsers = JSON.parse(localStorage.getItem("Users"));
+    //samme loop som brugt før i koden. Sørger for at currentUsers værdier også tilføjes til "Users" i localstorage
+    for (i = 0; i < allUsers.length; i++) {
+        if (User.Username === allUsers[i].Username) {
+
+            allUsers[i].bookedTours = User.bookedTours;
+            localStorage.setItem("Users", JSON.stringify(allUsers));
+
+            return true
+        }
+    }
+
+}); }
 
