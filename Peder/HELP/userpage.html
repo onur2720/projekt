@@ -48,7 +48,22 @@ console.log(JSON.parse(localStorage.getItem("currentUser")).Username)
 
 <p> Your bookings: </p>
 <!-- -->
+<table id="table2" border="1">
+    <!-- The Row Number 0 -->
+    <tr>
+        <th>Tours you have booked</th>
+        <th>Tour Info</th>
+        <th>Tour Date</th>
+        <th>Start Time</th>
+        <th>Duration</th>
+        <th>Meeting Point</th>
+        <th>Tour price</th>
+        <th>Tour location</th>
+        <th>Limit on participants</th>
+        <th>Press if you want to cancel the tour </th>
+    </tr>
 
+</table>
 <p>Additional comments</p>
 
 <textarea type="text" rows="5" cols="30" id="review-tour" value="" placeholder="Review the tour here!"></textarea>
@@ -61,6 +76,9 @@ console.log(JSON.parse(localStorage.getItem("currentUser")).Username)
 
 <p>Delete your account</p>
 <input id="deleteaccount" type="button" value="Press here if you want to delete your account" onClick="deleteall()"/>
+<br>
+
+
 <script src="register_login_function.js"> </script>
 </body>
 </html>
