@@ -21,12 +21,9 @@ console.log(JSON.parse(localStorage.getItem("currentUser")).Username)
     <br>
     <input id="changepassword" type="button" value="Change your Password" onClick="setnewPassword()"/>
     <br>
-    <p> Here you can book different tours:</p>
-    <input id="booktour1" type="button" value="Book the first tour" onClick="booktour()"/>
-    <br>
-    <input id="booktour2" type="button" value="Book the second tour" onClick="booktourtwo()"/>
-</form>
 
+</form>
+<p> Here you can book different tours</p>
 <table id="table" border="1">
     <!-- The Row Number 0 -->
     <tr>
@@ -43,7 +40,7 @@ console.log(JSON.parse(localStorage.getItem("currentUser")).Username)
     </tr>
 
 </table>
-<a href="../../Leila/CALENDAR.html">Book nu for faaan!</a>
+
 <br>
 <input id="deleteaccount" type="button" value="Press here if you want to delete your account" onClick="deleteall()"/>
 <script src="register_login_function.js"> </script>

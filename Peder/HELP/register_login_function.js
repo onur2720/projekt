@@ -375,8 +375,14 @@ document.getElementById(i).addEventListener("click", function(){
 //Vi henter den nuværende bruger og hans brugernavn fra localStorage og tildeler dem variabler.
     let User= JSON.parse(localStorage.getItem("currentUser"));
     let Username = User.Username;
+    if (tours[hehe].currentParticipants ==tours[hehe].amountLimit){
+        alert("This tour is fully booked");
+        return true
+    }
 //Turen der har samme id som knappen, vil tilføje den nuværende brugers navn til parameteren participants.
     tours[hehe].participants += " " + Username ;
+    tours[hehe].currentParticipants += 1;
+
 //Vi pusher det til localstorage, og overskriver den gamle "tours" key
     localStorage.setItem("tours",JSON.stringify(tours));
   //Turens navn bliver tilføjet til brugeres parameter: bookedTOurs
