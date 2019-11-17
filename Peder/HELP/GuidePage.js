@@ -55,9 +55,6 @@ function CreateTour() {
         //Hvis der er en key, der hedder Users i localstorage, bruges der JSON.parse, så værdien af Users, kan blive tildelt til allUsers
     }
     var tour = new Tours(tourName.value,tourInfo.value,tourDate.value,tourStartTime.value,tourDuration.value,tourMeetingPoint.value,tourPrice.value,tourLocation.value, amountLimit.value,"","", 0);
-   console.log(oldTours[0].tourName);
-    console.log(tour.tourName);
-
     for(i=0;i<oldTours.length;i++){
         if (tour.tourName===oldTours[i].tourName){
             alert("the tourname cannot be called the same as another tour")

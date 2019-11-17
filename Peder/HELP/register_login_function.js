@@ -82,10 +82,19 @@ var newPassword = document.getElementById("newpassword")
 function setnewUsername() {
     var oldaccount = JSON.parse(localStorage.getItem("currentUser"));
     var allUsers = JSON.parse(localStorage.getItem("Users"));
+    console.log(newUsername.value)
+    console.log(allUsers[0].Username)
+    for (i = 0; i < allUsers.length; i++) {
+        if(newUsername.value===allUsers[i].Username){
+            alert("You cannot change your username to one that already exist")
+            return true
+        }
+    }
     //To variabler skabes, der indeholder den nuværende bruger og alle brugere i local storage
     for (i = 0; i < allUsers.length; i++) {
         if (oldaccount.Username === allUsers[i].Username) {
             //Alle brugere køres igennem et loop, indtil den nuværende bruger findes i alle brugere.
+
             oldaccount.Username = newUsername.value;
             allUsers[i].Username = newUsername.value;
             //Begge steder vil brugeren få tildelt et nyt brugernavn, som blev skrevet ind
@@ -349,6 +358,14 @@ for(var i = 0; i < newArray.length; i++)
 function deleteall(){
     var allUsers = JSON.parse(localStorage.getItem("Users"));
     var newUser= JSON.parse(localStorage.getItem("currentUser"));
+
+    var buttons = document.getElementsByClassName('wow');
+
+    for(var i = 0; i < buttons.length; i++){
+        buttons[i].click();
+}
+
+
     for (i = 0; i < allUsers.length; i++) {
         if (newUser.Username === allUsers[i].Username) {
             localStorage.removeItem("currentUser");
@@ -443,7 +460,7 @@ for(i=0;i< arraytreee.length;i++){
     info.push(newinfo7);
     var newinfo8 = arraytreee[i].amountLimit;
     info.push(newinfo8);
-    var bookbutton = "<button type='button' id='hej "+i+"' >Delete!</button>";
+    var bookbutton = "<button type='button' class='wow' id='hej "+i+"' >Delete!</button>";
     info.push(bookbutton);
     newArray.push(info);
 }
@@ -485,9 +502,11 @@ for(i=0;i<arrayfive.length;i++){
         console.log(arrayseven)
         let arraysix = arrayseven.replace(arrayeight,"");
 arrayfive[i].participants = arraysix
+        arrayfive[i].currentParticipants --
         console.log(arraysix)
         localStorage.setItem("tours",JSON.stringify(arrayfive));
-        return true
+alert("hej")
+
     }
 }})}
 /*
