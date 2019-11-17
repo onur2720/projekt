@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="styles1.css">
+    <meta charset="UTF-8">
+    <title>Betaling 2</title>
+</head>
+<body>
+<form id="register-form">
+    <button id="MC" type="button" onclick="paymentCard1()">Mastercard</button>
+    <button id="V" type="button" onclick="paymentCard2()">Visa</button>
+
+    <h1>Kortoplysninger</h1>
+
+    <h2>Kortnummer</h2>
+    <input type="text" name="txtUserName" id="betknr" value="" placeholder="Eks: 1698 3423 2672 9845" maxlength="16">
+
+    <h3>Sidste benyttelsesdato</h3>
+    <input type="text" name="txtExp" id="betex" value="" placeholder="Eks: 09/20" maxlength="5">
+
+    <h4>Kontrolkode</h4>
+    <input type="text" name="txtControl" id="bettcr" value="" placeholder="Eks: 320" maxlength="3">
+
+    <h5>Pris: 5 euro</h5>
+
+    <input id="rgr_btn" type="submit" value="Betal" onClick="setItem()"/>
+</form>
+</body>
+</html>
+<script src="app2.js"> </script>
