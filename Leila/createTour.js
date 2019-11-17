@@ -81,6 +81,34 @@ function CreateTour() {
     localStorage.setItem("tours",JSON.stringify(oldTours))
 }
 
+/* function cloneTour(Tours) {
+    var clone = {};
+    for(tours) {
+        if (.
+        Tours.hasOwnProperty(tours)
+    )
+        clone[tours] = Tours[tours];
+    }
+    return clone;
+}
+
+//Then everytime you want to push a message into the list do:
+tours.push(cloneMessage(Tours));
+
+function deleteTour(){
+    var allTours = JSON.parse(localStorage.getItem("tours"));
+    var one= document.getElementById("delete_name");
+    console.log(allTours);
+    console.log(allTours.length);
+    console.log(allTours[0].tourName);
+    console.log(one.value);
+    for (i=0;i<allTours.length;i++){
+        if(allTours[i].tourName===one.value){
+            allTours.splice(i,1);
+            localStorage.setItem("tours",JSON.stringify(allTours))
+        }
+    }
+} */
 
 // TRIN 3: Vi tildeler de værdier vi har fået til HTML dokumentet til en klasse.
 
