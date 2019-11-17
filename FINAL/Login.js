@@ -11,18 +11,16 @@ class Users {
 
     }
 }
-
-//Endnu en klasse oprettes, der hedder guides
-class guides {
+class guide {
     constructor(guideUsername,guidePassword) {
         this.guideUsername = guideUsername;
         this.guidePassword = guidePassword;
     }
 }
-//Tre variabler oprettes til vores guides
-const guide1 = new guides("Peder","1");
-const  guide2 = new guides("Onur","2");
-const guide3 = new guides("Leila","3");
+let guide1 = new guide("Peder","1");
+let guide2 = new guide("Onur","2");
+let guide3 = new guide("Leila","3");
+
 
 //Variablen allUsers oprettes, der skal bruges i den nedestående funcktion. Forløbligt er den ikke tildelt en værdi
 let allUsers;
@@ -54,14 +52,14 @@ function storeUser() {
             }
         }
         //Hvis brugernavnet ikke er brugt før, fortsætter funktionen, og en opdateret array med den nye bruger bliver sat til nøglen Users i localstorage. Den slette altså den tidligere key "Users", der havde det gamle arrray
-        var User = new Users(enteredUsername.value, enteredPassWord.value, "");
+        let User = new Users(enteredUsername.value, enteredPassWord.value, "");
         allUsers.push(User);
         localStorage.setItem("Users", JSON.stringify(allUsers));
 
     }
 }
-var checkUsername = document.getElementById('checkusername');
-var checkPassword = document.getElementById('checkpassword');
+let checkUsername = document.getElementById('checkusername');
+let checkPassword = document.getElementById('checkpassword');
 //To variabler skabes, der tildeles værdierne fra de felter, hvor man skriver sit username og password for at logge ind
 function login() {
     allUsers = JSON.parse(localStorage.getItem("Users"));
@@ -77,17 +75,15 @@ function login() {
     //hvis der ikke er et match, kommer der en alert frem
     alert("Please enter your Username and Password correctly")
 }
-var newUsername = document.getElementById('newusername');
-var newPassword = document.getElementById("newpassword")
+let newUsername = document.getElementById('newusername');
+let newPassword = document.getElementById("newpassword");
 
 function setnewUsername() {
-    var oldaccount = JSON.parse(localStorage.getItem("currentUser"));
-    var allUsers = JSON.parse(localStorage.getItem("Users"));
-    console.log(newUsername.value)
-    console.log(allUsers[0].Username)
+    let oldaccount = JSON.parse(localStorage.getItem("currentUser"));
+    let allUsers = JSON.parse(localStorage.getItem("Users"));
     for (i = 0; i < allUsers.length; i++) {
         if(newUsername.value===allUsers[i].Username){
-            alert("You cannot change your username to one that already exist")
+            alert("You cannot change your username to one that already exist");
             return true
         }
     }
@@ -108,8 +104,8 @@ function setnewUsername() {
 }
 
 function setnewPassword() {
-    var oldaccount = JSON.parse(localStorage.getItem("currentUser"));
-    var allUsers = JSON.parse(localStorage.getItem("Users"));
+    let oldaccount = JSON.parse(localStorage.getItem("currentUser"));
+    let allUsers = JSON.parse(localStorage.getItem("Users"));
     for (i = 0; i < allUsers.length; i++) {
         if (oldaccount.Username === allUsers[i].Username) {
             oldaccount.Password = newPassword.value;
@@ -124,14 +120,13 @@ function setnewPassword() {
 function checkGuideLogin() {
 
     // Entered data in the login form
-    var enteredAdminName = document.getElementById('enteredAdminName');
-    var enteredAdminPass = document.getElementById('enteredAdminPass');
+    let enteredGuideName = document.getElementById('enteredGuideName');
+    let enteredGuidePass = document.getElementById('enteredGuidePass');
 
     // Check if stored data from registration form is equal to adminpassword and adminusername
-    if ((enteredAdminName.value == admin1.adminUsername && enteredAdminPass.value == admin1.adminPassword)
-        || (enteredAdminName.value == admin2.adminUsername && enteredAdminPass.value == admin2.adminPassword)
-        || (enteredAdminName.value == admin3.adminUsername && enteredAdminPass.value == admin3.adminPassword)
-        || (enteredAdminName.value == admin4.adminUsername && enteredAdminPass.value == admin4.adminPassword)) {
+    if ((enteredGuideName.value === guide1.guideUsername && enteredGuidePass.value === guide1.guidePassword)
+        || (enteredGuideName.value === guide2.guideUsername && enteredGuidePass.value === guide2.guidePassword)
+        || (enteredGuideName.value === guide3.guideUsername && enteredGuidePass.value === guide3.guidePassword)) {
         alert('You are now logged in.');
         window.location = "guidePage.html"
     }
@@ -140,68 +135,27 @@ function checkGuideLogin() {
     }
 }
 
-class admin {
-    constructor(adminUsername,adminPassword) {
-        this.adminUsername = adminUsername;
-        this.adminPassword = adminPassword;
-    }
-}
-var admin1 = new admin("Peder","1");
-var admin2 = new admin("Onur","2");
-var admin3 = new admin("Leila","3");
-var admin4 = new admin("Jonas","4");
-console.log(admin1);
-function booktouser(){
 
-   var tours = JSON.parse(localStorage.getItem("tours"));
 
-  var newUser= JSON.parse(localStorage.getItem("currentUser"));
-   var newUsername = newUser.Username;
-
-    tours[i].participants += " " + newUsername ;
-
-    localStorage.setItem("tours",JSON.stringify(tours));
-    newUser.bookedTours += " " + tours[0].tourName;
-    localStorage.setItem("currentUser",JSON.stringify(newUser));
-    var allUsers = JSON.parse(localStorage.getItem("Users"));
-    for (i = 0; i < allUsers.length; i++) {
-        if (newUser.Username === allUsers[i].Username) {
-
-            allUsers[i].bookedTours = newUser.bookedTours;
-            localStorage.setItem("Users", JSON.stringify(allUsers));
-            return true
-        }
-}}
 //Hurtige kommentarer da funktionen ikke er færdig"
 //Vi laver en variabel array, der henter den værdi fra nøglen "Tours" i local storage
-var array = JSON.parse(localStorage.getItem("tours"));
-console.log(array);
+let array = JSON.parse(localStorage.getItem("tours"));
+
 //Vi laver et tomt array til varaiblen newArray
-var newArray =[];
+let newArray =[];
 //Et loop opretters, der opretter et nyt array, hvis eneste forskel fra det gamle array er, at alle properties i klassen "Tours" bliver til numbers, så det kan bruges i det næste loop
 for(i=0;i<array.length;i++){
-   var info = [];
-    var newinfo = array[i].tourName;
-    info.push(newinfo);
-
-    var newinfo1 = array[i].tourInfo;
-    info.push(newinfo1);
-    var newinfo2 = array[i].tourDate;
-    info.push(newinfo2);
-    var newinfo3 = array[i].startTime;
-    info.push(newinfo3);
-    var newinfo4 = array[i].duration;
-    info.push(newinfo4);
-    var newinfo5 = array[i].meetingPoint;
-    info.push(newinfo5);
-    var newinfo6 = array[i].tourPrice;
-    info.push(newinfo6);
-    var newinfo7 = array[i].tourLocation;
-    info.push(newinfo7);
-    var newinfo8 = array[i].amountLimit;
-    info.push(newinfo8);
-    var bookbutton = "<button type='button' id='"+i+"' >Book!</button>";
-    info.push(bookbutton);
+   let info = [];
+    info.push(array[i].tourName);
+    info.push(array[i].tourInfo);
+    info.push(array[i].tourDate);
+    info.push(array[i].startTime);
+    info.push(array[i].duration);
+    info.push(array[i].meetingPoint);
+    info.push(array[i].tourPrice);
+    info.push(array[i].tourLocation);
+    info.push(array[i].amountLimit);
+    info.push("<button type='button' id='"+i+"' >Book!</button>");
     newArray.push(info);
 }
 
@@ -209,16 +163,16 @@ for(i=0;i<array.length;i++){
 console.log(newArray);
 table = document.getElementById("table");
 //Tabellen oprettes
-for(var i = 0; i < newArray.length; i++)
+for(i = 0; i < newArray.length; i++)
 {
    array[i].tourDate.value = 0;
 
 
-    var newRow = table.insertRow(table.length);
-    for(var j = 0; j < newArray[i].length; j++)
+    let newRow = table.insertRow(table.length);
+    for(j = 0; j < newArray[i].length; j++)
     {
 
-        var cell = newRow.insertCell(j);
+        let cell = newRow.insertCell(j);
 
 
         cell.innerHTML = newArray[i][j];
@@ -226,12 +180,12 @@ for(var i = 0; i < newArray.length; i++)
 }
 
 function deleteall(){
-    var allUsers = JSON.parse(localStorage.getItem("Users"));
-    var newUser= JSON.parse(localStorage.getItem("currentUser"));
+    let allUsers = JSON.parse(localStorage.getItem("Users"));
+    let newUser= JSON.parse(localStorage.getItem("currentUser"));
 
-    var buttons = document.getElementsByClassName('wow');
+    let buttons = document.getElementsByClassName('wow');
 
-    for(var i = 0; i < buttons.length; i++){
+    for(i = 0; i < buttons.length; i++){
         buttons[i].click();
 }
 
@@ -262,12 +216,12 @@ document.getElementById(i).addEventListener("click", function(){
 //Vi henter den nuværende bruger og hans brugernavn fra localStorage og tildeler dem variabler.
     let User= JSON.parse(localStorage.getItem("currentUser"));
     let Username = User.Username;
-    if (tours[hehe].currentParticipants ==tours[hehe].amountLimit){
+    if (tours[hehe].currentParticipants ===tours[hehe].amountLimit){
         alert("This tour is fully booked");
         return true
     }
     if (tours[hehe].participants.includes(Username)){
-        alert("You cannot book this tour twice")
+        alert("You cannot book this tour twice");
         return true
     }
 //Turen der har samme id som knappen, vil tilføje den nuværende brugers navn til parameteren participants.
@@ -294,10 +248,10 @@ document.getElementById(i).addEventListener("click", function(){
 
 }); }
 
-var arraytwo = JSON.parse(localStorage.getItem("tours"));
+let arraytwo = JSON.parse(localStorage.getItem("tours"));
 console.log(arraytwo[1].participants);
-console.log(JSON.parse(localStorage.getItem("currentUser")).Username)
-var arraytreee = []
+console.log(JSON.parse(localStorage.getItem("currentUser")).Username);
+let arraytreee = [];
 
 for(i=0;i<arraytwo.length;i++){
     if (arraytwo[i].participants.includes(JSON.parse(localStorage.getItem("currentUser")).Username)){
@@ -307,51 +261,40 @@ for(i=0;i<arraytwo.length;i++){
 
 localStorage.setItem("participatingtours",JSON.stringify(arraytreee));
 //Vi laver et tomt array til varaiblen newArray
-var newArray =[];
+let newArray5 =[];
 //Et loop opretters, der opretter et nyt array, hvis eneste forskel fra det gamle array er, at alle properties i klassen "Tours" bliver til numbers, så det kan bruges i det næste loop
 for(i=0;i< arraytreee.length;i++){
-    var info = [];
-    var newinfo = arraytreee[i].tourName;
-    info.push(newinfo);
-
-    var newinfo1 = arraytreee[i].tourInfo;
-    info.push(newinfo1);
-    var newinfo2 = arraytreee[i].tourDate;
-    info.push(newinfo2);
-    var newinfo3 = arraytreee[i].startTime;
-    info.push(newinfo3);
-    var newinfo4 = arraytreee[i].duration;
-    info.push(newinfo4);
-    var newinfo5 = arraytreee[i].meetingPoint;
-    info.push(newinfo5);
-    var newinfo6 = arraytreee[i].tourPrice;
-    info.push(newinfo6);
-    var newinfo7 = arraytreee[i].tourLocation;
-    info.push(newinfo7);
-    var newinfo8 = arraytreee[i].amountLimit;
-    info.push(newinfo8);
-    var bookbutton = "<button type='button' class='wow' id='hej "+i+"' >Delete!</button>";
-    info.push(bookbutton);
-    newArray.push(info);
+    let info = [];
+    info.push(arraytreee[i].tourName);
+    info.push(arraytreee[i].tourInfo);
+    info.push(arraytreee[i].tourDate);
+    info.push(arraytreee[i].startTime);
+    info.push(arraytreee[i].duration);
+    info.push(arraytreee[i].meetingPoint);
+    info.push(arraytreee[i].tourPrice);
+    info.push(arraytreee[i].tourLocation);
+    info.push(arraytreee[i].amountLimit);
+    info.push("<button type='button' class='wow' id='hej "+i+"' >Delete!</button>");
+    newArray5.push(info);
 }
 
 
-console.log(newArray);
+console.log(newArray5);
 table = document.getElementById("table2");
 //Tabellen oprettes
-for(var i = 0; i < newArray.length; i++)
+for(var i = 0; i < newArray5.length; i++)
 {
     array[i].tourDate.value = 0;
 
 
-    var newRow = table.insertRow(table.length);
-    for(var j = 0; j < newArray[i].length; j++)
+    let newRow = table.insertRow(table.length);
+    for(j = 0; j < newArray5[i].length; j++)
     {
 
-        var cell = newRow.insertCell(j);
+        let cell = newRow.insertCell(j);
 
 
-        cell.innerHTML = newArray[i][j];
+        cell.innerHTML = newArray5[i][j];
     }
 }
 
@@ -360,20 +303,20 @@ let tours4 = JSON.parse(localStorage.getItem("participatingtours"));
 for(i=0;i<tours4.length;i++){
     //Koden virker ikke, hvis vi ikke laver en variabel, der har værdien i
     let hehe = i;
-    arrayfive = JSON.parse(localStorage.getItem("tours"));
+    let arrayfive = JSON.parse(localStorage.getItem("tours"));
 //Henter id fra html side. Den første knap har id=0. Den anden knap har id=1 osv.
     document.getElementById("hej "+ i).addEventListener("click", function(){
 for(i=0;i<arrayfive.length;i++){
     if(tours4[hehe].tourName===arrayfive[i].tourName){
-        console.log(arrayfive[i].participants)
-        console.log(JSON.parse(localStorage.getItem("currentUser")).Username)
-       let  arrayseven = arrayfive[i].participants
-        let arrayeight = JSON.parse(localStorage.getItem("currentUser")).Username
-        console.log(arrayseven)
+        console.log(arrayfive[i].participants);
+        console.log(JSON.parse(localStorage.getItem("currentUser")).Username);
+       let  arrayseven = arrayfive[i].participants;
+        let arrayeight = JSON.parse(localStorage.getItem("currentUser")).Username;
+        console.log(arrayseven);
         let arraysix = arrayseven.replace(arrayeight,"");
-arrayfive[i].participants = arraysix
-        arrayfive[i].currentParticipants --
-        console.log(arraysix)
+arrayfive[i].participants = arraysix;
+        arrayfive[i].currentParticipants --;
+        console.log(arraysix);
         localStorage.setItem("tours",JSON.stringify(arrayfive));
 
     }

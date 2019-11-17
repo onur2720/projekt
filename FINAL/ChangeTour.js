@@ -1,99 +1,81 @@
 //Hurtige kommentarer da funktionen ikke er færdig"
 //Vi laver en variabel array, der henter den værdi fra nøglen "Tours" i local storage
-var array = JSON.parse(localStorage.getItem("currentTour"));
+let array = JSON.parse(localStorage.getItem("currentTour"));
 console.log(array);
 
 //Vi laver et tomt array til varaiblen newArray
-var newArray =[];
+let newArray =[];
 //Et loop opretters, der opretter et nyt array, hvis eneste forskel fra det gamle array er, at alle properties i klassen "Tours" bliver til numbers, så det kan bruges i det næste loop
 
-    var info = [];
+    let info = [];
     info.push("Tour name");
-    var newinfo = array.tourName;
-    info.push(newinfo);
-    var newinfo = "<input type=text id=0 value='"+array.tourName+"' >";
-    info.push(newinfo);
+    info.push(array.tourName);
+    info.push("<input type=text id=0 value='"+array.tourName+"' >");
     newArray.push(info);
 
-var info = [];
-info.push("Tour information");
-var newinfo = array.tourInfo;
-info.push(newinfo);
-var newinfo = "<input type=text id=1 value='"+array.tourInfo+"' >";
-info.push(newinfo);
-newArray.push(info);
+let info1 = [];
+info1.push("Tour information");
+info1.push(array.tourInfo);
+info1.push("<input type=text id=1 value='"+array.tourInfo+"' >");
+newArray.push(info1);
 
-var info = [];
-info.push("Total amount");
-var newinfo = array.amountLimit;
-info.push(newinfo);
-var newinfo = "<input type=text id=2 value='"+array.amountLimit+"' >";
-info.push(newinfo);
-newArray.push(info);
+let info2 = [];
+info2.push("Total amount");
+info2.push(array.amountLimit);
+info2.push("<input type=text id=2 value='"+array.amountLimit+"' >");
+newArray.push(info2);
 
-var info = [];
-info.push("Duration");
-var newinfo = array.duration;
-info.push(newinfo);
-var newinfo = "<input type=text id=3 value='"+array.duration+"' >";
-info.push(newinfo);
-newArray.push(info);
+let info3 = [];
+info3.push("Duration");
+info3.push(array.duration);
+info3.push("<input type=text id=3 value='"+array.meetingPoint+"' >");
+newArray.push(info3);
 
-var info = [];
-info.push("Meeting Point");
-var newinfo = array.meetingPoint;
-info.push(newinfo);
-var newinfo = "<input type=text id=4 value='"+array.meetingPoint+"' >";
-info.push(newinfo);
-newArray.push(info);
+let info4 = [];
+info4.push("Meeting Point");
+info4.push(array.meetingPoint);
+info4.push("<input type=text id=4 value='"+array.meetingPoint+"' >");
+newArray.push(info4);
 
-var info = [];
-info.push("Start Time");
-var newinfo = array.startTime;
-info.push(newinfo);
-var newinfo = "<input type=text id=5 value='"+array.startTime+"' >";
-info.push(newinfo);
-newArray.push(info);
+let info5 = [];
+info5.push("Start Time");
+info5.push(array.startTime);
+info5.push("<input type=text id=5 value='"+array.meetingPoint+"' >");
+newArray.push(info5);
 
-var info = [];
-info.push("Tour date");
-var newinfo = array.tourDate;
-info.push(newinfo);
-var newinfo = "<input type=text id=6 value='"+array.tourDate+"'>";
-info.push(newinfo);
-newArray.push(info);
+let info6 = [];
+info6.push("Tour date");
+info6.push(array.tourDate);
+info6.push("<input type=text id=6 value='"+array.meetingPoint+"' >");
+newArray.push(info6);
 
-var info = [];
-info.push("Location");
-var newinfo = array.tourLocation;
-info.push(newinfo);
-var newinfo = "<input type=text id=7 value='"+array.tourLocation+"'>";
-info.push(newinfo);
-newArray.push(info);
+let info7 = [];
+info7.push("Location");
+info7.push(array.tourLocation);
+info7.push("<input type=text id=7 value='"+array.meetingPoint+"' >");
+newArray.push(info7);
 
 
-var info = [];
-info.push("Price");
-var newinfo = array.tourPrice;
-info.push(newinfo);
-var newinfo = "<input type=text id=8 value='"+array.tourPrice+"'>";
-info.push(newinfo);
-newArray.push(info);
+let info8 = [];
+info8.push("Price");
+info8.push(array.tourPrice);
+info8.push("<input type=text id=8 value='"+array.meetingPoint+"' >");
+newArray.push(info8);
 
 
 console.log(newArray);
 table = document.getElementById("table");
 //Tabellen oprettes
-for(var i = 0; i < newArray.length; i++)
+for(i = 0; i < newArray.length; i++)
 {
     array.tourDate.value = 0;
 
 
-    var newRow = table.insertRow(table.length);
-    for(var j = 0; j < newArray[i].length; j++)
+    let newRow = table.insertRow(table.length);
+    for(j = 0; j < newArray[i].length; j++)
     {
 
-        var cell = newRow.insertCell(j);
+        let cell = newRow.insertCell(j);
 
 
         cell.innerHTML = newArray[i][j];
@@ -101,20 +83,20 @@ for(var i = 0; i < newArray.length; i++)
 }
 
 document.getElementById("dewit").addEventListener("click", function(){
-    var tourName = document.getElementById('0');
-    var tourInfo = document.getElementById('1');
-    var amountLimit = document.getElementById('2');
-    var duration = document.getElementById('3');
-    var meetingPoint = document.getElementById('4');
-    var startTime = document.getElementById('5');
-    var tourDate = document.getElementById('6');
-    var tourLocation = document.getElementById('7');
-    var tourPrice = document.getElementById('8');
+    let tourName = document.getElementById('0');
+    let tourInfo = document.getElementById('1');
+    let amountLimit = document.getElementById('2');
+    let duration = document.getElementById('3');
+    let meetingPoint = document.getElementById('4');
+    let startTime = document.getElementById('5');
+    let tourDate = document.getElementById('6');
+    let tourLocation = document.getElementById('7');
+    let tourPrice = document.getElementById('8');
 
 
 
-        var Tour = JSON.parse(localStorage.getItem("currentTour"));
-        var Tours = JSON.parse(localStorage.getItem("tours"));
+        let Tour = JSON.parse(localStorage.getItem("currentTour"));
+        let Tours = JSON.parse(localStorage.getItem("tours"));
         //To variabler skabes, der indeholder den nuværende bruger og alle brugere i local storage
         for (i = 0; i < Tours.length; i++) {
             if (Tour.tourName === Tours[i].tourName) {
@@ -132,8 +114,8 @@ document.getElementById("dewit").addEventListener("click", function(){
                 Tour.tourPrice = tourPrice.value;
                 console.log(Tour);
 
-console.log(Tour)
-Tours[i]=Tour
+console.log(Tour);
+Tours[i]=Tour;
 
                 //Begge steder vil brugeren få tildelt et nyt brugernavn, som blev skrevet ind
                 localStorage.setItem("currentTour", JSON.stringify(Tour));
