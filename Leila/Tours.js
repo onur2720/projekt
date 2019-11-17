@@ -1,5 +1,5 @@
 
-// LET - Vi opretter vores tour-object for at kunne kalde/benytte tours i vores booking system.
+// We use the constructor function which includes the object 'this'. 'this' is the substitute for the tour-values */
 
 class Tours {
     constructor(tourName, tourInfo, startTime, tourDate, duration, meetingPoint, tourPrice, tourLocation) {
@@ -13,8 +13,8 @@ class Tours {
         this.tourLocation = tourLocation;
 
     }
-// LT - Vi opretter HTML-kode i vores js for at oprette en 'table' for vores objecter.
-// LT - Vi har valgt at holde det på samme side, således at vi let kan finde tilbage til indholdet.
+// We create a table with createHTML()
+// The return statement stops the execution of the function and returns the values from the function Tours.
     createHTML()   {
         var bookbutton = "<button type='button' onclick=booking()>Book!</button>";
         var review = "<textarea type='text' rows='2' cols='10' id='review-tour' value='' placeholder='Review the tour here!'></textarea></br><button type='submit' style='cursor: pointer;'>Review</button>";
