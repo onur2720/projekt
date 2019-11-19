@@ -14,7 +14,7 @@ class Tours {
     }
 }
 
-// TRIN 2: Create tours, whcih is pre-defined tours  //
+// TRIN 2: Create tours, which is pre-defined tours  //
 let tour1 = new Tours("Old Copenhagen", "The old city", "2 HRS", "Christiansborg", "7 EUR", "Copenhagen");
 let tour2 = new Tours("Copenhagen Higlights", "The little Mermaid, Amalienborg and Nyhavn",   "1 HR", "Nyhavn", "5 EUR", "Copenhagen");
 let tour3 = new Tours("Rosenborg Castle and Royal Jewelry", "Museum", "2 HRS", "Nørreport St.", "10 EUR", "Copenhagen");

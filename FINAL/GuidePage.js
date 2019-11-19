@@ -43,6 +43,7 @@ function CreateTour() {
         //Hvis der er en key, der hedder Users i localstorage, bruges der JSON.parse, så værdien af Users, kan blive tildelt til allUsers
     }
     let tour = new Tours(tourName.value,tourInfo.value,tourDate.value,tourStartTime.value,tourDuration.value,tourMeetingPoint.value,tourPrice.value,tourLocation.value, amountLimit.value,"","", 0);
+
     for(i=0;i<oldTours.length;i++){
         if (tour.tourName===oldTours[i].tourName){
             alert("the tourname cannot be called the same as another tour");
@@ -50,6 +51,28 @@ function CreateTour() {
         }
     }
 
+    var alertMessage = "";
+    var alertBoolean = true;
+
+    // if statement which controls that the information required is filled correctly
+    if (tour.tourName=="") {
+        alertMessage += "Indtast tour name \n";
+        alertBoolean = false;
+    }
+
+    // if statement controls that the tour info is at least 30 characters
+    if (tour.tourInfo.length <="20") {
+        alertMessage +="Tour information skal mindst være 30 tegn \n";
+        alertBoolean = false;
+
+    }
+
+    // The boxes the guide has to fill out, is not filled correctly if the alertBoolean is false. This will set off the alertMessage.
+    // If the alertBoolean is true, everything is filled out correctly and  the tour will be created
+    if (alertBoolean === false) {
+        alert(alertMessage);
+        return true
+    }
 
     oldTours.push(tour);
     localStorage.setItem("tours",JSON.stringify(oldTours))
