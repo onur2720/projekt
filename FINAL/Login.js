@@ -17,6 +17,7 @@ class guide {
         this.guidePassword = guidePassword;
     }
 }
+//Der skabes tre nye objekter, der hedder guide1,guide2 og guide 3
 let guide1 = new guide("Peder","1");
 let guide2 = new guide("Onur","2");
 let guide3 = new guide("Leila","3");
@@ -145,7 +146,7 @@ let array = JSON.parse(localStorage.getItem("tours"));
 let newArray =[];
 //Et loop opretters, der opretter et nyt array, hvis eneste forskel fra det gamle array er, at alle properties i klassen "Tours" bliver til numbers, så det kan bruges i det næste loop
 for(i=0;i<array.length;i++){
-   let info = [];
+    let info = [];
     info.push(array[i].tourName);
     info.push(array[i].tourInfo);
     info.push(array[i].tourDate);
@@ -165,7 +166,7 @@ table = document.getElementById("table");
 //Tabellen oprettes
 for(i = 0; i < newArray.length; i++)
 {
-   array[i].tourDate.value = 0;
+    array[i].tourDate.value = 0;
 
 
     let newRow = table.insertRow(table.length);
@@ -187,7 +188,7 @@ function deleteall(){
 
     for(i = 0; i < buttons.length; i++){
         buttons[i].click();
-}
+    }
 
 
     for (i = 0; i < allUsers.length; i++) {
@@ -209,44 +210,44 @@ let tours = JSON.parse(localStorage.getItem("tours"));
 // Et loop skabes der kører den nedestående kode lige så mange gange som antal ture i tours
 for(i=0;i<tours.length;i++){
     //Koden virker ikke, hvis vi ikke laver en variabel, der har værdien i
-let hehe = i;
+    let hehe = i;
 //Henter id fra html side. Den første knap har id=0. Den anden knap har id=1 osv.
-document.getElementById(i).addEventListener("click", function(){
+    document.getElementById(i).addEventListener("click", function(){
 
 //Vi henter den nuværende bruger og hans brugernavn fra localStorage og tildeler dem variabler.
-    let User= JSON.parse(localStorage.getItem("currentUser"));
-    let Username = User.Username;
-    if (tours[hehe].currentParticipants ===tours[hehe].amountLimit){
-        alert("This tour is fully booked");
-        return true
-    }
-    if (tours[hehe].participants.includes(Username)){
-        alert("You cannot book this tour twice");
-        return true
-    }
-//Turen der har samme id som knappen, vil tilføje den nuværende brugers navn til parameteren participants.
-    tours[hehe].participants += " " + Username ;
-    tours[hehe].currentParticipants += 1;
-
-//Vi pusher det til localstorage, og overskriver den gamle "tours" key
-    localStorage.setItem("tours",JSON.stringify(tours));
-  //Turens navn bliver tilføjet til brugeres parameter: bookedTOurs
-    User.bookedTours += " " + tours[hehe].tourName;
-    localStorage.setItem("currentUser",JSON.stringify(User));
-    //Vi pusher det til localstorage, og overskriver den gamle "currentUser" key
-    let allUsers = JSON.parse(localStorage.getItem("Users"));
-    //samme loop som brugt før i koden. Sørger for at currentUsers værdier også tilføjes til "Users" i localstorage
-    for (i = 0; i < allUsers.length; i++) {
-        if (User.Username === allUsers[i].Username) {
-
-            allUsers[i].bookedTours = User.bookedTours;
-            localStorage.setItem("Users", JSON.stringify(allUsers));
-
+        let User= JSON.parse(localStorage.getItem("currentUser"));
+        let Username = User.Username;
+        if (tours[hehe].currentParticipants ===tours[hehe].amountLimit){
+            alert("This tour is fully booked");
             return true
         }
-    }
+        if (tours[hehe].participants.includes(Username)){
+            alert("You cannot book this tour twice");
+            return true
+        }
+//Turen der har samme id som knappen, vil tilføje den nuværende brugers navn til parameteren participants.
+        tours[hehe].participants += " " + Username ;
+        tours[hehe].currentParticipants += 1;
 
-}); }
+//Vi pusher det til localstorage, og overskriver den gamle "tours" key
+        localStorage.setItem("tours",JSON.stringify(tours));
+        //Turens navn bliver tilføjet til brugeres parameter: bookedTOurs
+        User.bookedTours += " " + tours[hehe].tourName;
+        localStorage.setItem("currentUser",JSON.stringify(User));
+        //Vi pusher det til localstorage, og overskriver den gamle "currentUser" key
+        let allUsers = JSON.parse(localStorage.getItem("Users"));
+        //samme loop som brugt før i koden. Sørger for at currentUsers værdier også tilføjes til "Users" i localstorage
+        for (i = 0; i < allUsers.length; i++) {
+            if (User.Username === allUsers[i].Username) {
+
+                allUsers[i].bookedTours = User.bookedTours;
+                localStorage.setItem("Users", JSON.stringify(allUsers));
+
+                return true
+            }
+        }
+
+    }); }
 
 let arraytwo = JSON.parse(localStorage.getItem("tours"));
 console.log(arraytwo[1].participants);
@@ -300,10 +301,10 @@ for(var i = 0; i < newArray5.length; i++)
 
 let tours4 = JSON.parse(localStorage.getItem("participatingtours"));
 // Et loop skabes der kører den nedestående kode lige så mange gange som antal ture i tours
-for(i=0;i<tours4.length;i++){
+for(let i=0;i<tours4.length;i++){
     //Koden virker ikke, hvis vi ikke laver en variabel, der har værdien i
     let hehe = i;
-    let arrayfive = JSON.parse(localStorage.getItem("tours"));
+    arrayfive = JSON.parse(localStorage.getItem("tours"));
 //Henter id fra html side. Den første knap har id=0. Den anden knap har id=1 osv.
     document.getElementById("hej "+ i).addEventListener("click", function(){
 for(i=0;i<arrayfive.length;i++){

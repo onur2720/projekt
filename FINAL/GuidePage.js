@@ -35,15 +35,15 @@ let tours;
 
 function CreateTour() {
     if (localStorage.getItem("tours") == null) {
-         oldTours = []
+        oldTours = []
         //Først bruges der "if", der tjekker om der IKKE er en key, som hedder "Users" i localstorage.
         //Hvis dette er true, vil funktion sætte et tomt array til variablen allUsers
     } else {
-         oldTours = JSON.parse(localStorage.getItem("tours"))
+        oldTours = JSON.parse(localStorage.getItem("tours"))
         //Hvis der er en key, der hedder Users i localstorage, bruges der JSON.parse, så værdien af Users, kan blive tildelt til allUsers
     }
     let tour = new Tours(tourName.value,tourInfo.value,tourDate.value,tourStartTime.value,tourDuration.value,tourMeetingPoint.value,tourPrice.value,tourLocation.value, amountLimit.value,"","", 0);
-    for(i=0;i<oldTours.length;i++){
+    for(let i=0;i<oldTours.length;i++){
         if (tour.tourName===oldTours[i].tourName){
             alert("the tourname cannot be called the same as another tour");
             return true
@@ -61,13 +61,13 @@ function deleteTour(){
     console.log(allTours);
     console.log(allTours.length);
     console.log(allTours[0].tourName);
-console.log(one.value);
-   for (i=0;i<allTours.length;i++){
-       if(allTours[i].tourName===one.value){
-           allTours.splice(i,1);
-           localStorage.setItem("tours",JSON.stringify(allTours))
-       }
-   }
+    console.log(one.value);
+    for (let i=0;i<allTours.length;i++){
+        if(allTours[i].tourName===one.value){
+            allTours.splice(i,1);
+            localStorage.setItem("tours",JSON.stringify(allTours))
+        }
+    }
 }
 
 //Hurtige kommentarer da funktionen ikke er færdig"
@@ -77,7 +77,7 @@ console.log(array);
 //Vi laver et tomt array til varaiblen newArray
 let newArray =[];
 //Et loop opretters, der opretter et nyt array, hvis eneste forskel fra det gamle array er, at alle properties i klassen "Tours" bliver til numbers, så det kan bruges i det næste loop
-for(i=0;i<array.length;i++){
+for(let i=0;i<array.length;i++){
     let info = [];
     info.push(array[i].tourName);
     info.push(array[i].tourInfo);
@@ -97,13 +97,13 @@ for(i=0;i<array.length;i++){
 console.log(newArray);
 table = document.getElementById("table");
 //Tabellen oprettes
-for(i = 0; i < newArray.length; i++)
+for(let i = 0; i < newArray.length; i++)
 {
     array[i].tourDate.value = 0;
 
 
     let newRow = table.insertRow(table.length);
-    for(j = 0; j < newArray[i].length; j++)
+    for(let j = 0; j < newArray[i].length; j++)
     {
 
         let cell = newRow.insertCell(j);
@@ -114,13 +114,13 @@ for(i = 0; i < newArray.length; i++)
 }
 let toursinfo = JSON.parse(localStorage.getItem("tours"));
 // Et loop skabes der kører den nedestående kode lige så mange gange som antal ture i tours
-for(i=0;i<toursinfo.length;i++){
+for(let i=0;i<toursinfo.length;i++){
     //Koden virker ikke, hvis vi ikke laver en variabel, der har værdien i
-    let hehe = i;
+
 //Henter id fra html side. Den første knap har id=0. Den anden knap har id=1 osv.
     document.getElementById(i).addEventListener("click", function(){
-        console.log(toursinfo[hehe]);
-        localStorage.setItem("currentTour",JSON.stringify(toursinfo[hehe]));
-       window.location.assign("changeTour.html")
+        console.log(toursinfo[i]);
+        localStorage.setItem("currentTour",JSON.stringify(toursinfo[i]));
+        window.location.assign("changeTour.html")
     })
 }
