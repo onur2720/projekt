@@ -1,16 +1,27 @@
+
 // Der hentes fra html-dokumentet de værdier, der står i feltet med ID: username og password. Disse værdier tildeles til to variabler, som hedder enteredUsername og enteredPassword
 let enteredUsername = document.getElementById('username');
 let enteredPassWord = document.getElementById('password');
+let checkUsername = document.getElementById('checkusername');
+let checkPassword = document.getElementById('checkpassword');
+let allUsers;
+//Når registration siden åbnes, vil objektet newUser automatisk bliver oprettet med tomme værdier
+let newUser = new User("","","");
+//VI bruger addEventListener til at tjekke efter, om registration knappen bliver trykket
+document.getElementById("registration").addEventListener("click", function(){
+    //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
+    newUser.Username = enteredUsername.value;
+    newUser.Password = enteredPassWord.value;
+    //Funktionen signUp i objektet newUser vil bliver kaldt på
+    newUser.signUp()
+});
 
-//En klasse oprettes, som hedder Users. Den kan indeholde tre properties:Username, Password og bookedTours
-class Users {
-    constructor(Username,Password,bookedTours){
-        this.Username = Username;
-        this.Password = Password;
-        this.bookedTours = bookedTours;
+document.getElementById("login").addEventListener("click", function(){
+    //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
 
-    }
-}
+    //Funktionen signUp i objektet newUser vil bliver kaldt på
+    newUser.login()
+});
 class guide {
     constructor(guideUsername,guidePassword) {
         this.guideUsername = guideUsername;
@@ -24,9 +35,9 @@ let guide3 = new guide("Leila","3");
 
 
 //Variablen allUsers oprettes, der skal bruges i den nedestående funcktion. Forløbligt er den ikke tildelt en værdi
-let allUsers;
+
 //Funktionen storeUser() bliver brugt, når der trykkes på knappen, der hedder "Sign Up" på login.html, som registrer en ny bruger
-function storeUser() {
+/*function storeUser() {
     if (localStorage.getItem("Users") == null) {
         allUsers = []
         //Først bruges der "if", der tjekker om der IKKE er en key, som hedder "Users" i localstorage.
@@ -58,11 +69,10 @@ function storeUser() {
         localStorage.setItem("Users", JSON.stringify(allUsers));
 
     }
-}
-let checkUsername = document.getElementById('checkusername');
-let checkPassword = document.getElementById('checkpassword');
+}*/
+
 //To variabler skabes, der tildeles værdierne fra de felter, hvor man skriver sit username og password for at logge ind
-function login() {
+/*function login() {
     allUsers = JSON.parse(localStorage.getItem("Users"));
     for (i = 0; i < allUsers.length; i++) {
         if (checkUsername.value === allUsers[i].Username && allUsers[i].Password===checkPassword.value) {
@@ -75,7 +85,7 @@ function login() {
     }
     //hvis der ikke er et match, kommer der en alert frem
     alert("Please enter your Username and Password correctly")
-}
+}*/
 let newUsername = document.getElementById('newusername');
 let newPassword = document.getElementById("newpassword");
 
@@ -307,18 +317,18 @@ for(let i=0;i<tours4.length;i++){
     arrayfive = JSON.parse(localStorage.getItem("tours"));
 //Henter id fra html side. Den første knap har id=0. Den anden knap har id=1 osv.
     document.getElementById("hej "+ i).addEventListener("click", function(){
-for(i=0;i<arrayfive.length;i++){
-    if(tours4[hehe].tourName===arrayfive[i].tourName){
-        console.log(arrayfive[i].participants);
-        console.log(JSON.parse(localStorage.getItem("currentUser")).Username);
-       let  arrayseven = arrayfive[i].participants;
-        let arrayeight = JSON.parse(localStorage.getItem("currentUser")).Username;
-        console.log(arrayseven);
-        let arraysix = arrayseven.replace(arrayeight,"");
-arrayfive[i].participants = arraysix;
-        arrayfive[i].currentParticipants --;
-        console.log(arraysix);
-        localStorage.setItem("tours",JSON.stringify(arrayfive));
+        for(i=0;i<arrayfive.length;i++){
+            if(tours4[hehe].tourName===arrayfive[i].tourName){
+                console.log(arrayfive[i].participants);
+                console.log(JSON.parse(localStorage.getItem("currentUser")).Username);
+                let  arrayseven = arrayfive[i].participants;
+                let arrayeight = JSON.parse(localStorage.getItem("currentUser")).Username;
+                console.log(arrayseven);
+                let arraysix = arrayseven.replace(arrayeight,"");
+                arrayfive[i].participants = arraysix;
+                arrayfive[i].currentParticipants --;
+                console.log(arraysix);
+                localStorage.setItem("tours",JSON.stringify(arrayfive));
 
-    }
-}})}
+            }
+        }})}
