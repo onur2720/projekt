@@ -16,9 +16,7 @@ class Tour {
 
     }
     createHTML()   {
-        var bookbutton = "<button type='button' onclick=booking()>Book!</button>";
-        var review = "<textarea type='text' rows='2' cols='10' id='review-tour' value='' placeholder='Review the tour here!'></textarea></br><button type='submit' style='cursor: pointer;'>Review</button>";
-        return "<tr><td>" + this.tourName + "</td><td>" + this.tourInfo+ "</td><td>" + this.tourDate + "</td><td>" + this.startTime + "</td><td>"+ this.duration + "</td><td>"+ this.tourPrice + "</td><td>" + bookbutton + "</td></td>" + review + "</td></td>";
+        return "<tr><td>" + this.tourName + "</td><td>" + this.tourInfo+ "</td><td>" + this.tourDate + "</td><td>" + this.startTime + "</td><td>"+ this.duration + "</td><td>"+ this.tourPrice + "</td><td>" + this.tourLocation+ "</td></td>" + this.amountLimit + "</td></td>"+ this.participants + "</td></td>";
 
-    }
+    };
 }

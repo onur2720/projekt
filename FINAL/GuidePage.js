@@ -82,17 +82,21 @@ function deleteTour(){
 //let toursinfo = JSON.parse(localStorage.getItem("tours"));
 
 console.log(toursinfo);
-/*
-* for (i =0; i < toursinfo.length, i++){
-*  toursinfo[i].createHTML
-* }
-* */
+/* ISABELLAS NOTES
+for (i =0; i < toursinfo.length, i++){
+toursinfo[i].createHTML
+}
+*/
+let newArray = [];
 
-
+/* VI VIL GERNE GØRE KODEN OBJECT-ORIENTERET FRA LINJE 95-117
 //Vi laver et tomt array til varaiblen newArray
+
 let newArray =[];
-//Et loop opretters, der opretter et nyt array, hvis eneste forskel fra det gamle array er, at alle properties i klassen "Tours" bliver til numbers, så det kan bruges i det næste loop
-for(i=0;i<toursinfo.length;i++){
+
+// Et loop opretters, der opretter et nyt array, hvis eneste forskel fra det gamle array er, at alle properties i klassen "Tours" bliver til numbers, så det kan bruges i det næste loop
+for(i=0;i<toursinfo.length;i++) {
+
     let info = [];
     info.push(toursinfo[i].tourName);
     info.push(toursinfo[i].tourInfo);
@@ -104,12 +108,13 @@ for(i=0;i<toursinfo.length;i++){
     info.push(toursinfo[i].tourLocation);
     info.push(toursinfo[i].amountLimit);
     info.push(toursinfo[i].participants);
-    info.push("<button type='button' id='"+i+"' >Click to change information of the tour!</button>");
-    newArray.push(info);
-   // newArray.push(toursinfo)
-    console.log(info)
-}
+    info.push("<button type='button' id='" + i + "' >Click to change information of the tour!</button>");
 
+    newArray.push(info);
+    // newArray.push(toursinfo)
+    console.log(info);
+}
+*/
 
 
 console.log(newArray);
