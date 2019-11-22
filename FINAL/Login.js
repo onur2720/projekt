@@ -188,7 +188,7 @@ function deleteall(){
     let allUsers = JSON.parse(localStorage.getItem("Users"));
     let newUser= JSON.parse(localStorage.getItem("currentUser"));
 
-    let buttons = document.getElementsByClassName('wow');
+    let buttons = document.getElementsByClassName('deletebuttons');
 
     for(i = 0; i < buttons.length; i++){
         buttons[i].click();

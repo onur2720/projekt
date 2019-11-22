@@ -96,7 +96,7 @@ class User {
 
     bookTour() {
 
-        alert("hej");
+
         console.log(tour);
 //Vi henter den nuværende bruger og hans brugernavn fra localStorage og tildeler dem variabler.
         let User = JSON.parse(localStorage.getItem("currentUser"));
@@ -128,7 +128,7 @@ class User {
 
                         allUsers[i].bookedTours = User.bookedTours;
                         localStorage.setItem("Users", JSON.stringify(allUsers));
-
+                      alert("Du har nu booket en tur");
                         return true
                     }
                 }
@@ -137,4 +137,27 @@ class User {
 
         }
     }
-}
+    deleteTour(){
+        let allUsers = JSON.parse(localStorage.getItem("Users"));
+        let newUser= JSON.parse(localStorage.getItem("currentUser"));
+        let buttons = document.getElementsByClassName('deletebuttons');
+
+        for(i = 0; i < buttons.length; i++){
+
+            buttons[i].click();
+        }
+
+        for (i = 0; i < allUsers.length; i++) {
+            if (newUser.Username === allUsers[i].Username) {
+                localStorage.removeItem("currentUser");
+                allUsers.splice(i,1);
+                localStorage.setItem("Users", JSON.stringify(allUsers));
+                alert("You have now deleted your account");
+
+                window.location.assign("login.html");
+                return true
+            }
+        }
+
+    }
+    }

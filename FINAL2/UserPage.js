@@ -12,7 +12,11 @@ document.getElementById("changepassword").addEventListener("click", function(){
     //Funktionen signUp i objektet newUser vil bliver kaldt på
     newUser.setnewPassword()
 });
-
+document.getElementById("deleteaccount").addEventListener("click", function(){
+    //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
+    //Funktionen signUp i objektet newUser vil bliver kaldt på
+    newUser.deleteTour()
+});
 //Vi laver en variabel array, der henter den værdi fra nøglen "Tours" i local storage
 let array = JSON.parse(localStorage.getItem("tours"));
 
@@ -121,7 +125,7 @@ for(i=0;i< arraytreee.length;i++){
     info.push(arraytreee[i].tourPrice);
     info.push(arraytreee[i].tourLocation);
     info.push(arraytreee[i].amountLimit);
-    info.push("<button type='button' class='wow' id='hej "+i+"' >Delete!</button>");
+    info.push("<button type='button' class='deletebuttons' id='hej "+i+"' >Delete!</button>");
     newArray5.push(info);
 }
 
