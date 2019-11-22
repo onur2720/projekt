@@ -6,7 +6,7 @@ let checkUsername = document.getElementById('checkusername');
 let checkPassword = document.getElementById('checkpassword');
 let allUsers;
 //Når registration siden åbnes, vil objektet newUser automatisk bliver oprettet med tomme værdier
-let newUser = new User("","","");
+var newUser = new User("","", "");
 //VI bruger addEventListener til at tjekke efter, om registration knappen bliver trykket
 document.getElementById("registration").addEventListener("click", function(){
     //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne

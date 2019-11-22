@@ -78,4 +78,63 @@ class User {
 
         }
     }
+
+    setnewPassword() {
+        let oldaccount = JSON.parse(localStorage.getItem("currentUser"));
+        let allUsers = JSON.parse(localStorage.getItem("Users"));
+        for (i = 0; i < allUsers.length; i++) {
+            if (oldaccount.Username === allUsers[i].Username) {
+                oldaccount.Password = newPassword.value;
+                allUsers[i].Password = newPassword.value;
+                localStorage.setItem("currentUser", JSON.stringify(oldaccount));
+                localStorage.setItem("Users", JSON.stringify(allUsers));
+                alert("You have now changed your Password");
+                return true
+            }
+        }
+    }
+
+    bookTour() {
+
+        alert("hej");
+        console.log(tour);
+//Vi henter den nuværende bruger og hans brugernavn fra localStorage og tildeler dem variabler.
+        let User = JSON.parse(localStorage.getItem("currentUser"));
+
+        if (tour.currentParticipants === tour.amountLimit) {
+            alert("This tour is fully booked");
+            return true
+        }
+        if (tour.participants.includes(User.Username)) {
+            alert("You cannot book this tour twice");
+            return true
+        }
+//Turen der har samme id som knappen, vil tilføje den nuværende brugers navn til parameteren participants.
+        for (i = 0; i < tours.length; i++) {
+            if (tour.tourName === tours[i].tourName) {
+                tours[i].participants += " " + User.Username;
+                tours[i].currentParticipants += 1;
+
+//Vi pusher det til localstorage, og overskriver den gamle "tours" key
+                localStorage.setItem("tours", JSON.stringify(tours));
+//Turens navn bliver tilføjet til brugeres parameter: bookedTOurs
+                User.bookedTours += " " + tour.tourName;
+                localStorage.setItem("currentUser", JSON.stringify(User));
+//Vi pusher det til localstorage, og overskriver den gamle "currentUser" key
+                let allUsers = JSON.parse(localStorage.getItem("Users"));
+//samme loop som brugt før i koden. Sørger for at currentUsers værdier også tilføjes til "Users" i localstorage
+                for (i = 0; i < allUsers.length; i++) {
+                    if (User.Username === allUsers[i].Username) {
+
+                        allUsers[i].bookedTours = User.bookedTours;
+                        localStorage.setItem("Users", JSON.stringify(allUsers));
+
+                        return true
+                    }
+                }
+
+            }
+
+        }
+    }
 }
