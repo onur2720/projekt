@@ -151,25 +151,24 @@ class User {
     deleteAccount() {
         let allUsers = JSON.parse(localStorage.getItem("Users"));
         let newUser = JSON.parse(localStorage.getItem("currentUser"));
-        let buttons = document.getElementsByClassName('deletebuttons');
 
-        for (i = 0; i < buttons.length; i++) {
 
-            buttons[i].click();
-        }
+        if (participatingTours.length > 0) {
+            alert("Please cancel all your tours first")
+        } else {
+            for (i = 0; i < allUsers.length; i++) {
+                if (newUser.Username === allUsers[i].Username) {
+                    localStorage.removeItem("currentUser");
+                    allUsers.splice(i, 1);
+                    localStorage.setItem("Users", JSON.stringify(allUsers));
+                    alert("You have now deleted your account");
 
-        for (i = 0; i < allUsers.length; i++) {
-            if (newUser.Username === allUsers[i].Username) {
-                localStorage.removeItem("currentUser");
-                allUsers.splice(i, 1);
-                localStorage.setItem("Users", JSON.stringify(allUsers));
-                alert("You have now deleted your account");
-
-                window.location.assign("login.html");
-                return true
+                    window.location.assign("login.html");
+                    return true
+                }
             }
-        }
 
+        }
     }
 
     deleteBookedTour() {
@@ -179,7 +178,7 @@ class User {
                 let  participants = tours[i].participants;
                 let username = JSON.parse(localStorage.getItem("currentUser")).Username;
                 console.log(participants);
-                tours[i].participants = participants.replace(username,"")
+                tours[i].participants = participants.replace(username,"");
                 tours[i].currentParticipants --;
                 localStorage.setItem("tours",JSON.stringify(tours));
                 alert("You have now cancelled the tour");
