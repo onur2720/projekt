@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guide Page</title>
+</head>
+<body>
+<div class="container">
+    <h1>Create your tour</h1>
+    <form id="create-tour">
+        <input id="tour-name" type="text" placeholder="Tourname" autocomplete="new-tourname" value=""/>
+        <br>
+        <input id="tour-info" type="text" placeholder="Tour description" autocomplete="new-tourinformation" value=""/>
+        <br>
+        <input id="tour-date" type="text" placeholder="Tour date" autocomplete="new-date" value=""/>
+        <br>
+        <input id="start-time" type="text" placeholder="Start time of tour" autocomplete="new-starttime" value=""/>
+        <br>
+        <input id="tour-duration" type="text" placeholder="Duration of tour" autocomplete="new-duration" value=""/>
+        <br>
+        <input id="meetingpoint" type="text" placeholder="Meetingpoint" autocomplete="new-meetingpoint" value=""/>
+        <br>
+        <input id="tour-price" type="text" placeholder="Price of tour" autocomplete="new-price" value=""/>
+        <br>
+
+        <input id="tour-location" type="text" placeholder="Location" autocomplete="new-location" value=""/>
+        <br>
+        <input id="limit" type="text" placeholder="Amount Limit" autocomplete="new-location" value=""/>
+        <br>
+        <input id="create_tour" type="button" value="Create" />
+        <br>
+<p>Here you can delete your tour</p>
+        <input id="delete_name" type="text" placeholder="Name of the tour you want to delete" value=""/>
+        <input id="delete_tour" type="button" value="Delete"/>
+        <!-- The elements above is taken from the class/object "Tours"
+          this.tourName
+          this.tourInfo
+          this.tourDate
+          this.duration = duration;
+          this.meetingPoint = meetingPoint;
+          this.tourPrice = tourPrice; -->
+    </form>
+</div>
+
+</div>
+<p> Alle ture </p>
+<table id="table" border="1">
+    <!-- The Row Number 0 -->
+    <tr>
+        <th>Tour Name</th>
+        <th>Tour Info</th>
+        <th>Tour Date</th>
+        <th>Start Time</th>
+        <th>Duration</th>
+        <th>Meeting Point</th>
+        <th>Tour price</th>
+        <th>Tour location</th>
+        <th>Limit on participants</th>
+        <th>Participants</th>
+        <th>Click to change information!</th>
+    </tr>
+
+</table>
+</body>
+<script src="Tour_Class.js"></script>
+<script src="GuidePage.js"></script>
+</html>

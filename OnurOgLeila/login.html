@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUp_and_Login</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<ul>
+    <li><a href="../../Voreswebsite.html">Home</a></li>
+    <li style="float:right;"><a class="active" href=login.html">Sign up and login</a></li>
+</ul>
+
+
+<div class="content">
+
+    <h1>Sign up</h1>
+    <p>Here you can make an account.</p>
+    <form id="signup_form">
+        <input id="username" type="text" placeholder="Username"  value=""/>
+        <br>
+        <input id="password" type="password" placeholder="Password"  value=""/>
+        <br>
+        <input id="registration" type="button" value="Register"/>
+        <br>
+    </form>
+
+    <br>
+
+    <h1>Login</h1>
+    <p>If you have made an account, you can sign in here.</p>
+    <input id="checkusername" type="text" placeholder="Username"  value=""/>
+    <br>
+    <input id="checkpassword" type="password" placeholder="Password" value=""/>
+    <br>
+    <input id="login" type="button" value="Login"/>
+
+    <br>
+
+    <h1>Guide Login</h1>
+    <p> If you are a guide, you can sign in here </p>
+    <form id="guidelogin-form">
+        <input id="enteredGuideName" type="text" placeholder="Username"  value=""/> <br>
+        <input id="enteredGuidePass" type="password" placeholder="Password"  value=""/> <br>
+        <input id="guideLoginbutton" type="button" value="Login" />
+    </form>
+</div>
+<script src="Guide_Class.js"></script>
+<script src="User_Class.js"></script>
+<script src="Login.js"> </script>
+
+</body>
+</html>
