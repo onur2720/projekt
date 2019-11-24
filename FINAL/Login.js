@@ -1,16 +1,54 @@
-// Der hentes fra html-dokumentet de værdier, der står i feltet med ID: username og password. Disse værdier tildeles til to variabler, som hedder enteredUsername og enteredPassword
-let enteredUsername = document.getElementById('username');
-let enteredPassWord = document.getElementById('password');
-
-//En klasse oprettes, som hedder Users. Den kan indeholde tre properties:Username, Password og bookedTours
-class Users {
-    constructor(Username,Password,bookedTours){
+//En klasse oprettes, som hedder Users. Den kan indeholde tre properties: Username, Password og bookedTours og en method signUp()
+class User {
+    constructor(Username, Password, bookedTours) {
         this.Username = Username;
         this.Password = Password;
         this.bookedTours = bookedTours;
-
+    }
+    signUp() {
+        newUser.Username = enteredUsername.value;
+        newUser.Password = enteredPassWord.value;
+        //Hvis der ikke er en værdi i nøglen "Users" i localstorage, vil allUsers blive et tomt array
+        if (localStorage.getItem("Users") == null) {
+            allUsers = [];
+            //Vi tilføjer newUser ind som den første værdi i arrayet allUsers
+            allUsers.push(newUser);
+            localStorage.setItem("Users", JSON.stringify(allUsers))
+            //En alert oprettes, der består af to strings, som aldrig ændrer sig, og det indtastede brugernavn
+            alert("Hej " + enteredUsername.value + ". Du har nu oprettet en bruger");
+            //Værdien af allUsers bliver tilføjet til localStorage, og får nøglen "Users"
+        } else {
+            //Arrayet allUsers får værdien, der har nøglen "Users" i localStorage
+            allUsers = JSON.parse(localStorage.getItem("Users"));
+            //Et loop laves, der tjekker alle brugere, om det nye brugernavn matcher deres. Hvis det er true, vil der komme en warning og funktionen stopped med return true
+            for (i = 0; i < allUsers.length; i++) {
+                if (enteredUsername.value === allUsers[i].Username) {
+                    alert("Username already exists");
+                    return true
+                }
+            }
+            //Den nye bruger bliver skubbet til arrayet
+            allUsers.push(newUser);
+            //Den opdateret array med den nye bruger bliver tilføjet til localstorage og sletter den gamle værdi, der havde nøglen "Users"
+            localStorage.setItem("Users", JSON.stringify(allUsers));
+            //En alert oprettes, der består af to strings, som aldrig ændrer sig, og det indtastede brugernavn
+            alert("Hej " + enteredUsername.value + ". Du har nu oprettet en bruger");
+        }
     }
 }
+// Der hentes fra html-dokumentet de værdier, der står i feltet med ID: username og password. Disse værdier tildeles til to variabler, som hedder enteredUsername og enteredPassword
+let enteredUsername = document.getElementById('username');
+let enteredPassWord = document.getElementById('password');
+//Når registration siden åbnes, vil objektet newUser automatisk bliver oprettet med tomme værdier
+let newUser = new User("","","");
+//VI bruger addEventListener til at tjekke efter, om registration knappen bliver trykket
+document.getElementById("registration").addEventListener("click", function(){
+    //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
+    newUser.Username = enteredUsername.value;
+    newUser.Password = enteredPassWord.value;
+    //Funktionen signUp i objektet newUser vil bliver kaldt på
+    newUser.signUp()
+});
 class guide {
     constructor(guideUsername,guidePassword) {
         this.guideUsername = guideUsername;
@@ -24,41 +62,7 @@ let guide3 = new guide("Leila","3");
 
 
 //Variablen allUsers oprettes, der skal bruges i den nedestående funcktion. Forløbligt er den ikke tildelt en værdi
-let allUsers;
-//Funktionen storeUser() bliver brugt, når der trykkes på knappen, der hedder "Sign Up" på login.html, som registrer en ny bruger
-function storeUser() {
-    if (localStorage.getItem("Users") == null) {
-        allUsers = []
-        //Først bruges der "if", der tjekker om der IKKE er en key, som hedder "Users" i localstorage.
-        //Hvis dette er true, vil funktion sætte et tomt array til variablen allUsers
-    } else {
-        allUsers = JSON.parse(localStorage.getItem("Users"))
-        //Hvis der er en key, der hedder Users i localstorage, bruges der JSON.parse, så værdien af Users i localstorage, kan blive tildelt til variablen allUsers
-    }
-// if benyttes for at tjekke at allUsers.length===0, altså om arrayet er tomt.
-    if (allUsers.length === 0) {
-        let User = new Users(enteredUsername.value, enteredPassWord.value, "");
-        //Variablen User opretters, der bruger klassen Users, hvor Username er værdien af enteredUsername og  Password er værdien af enteredPassWord.
-        allUsers.push(User);
-        //User bliver pushet til arrayet allUsers
-        localStorage.setItem("Users", JSON.stringify(allUsers));
-        //LocalStorage.setItem bruges til at at sætte værdien af allUsers til the key Users i localstorage ved hjælp af JSON.stringify. Det betyder, at den første bruger bliver oprettet i localStorage
-    } else {
-        //Hvis allUsers.length er 1 eller højere, altså at der er værdier i arrayet, vil funktionen lave et loop, der tjekker alle værdierne i arrayet
-        for (i = 0; i < allUsers.length; i++) {
-            if (enteredUsername.value === allUsers[i].Username) {
-                alert("Username already exists");
-                return true
-                //Hvis den værdi, der blev indtastet i HTML-siden til at være et nye brugernavn, er det samme som et af de brugernavner i arrayet, vil der komme en alert, og bagefter afslutte funktionen
-            }
-        }
-        //Hvis brugernavnet ikke er brugt før, fortsætter funktionen, og en opdateret array med den nye bruger bliver sat til nøglen Users i localstorage. Den slette altså den tidligere key "Users", der havde det gamle arrray
-        let User = new Users(enteredUsername.value, enteredPassWord.value, "");
-        allUsers.push(User);
-        localStorage.setItem("Users", JSON.stringify(allUsers));
 
-    }
-}
 let checkUsername = document.getElementById('checkusername');
 let checkPassword = document.getElementById('checkpassword');
 //To variabler skabes, der tildeles værdierne fra de felter, hvor man skriver sit username og password for at logge ind
@@ -184,11 +188,6 @@ function deleteall(){
     let allUsers = JSON.parse(localStorage.getItem("Users"));
     let newUser= JSON.parse(localStorage.getItem("currentUser"));
 
-    let buttons = document.getElementsByClassName('wow');
-
-    for(i = 0; i < buttons.length; i++){
-        buttons[i].click();
-    }
 
 
     for (i = 0; i < allUsers.length; i++) {
