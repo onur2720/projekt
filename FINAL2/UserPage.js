@@ -1,6 +1,7 @@
 let newUsername = document.getElementById('newusername');
 let newPassword = document.getElementById("newpassword");
 let newUser = JSON.parse(localStorage.getItem("currentUser"));
+var tours =  JSON.parse(localStorage.getItem("tours"));
 newUser = new User("","","");
 document.getElementById("changeusername").addEventListener("click", function(){
     //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
@@ -15,76 +16,52 @@ document.getElementById("changepassword").addEventListener("click", function(){
 document.getElementById("deleteaccount").addEventListener("click", function(){
     //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
     //Funktionen signUp i objektet newUser vil bliver kaldt på
-    newUser.deleteTour()
+    newUser.deleteAccount()
 });
 //Vi laver en variabel array, der henter den værdi fra nøglen "Tours" i local storage
-let array = JSON.parse(localStorage.getItem("tours"));
+
 
 //Vi laver et tomt array til varaiblen newArray
-let newArray =[];
+let tableArray =[];
 //Et loop opretters, der opretter et nyt array, hvis eneste forskel fra det gamle array er, at alle properties i klassen "Tours" bliver til numbers, så det kan bruges i det næste loop
-for(i=0;i<array.length;i++){
+for(i=0;i<tours.length;i++){
     let info = [];
-    info.push(array[i].tourName);
-    info.push(array[i].tourInfo);
-    info.push(array[i].tourDate);
-    info.push(array[i].startTime);
-    info.push(array[i].duration);
-    info.push(array[i].meetingPoint);
-    info.push(array[i].tourPrice);
-    info.push(array[i].tourLocation);
-    info.push(array[i].amountLimit);
+    info.push(tours[i].tourName);
+    info.push(tours[i].tourInfo);
+    info.push(tours[i].tourDate);
+    info.push(tours[i].startTime);
+    info.push(tours[i].duration);
+    info.push(tours[i].meetingPoint);
+    info.push(tours[i].tourPrice);
+    info.push(tours[i].tourLocation);
+    info.push(tours[i].amountLimit);
     info.push("<button type='button' id='"+i+"' >Book!</button>");
-    newArray.push(info);
+    tableArray.push(info);
 }
 
 
-console.log(newArray);
+console.log(tableArray);
 table = document.getElementById("table");
 //Tabellen oprettes
-for(i = 0; i < newArray.length; i++)
+for(i = 0; i < tableArray.length; i++)
 {
-    array[i].tourDate.value = 0;
+    tours[i].tourDate.value = 0;
 
 
     let newRow = table.insertRow(table.length);
-    for(j = 0; j < newArray[i].length; j++)
+    for(j = 0; j < tableArray[i].length; j++)
     {
 
         let cell = newRow.insertCell(j);
 
 
-        cell.innerHTML = newArray[i][j];
+        cell.innerHTML = tableArray[i][j];
     }
 }
 
-function deleteall(){
-    let allUsers = JSON.parse(localStorage.getItem("Users"));
-    let newUser= JSON.parse(localStorage.getItem("currentUser"));
 
-    let buttons = document.getElementsByClassName('wow');
-
-    for(i = 0; i < buttons.length; i++){
-        buttons[i].click();
-    }
-
-
-    for (i = 0; i < allUsers.length; i++) {
-        if (newUser.Username === allUsers[i].Username) {
-            localStorage.removeItem("currentUser");
-            allUsers.splice(i,1);
-            localStorage.setItem("Users", JSON.stringify(allUsers));
-            alert("You have now deleted your account");
-
-            window.location.assign("login.html");
-            return true
-        }
-    }
-
-}
 //Hurtige kommentarer til Henrik
 //Variablen tours skabes, der henter værdien fra localstorage, der blev tildelt nøglen "tours"
-var tours =  JSON.parse(localStorage.getItem("tours"));
 var tour;
 // Et loop skabes der kører den nedestående kode lige så mange gange som antal ture i tours
 for(i=0;i<tours.length;i++) {
@@ -99,76 +76,64 @@ for(i=0;i<tours.length;i++) {
         });
     }
 
-    let arraytwo = JSON.parse(localStorage.getItem("tours"));
 
-    let arraytreee = [];
 
-    for (i = 0; i < arraytwo.length; i++) {
-        if (arraytwo[i].participants.includes(JSON.parse(localStorage.getItem("currentUser")).Username)) {
-            arraytreee.push(arraytwo[i])
+    let bookedTableArray = [];
+
+    for (i = 0; i < tours.length; i++) {
+        if (tours[i].participants.includes(JSON.parse(localStorage.getItem("currentUser")).Username)) {
+            bookedTableArray.push(tours[i])
         }
     }
 
 
-localStorage.setItem("participatingtours",JSON.stringify(arraytreee));
+localStorage.setItem("participatingtours",JSON.stringify(bookedTableArray));
 //Vi laver et tomt array til varaiblen newArray
-let newArray5 =[];
+let bookedTours =[];
 //Et loop opretters, der opretter et nyt array, hvis eneste forskel fra det gamle array er, at alle properties i klassen "Tours" bliver til numbers, så det kan bruges i det næste loop
-for(i=0;i< arraytreee.length;i++){
+for(i=0;i< bookedTableArray.length;i++){
     let info = [];
-    info.push(arraytreee[i].tourName);
-    info.push(arraytreee[i].tourInfo);
-    info.push(arraytreee[i].tourDate);
-    info.push(arraytreee[i].startTime);
-    info.push(arraytreee[i].duration);
-    info.push(arraytreee[i].meetingPoint);
-    info.push(arraytreee[i].tourPrice);
-    info.push(arraytreee[i].tourLocation);
-    info.push(arraytreee[i].amountLimit);
-    info.push("<button type='button' class='deletebuttons' id='hej "+i+"' >Delete!</button>");
-    newArray5.push(info);
+    info.push(bookedTableArray[i].tourName);
+    info.push(bookedTableArray[i].tourInfo);
+    info.push(bookedTableArray[i].tourDate);
+    info.push(bookedTableArray[i].startTime);
+    info.push(bookedTableArray[i].duration);
+    info.push(bookedTableArray[i].meetingPoint);
+    info.push(bookedTableArray[i].tourPrice);
+    info.push(bookedTableArray[i].tourLocation);
+    info.push(bookedTableArray[i].amountLimit);
+    info.push("<button type='button' class='deletebuttons' id='delete "+i+"' >Delete!</button>");
+    bookedTours.push(info);
 }
 
 
-console.log(newArray5);
+console.log(bookedTours);
 table = document.getElementById("table2");
 //Tabellen oprettes
-for(var i = 0; i < newArray5.length; i++)
+for(var i = 0; i < bookedTours.length; i++)
 {
-    array[i].tourDate.value = 0;
+    bookedTableArray[i].tourDate.value = 0;
 
 
     let newRow = table.insertRow(table.length);
-    for(j = 0; j < newArray5[i].length; j++)
+    for(j = 0; j < bookedTours[i].length; j++)
     {
 
         let cell = newRow.insertCell(j);
 
 
-        cell.innerHTML = newArray5[i][j];
+        cell.innerHTML = bookedTours[i][j];
     }
 }
 
-let tours4 = JSON.parse(localStorage.getItem("participatingtours"));
+let participatingTours = JSON.parse(localStorage.getItem("participatingtours"));
 // Et loop skabes der kører den nedestående kode lige så mange gange som antal ture i tours
-for(let i=0;i<tours4.length;i++){
+for(let i=0;i<participatingTours.length;i++){
     //Koden virker ikke, hvis vi ikke laver en variabel, der har værdien i
-    let hehe = i;
-    arrayfive = JSON.parse(localStorage.getItem("tours"));
-//Henter id fra html side. Den første knap har id=0. Den anden knap har id=1 osv.
-    document.getElementById("hej "+ i).addEventListener("click", function(){
-        for(i=0;i<arrayfive.length;i++){
-            if(tours4[hehe].tourName===arrayfive[i].tourName){
-                console.log(arrayfive[i].participants);
-                console.log(JSON.parse(localStorage.getItem("currentUser")).Username);
-                let  arrayseven = arrayfive[i].participants;
-                let arrayeight = JSON.parse(localStorage.getItem("currentUser")).Username;
-                console.log(arrayseven);
-                let arraysix = arrayseven.replace(arrayeight,"");
-                arrayfive[i].participants = arraysix;
-                arrayfive[i].currentParticipants --;
-                console.log(arraysix);
-                localStorage.setItem("tours",JSON.stringify(arrayfive));
+    var counter = i;
 
-            }
-        }})}
+//Henter id fra html side. Den første knap har id=0. Den anden knap har id=1 osv.
+    document.getElementById("delete "+ i).addEventListener("click", function() {
+    newUser.deleteBookedTour()}
+    )}
+

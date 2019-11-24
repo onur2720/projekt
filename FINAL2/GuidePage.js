@@ -11,29 +11,25 @@ let tourLocation = document.getElementById('tour-location');
 let amountLimit = document.getElementById("limit");
 
 
-// TRIN 2: Vi laver en klasse, der indeholder værdierne se i Tours.js
-class Tours {
-    constructor(tourName, tourInfo, startTime, tourDate, duration, meetingPoint, tourPrice, tourLocation, amountLimit, participants, reviews, currentParticipants) {
-        this.tourName = tourName;
-        this.tourInfo = tourInfo;
-        this.tourDate = tourDate;
-        this.startTime = startTime;
-        this.duration = duration;
-        this.meetingPoint = meetingPoint;
-        this.tourPrice = tourPrice;
-        this.tourLocation = tourLocation;
-        this.amountLimit = amountLimit;
-        this.participants  = participants;
-        this.reviews = reviews;
-        this.currentParticipants = currentParticipants;
+var newTour = new Tour("","", "","","","","","","", "", "",0);
+document.getElementById("create_tour").addEventListener("click", function(){
+    //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
+    newTour.tourName = tourName.value;
+    newTour.tourInfo = tourInfo.value;
+    newTour.tourDate = tourDate.value;
+    newTour.startTime = tourStartTime.value;
+    newTour.meetingPoint = tourMeetingPoint.value;
+    newTour.tourPrice = tourPrice.value;
+    newTour.tourLocation = tourLocation.value;
+    newTour.amountLimit = amountLimit.value;
+    //Funktionen signUp i objektet newUser vil bliver kaldt på
+    newTour.createTour()
+});
 
-    }
-}
-
-
-let tours;
-
-function CreateTour() {
+document.getElementById("delete_tour").addEventListener("click",function(){
+    newTour.deleteTour()
+})
+/*function CreateTour() {
     if (localStorage.getItem("tours") == null) {
         oldTours = []
         //Først bruges der "if", der tjekker om der IKKE er en key, som hedder "Users" i localstorage.
@@ -53,7 +49,7 @@ function CreateTour() {
 
     oldTours.push(tour);
     localStorage.setItem("tours",JSON.stringify(oldTours))
-}
+}*/
 // TRIN 3: Vi tildeler de værdier vi har fået til HTML dokumentet til en klasse.
 function deleteTour(){
     let allTours = JSON.parse(localStorage.getItem("tours"));
@@ -119,7 +115,6 @@ for(let i=0;i<toursinfo.length;i++){
 
 //Henter id fra html side. Den første knap har id=0. Den anden knap har id=1 osv.
     document.getElementById(i).addEventListener("click", function(){
-        console.log(toursinfo[i]);
         localStorage.setItem("currentTour",JSON.stringify(toursinfo[i]));
         window.location.assign("changeTour.html")
     })

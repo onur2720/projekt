@@ -14,7 +14,7 @@ class User {
             allUsers = [];
             //Vi tilføjer newUser ind som den første værdi i arrayet allUsers
             allUsers.push(newUser);
-            localStorage.setItem("Users", JSON.stringify(allUsers))
+            localStorage.setItem("Users", JSON.stringify(allUsers));
             //En alert oprettes, der består af to strings, som aldrig ændrer sig, og det indtastede brugernavn
             alert("Hej " + enteredUsername.value + ". Du har nu oprettet en bruger");
             //Værdien af allUsers bliver tilføjet til localStorage, og får nøglen "Users"
@@ -22,7 +22,7 @@ class User {
             //Arrayet allUsers får værdien, der har nøglen "Users" i localStorage
             allUsers = JSON.parse(localStorage.getItem("Users"));
             //Et loop laves, der tjekker alle brugere, om det nye brugernavn matcher deres. Hvis det er true, vil der komme en warning og funktionen stopped med return true
-            for (i = 0; i < allUsers.length; i++) {
+            for (var i = 0; i < allUsers.length; i++) {
                 if (enteredUsername.value === allUsers[i].Username) {
                     alert("Username already exists");
                     return true
@@ -39,7 +39,7 @@ class User {
 
     login() {
         allUsers = JSON.parse(localStorage.getItem("Users"));
-        for (i = 0; i < allUsers.length; i++) {
+        for (var i = 0; i < allUsers.length; i++) {
             if (checkUsername.value === allUsers[i].Username && allUsers[i].Password === checkPassword.value) {
                 //Der køres et loop igennem alle brugere, som tjekker om der findes et match med de værdier, som blev indtastet på loginsiden
                 localStorage.setItem("currentUser", JSON.stringify(allUsers[i]));
@@ -56,28 +56,34 @@ class User {
     setnewUsername() {
         let oldaccount = JSON.parse(localStorage.getItem("currentUser"));
         let allUsers = JSON.parse(localStorage.getItem("Users"));
-
+        console.log(newUsername.value);
+        console.log(allUsers[1].Username);
         for (i = 0; i < allUsers.length; i++) {
+
             if (newUsername.value === allUsers[i].Username) {
                 alert("You cannot change your username to one that already exist");
+                return true;
+            }
+        }
+
+        //Alle brugere køres igennem et loop, indtil den nuværende bruger findes i alle brugere.
+        for (i = 0; i < allUsers.length; i++) {
+            if (oldaccount.Username === allUsers[i].Username) {
+                oldaccount.Username = newUsername.value;
+                allUsers[i].Username = newUsername.value;
+                //Begge steder vil brugeren få tildelt et nyt brugernavn, som blev skrevet ind
+                localStorage.setItem("currentUser", JSON.stringify(oldaccount));
+                localStorage.setItem("Users", JSON.stringify(allUsers));
+
+                //De nye informationer overskriver de gamle i local storage
+                document.location.reload();
                 return true
             }
-            for (i = 0; i < allUsers.length; i++) {
-                if (oldaccount.Username === allUsers[i].Username) {
-                    //Alle brugere køres igennem et loop, indtil den nuværende bruger findes i alle brugere.
-
-                    oldaccount.Username = newUsername.value;
-                    allUsers[i].Username = newUsername.value;
-                    //Begge steder vil brugeren få tildelt et nyt brugernavn, som blev skrevet ind
-                    localStorage.setItem("currentUser", JSON.stringify(oldaccount));
-                    localStorage.setItem("Users", JSON.stringify(allUsers));
-                    //De nye informationer overskriver de gamle i local storage
-                    return true
-                }
-            }
-
         }
     }
+
+
+
 
     setnewPassword() {
         let oldaccount = JSON.parse(localStorage.getItem("currentUser"));
@@ -89,6 +95,7 @@ class User {
                 localStorage.setItem("currentUser", JSON.stringify(oldaccount));
                 localStorage.setItem("Users", JSON.stringify(allUsers));
                 alert("You have now changed your Password");
+                document.location.reload();
                 return true
             }
         }
@@ -100,49 +107,53 @@ class User {
         console.log(tour);
 //Vi henter den nuværende bruger og hans brugernavn fra localStorage og tildeler dem variabler.
         let User = JSON.parse(localStorage.getItem("currentUser"));
-
-        if (tour.currentParticipants === tour.amountLimit) {
+        console.log("hej");
+        console.log(tour.currentParticipants);
+        console.log(tour.amountLimit);
+        if (tour.currentParticipants == tour.amountLimit) {
             alert("This tour is fully booked");
             return true
         }
         if (tour.participants.includes(User.Username)) {
             alert("You cannot book this tour twice");
             return true
-        }
+        } else {
 //Turen der har samme id som knappen, vil tilføje den nuværende brugers navn til parameteren participants.
-        for (i = 0; i < tours.length; i++) {
-            if (tour.tourName === tours[i].tourName) {
-                tours[i].participants += " " + User.Username;
-                tours[i].currentParticipants += 1;
+            for (i = 0; i < tours.length; i++) {
+                if (tour.tourName === tours[i].tourName) {
+                    tours[i].participants += " " + User.Username;
+                    tours[i].currentParticipants += 1;
 
 //Vi pusher det til localstorage, og overskriver den gamle "tours" key
-                localStorage.setItem("tours", JSON.stringify(tours));
+                    localStorage.setItem("tours", JSON.stringify(tours));
 //Turens navn bliver tilføjet til brugeres parameter: bookedTOurs
-                User.bookedTours += " " + tour.tourName;
-                localStorage.setItem("currentUser", JSON.stringify(User));
+                    User.bookedTours += " " + tour.tourName;
+                    localStorage.setItem("currentUser", JSON.stringify(User));
 //Vi pusher det til localstorage, og overskriver den gamle "currentUser" key
-                let allUsers = JSON.parse(localStorage.getItem("Users"));
+                    let allUsers = JSON.parse(localStorage.getItem("Users"));
 //samme loop som brugt før i koden. Sørger for at currentUsers værdier også tilføjes til "Users" i localstorage
-                for (i = 0; i < allUsers.length; i++) {
-                    if (User.Username === allUsers[i].Username) {
+                    for (i = 0; i < allUsers.length; i++) {
+                        if (User.Username === allUsers[i].Username) {
 
-                        allUsers[i].bookedTours = User.bookedTours;
-                        localStorage.setItem("Users", JSON.stringify(allUsers));
-                      alert("Du har nu booket en tur");
-                        return true
+                            allUsers[i].bookedTours = User.bookedTours;
+                            localStorage.setItem("Users", JSON.stringify(allUsers));
+                            alert("Du har nu booket en tur");
+                            window.location.reload(true)
+                            return true
+                        }
                     }
+
                 }
-
             }
-
         }
     }
-    deleteTour(){
+
+    deleteAccount() {
         let allUsers = JSON.parse(localStorage.getItem("Users"));
-        let newUser= JSON.parse(localStorage.getItem("currentUser"));
+        let newUser = JSON.parse(localStorage.getItem("currentUser"));
         let buttons = document.getElementsByClassName('deletebuttons');
 
-        for(i = 0; i < buttons.length; i++){
+        for (i = 0; i < buttons.length; i++) {
 
             buttons[i].click();
         }
@@ -150,7 +161,7 @@ class User {
         for (i = 0; i < allUsers.length; i++) {
             if (newUser.Username === allUsers[i].Username) {
                 localStorage.removeItem("currentUser");
-                allUsers.splice(i,1);
+                allUsers.splice(i, 1);
                 localStorage.setItem("Users", JSON.stringify(allUsers));
                 alert("You have now deleted your account");
 
@@ -160,4 +171,19 @@ class User {
         }
 
     }
-    }
+
+    deleteBookedTour() {
+
+        for(i=0;i<tours.length;i++){
+            if(participatingTours[counter].tourName===tours[i].tourName){
+                let  participants = tours[i].participants;
+                let username = JSON.parse(localStorage.getItem("currentUser")).Username;
+                console.log(participants);
+                tours[i].participants = participants.replace(username,"")
+                tours[i].currentParticipants --;
+                localStorage.setItem("tours",JSON.stringify(tours));
+                alert("You have now cancelled the tour");
+                window.location.reload(true)
+            }
+        }}
+}

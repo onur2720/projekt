@@ -1,6 +1,7 @@
 //Hurtige kommentarer da funktionen ikke er færdig"
 //Vi laver en variabel array, der henter den værdi fra nøglen "Tours" i local storage
 let array = JSON.parse(localStorage.getItem("currentTour"));
+let changetour = new Tour("","", "");
 console.log(array);
 
 //Vi laver et tomt array til varaiblen newArray
@@ -82,49 +83,8 @@ for(let i = 0; i < newArray.length; i++)
     }
 }
 
-document.getElementById("dewit").addEventListener("click", function(){
-    let tourName = document.getElementById('0');
-    let tourInfo = document.getElementById('1');
-    let amountLimit = document.getElementById('2');
-    let duration = document.getElementById('3');
-    let meetingPoint = document.getElementById('4');
-    let startTime = document.getElementById('5');
-    let tourDate = document.getElementById('6');
-    let tourLocation = document.getElementById('7');
-    let tourPrice = document.getElementById('8');
-
-
-
-    let Tour = JSON.parse(localStorage.getItem("currentTour"));
-    let Tours = JSON.parse(localStorage.getItem("tours"));
-    //To variabler skabes, der indeholder den nuværende bruger og alle brugere i local storage
-    for (let i = 0; i < Tours.length; i++) {
-        if (Tour.tourName === Tours[i].tourName) {
-
-            console.log(Tour);
-
-            Tour.tourName = tourName.value;
-            Tour.tourInfo = tourInfo.value;
-            Tour.amountLimit = amountLimit.value;
-            Tour.duration = duration.value;
-            Tour.meetingPoint = meetingPoint.value;
-            Tour.startTime = startTime.value;
-            Tour.tourDate = tourDate.value;
-            Tour.tourLocation = tourLocation.value;
-            Tour.tourPrice = tourPrice.value;
-            console.log(Tour);
-
-            console.log(Tour);
-            Tours[i]=Tour;
-
-            //Begge steder vil brugeren få tildelt et nyt brugernavn, som blev skrevet ind
-            localStorage.setItem("currentTour", JSON.stringify(Tour));
-            localStorage.setItem("tours", JSON.stringify(Tours));
-            //De nye informationer overskriver de gamle i local storage
-            window.location.reload(true)
-
-        }
-    }
+document.getElementById("change_Tour").addEventListener("click", function(){
+    changetour.changeTourInfo()
 });
 
 
