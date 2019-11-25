@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9addce15-9391-4f9f-9a91-a7e4d4f1113f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../FINAL/Betaling/app1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FINAL/Betaling/app1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FINAL/Betaling/app2..js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FINAL/Betaling/styles1.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FINAL/Betaling/styles1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FINAL/Kontaktfunktion.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FINAL/Kontaktfunktion.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Peder/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Peder/app.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +82,8 @@
       <workItem from="1572607509432" duration="105000" />
       <workItem from="1572702142757" duration="149000" />
       <workItem from="1572702294141" duration="1000" />
+      <workItem from="1574448470840" duration="1000" />
+      <workItem from="1574449321475" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="Hej med jer">
       <created>1572606892093</created>

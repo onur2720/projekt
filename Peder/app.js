@@ -12,7 +12,6 @@ class User {
     }
 }
 
-
 //TRIN 2 vi laver en klasse, der indeholder værdierne
 class normalUsers {
     constructor(normalUsername,normalPassword,bookedTours){
@@ -21,7 +20,6 @@ class normalUsers {
         this.bookedTours = bookedTours;
     }
 }
-
 
 /*var normalUser1 = new normalUsers("Simon",5,"");
 var normalUser2 = new normalUsers("Ida", 6, "");*/
