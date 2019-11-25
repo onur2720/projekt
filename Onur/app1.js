@@ -3,6 +3,7 @@ var arrInformation = JSON.parse(localStorage.getItem('paymentInformation')) || [
 var mastercard = document.getElementById('MC');
 var vise = document.getElementById('V');
 //Vi opretter en class der hedder Paymentinfo
+
 class Paymentinfo {
     constructor(cardNumber, expiryDate, controleNumber) {
         this.cardNumber = cardNumber;
