@@ -4,8 +4,16 @@ var mastercard = document.getElementById('MC');
 var vise = document.getElementById('V');
 //Vi opretter en class der hedder Paymentinfo
 
-class Paymentinfo {
-    constructor(cardNumber, expiryDate, controleNumber) {
+var tours =  JSON.parse(localStorage.getItem("tours"));
+var tour =  JSON.parse(localStorage.getItem("paymentinfo"));
+var infoo = new Paymentinfo("");
+var User2 = new User("")
+document.getElementById("rgr_btn").addEventListener("click", function(){
+    //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
+    //Funktionen signUp i objektet newUser vil bliver kaldt på
+    infoo.setItem()
+});
+   /* constructor(cardNumber, expiryDate, controleNumber) {
         this.cardNumber = cardNumber;
         this.expiryDate = expiryDate;
         this.controleNumber = controleNumber;
@@ -46,7 +54,7 @@ class Paymentinfo {
     }
 }
 
-
+*/
 
 
 

@@ -103,66 +103,52 @@ class User {
 
 
     bookTour(){
+        var User3 = JSON.parse(localStorage.getItem("currentUser"));
       //link til payment side
         if (tour.currentParticipants == tour.amountLimit) {
             alert("This tour is fully booked");
             return true
         }
-        if (tour.participants.includes(User.Username)) {
+        if (tour.participants.includes(User3.Username)) {
             alert("You cannot book this tour twice");
             return true
         }
-        localStorage.setItem("paymentinfo",tour)
+        localStorage.setItem("paymentinfo", JSON.stringify(tour));
         window.location = "Betaling1.html"
     }
 
 
     bookTour2() {
-
-
-        console.log(tour);
-//Vi henter den nuværende bruger og hans brugernavn fra localStorage og tildeler dem variabler.
-        let User = JSON.parse(localStorage.getItem("currentUser"));
-        console.log("hej");
-        console.log(tour.currentParticipants);
-        console.log(tour.amountLimit);
-        if (tour.currentParticipants == tour.amountLimit) {
-            alert("This tour is fully booked");
-            return true
-        }
-        if (tour.participants.includes(User.Username)) {
-            alert("You cannot book this tour twice");
-            return true
-        } else {
-//Turen der har samme id som knappen, vil tilføje den nuværende brugers navn til parameteren participants.
-            for (i = 0; i < tours.length; i++) {
-                if (tour.tourName === tours[i].tourName) {
-                    tours[i].participants += " " + User.Username;
-                    tours[i].currentParticipants += 1;
+        var User4 = JSON.parse(localStorage.getItem("currentUser"));
+        for (let i = 0; i < tours.length; i++) {
+            if (tour.tourName === tours[i].tourName) {
+                tours[i].participants += " " + User4.Username;
+                tours[i].currentParticipants += 1;
 
 //Vi pusher det til localstorage, og overskriver den gamle "tours" key
-                    localStorage.setItem("tours", JSON.stringify(tours));
+                localStorage.setItem("tours", JSON.stringify(tours));
 //Turens navn bliver tilføjet til brugeres parameter: bookedTOurs
-                    User.bookedTours += " " + tour.tourName;
-                    localStorage.setItem("currentUser", JSON.stringify(User));
+                User4.bookedTours += " " + tour.tourName;
+                localStorage.setItem("currentUser", JSON.stringify(User4));
 //Vi pusher det til localstorage, og overskriver den gamle "currentUser" key
-                    let allUsers = JSON.parse(localStorage.getItem("Users"));
+                let allUsers = JSON.parse(localStorage.getItem("Users"));
 //samme loop som brugt før i koden. Sørger for at currentUsers værdier også tilføjes til "Users" i localstorage
-                    for (i = 0; i < allUsers.length; i++) {
-                        if (User.Username === allUsers[i].Username) {
+                for (i = 0; i < allUsers.length; i++) {
+                    if (User4.Username === allUsers[i].Username) {
 
-                            allUsers[i].bookedTours = User.bookedTours;
-                            localStorage.setItem("Users", JSON.stringify(allUsers));
-                            alert("Du har nu booket en tur");
-                            window.location.reload(true)
-                            return true
-                        }
+                        allUsers[i].bookedTours = User4.bookedTours;
+                        localStorage.setItem("Users", JSON.stringify(allUsers));
+
                     }
 
                 }
             }
         }
     }
+
+
+
+
 
     deleteAccount() {
         let allUsers = JSON.parse(localStorage.getItem("Users"));

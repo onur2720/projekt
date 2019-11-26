@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link type="text/css" rel="stylesheet" href="styles1.css">
+
     <meta charset="UTF-8">
     <title>Betaling</title>
 </head>
@@ -21,13 +21,19 @@
     <h4>Kontrolkode</h4>
     <input type="text" name="txtControl" id="bettcr" value="" placeholder="Eks: 320" maxlength="3">
 
-    <h5>Pris: 7 euro</h5>
+    <div id="output"></div>
+    <script>var node = document.createElement("p");
+    node.appendChild(document.createTextNode("Pris: "+JSON.parse(localStorage.getItem("paymentinfo")).tourPrice+ " kr."));
+    document.getElementById("output").appendChild(node);
 
-    <input id="rgr_btn" type="submit" value="Betal" onClick="bookTour2()"/>
+    </script>
+
+    <input id="rgr_btn" type="button" value="Betal" />
     <ul>
     <li><a type="button" href="../../Voreswebsite.html">Fortryd</a></li>
     </ul>
 </form>
+<script src="Payment_class.js"></script>
 <script src="User_Class.js"> </script>
 <script src="app1.js"> </script>
 </body>
