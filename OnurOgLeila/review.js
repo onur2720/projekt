@@ -19,7 +19,7 @@ function appendReview (event) {
     const data = {
         avatar: "https://pixabay.com/users/WandererCreative-855399/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=973460",
         review: reviewInput.value,
-        author: "User"
+        author: JSON.parse(localStorage.getItem("currentUser")).Username
     };
 
     event.preventDefault();
