@@ -31,11 +31,11 @@ class Paymentinfo {
         var controlNum = document.getElementById('bettcr').value;
 
         if (kortnummer.length != 16) {
-            alert("kortnummer skal være på præcis 8 tegn");
+            alert("kortnummer skal være på præcis 16 tegn");
             return false;
         }
         if (expnum.length != 5) {
-            alert("udløbsdato skal være på præcis 4 tegn");
+            alert("udløbsdato skal være på præcis 5 tegn");
             return false;
         }
         if (controlNum.length != 3) {

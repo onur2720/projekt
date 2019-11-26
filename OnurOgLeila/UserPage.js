@@ -40,6 +40,10 @@ for(i=0;i<tours.length;i++){
 }
 
 
+
+
+
+
 console.log(tableArray);
 table = document.getElementById("table");
 //Tabellen oprettes

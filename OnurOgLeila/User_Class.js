@@ -101,7 +101,23 @@ class User {
         }
     }
 
-    bookTour() {
+
+    bookTour(){
+      //link til payment side
+        if (tour.currentParticipants == tour.amountLimit) {
+            alert("This tour is fully booked");
+            return true
+        }
+        if (tour.participants.includes(User.Username)) {
+            alert("You cannot book this tour twice");
+            return true
+        }
+        localStorage.setItem("paymentinfo",tour)
+        window.location = "Betaling1.html"
+    }
+
+
+    bookTour2() {
 
 
         console.log(tour);
