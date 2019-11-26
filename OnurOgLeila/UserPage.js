@@ -141,3 +141,4 @@ for(let i=0;i<participatingTours.length;i++){
     newUser.deleteBookedTour()}
     )}
 
+
