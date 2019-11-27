@@ -13,6 +13,12 @@ document.getElementById("rgr_btn").addEventListener("click", function(){
     //Funktionen signUp i objektet newUser vil bliver kaldt på
     infoo.setItem()
 });
+
+document.getElementById("cancel").addEventListener("click", function(){
+    //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
+    //Funktionen signUp i objektet newUser vil bliver kaldt på
+    window.location.href = "userPage.html"
+});
    /* constructor(cardNumber, expiryDate, controleNumber) {
         this.cardNumber = cardNumber;
         this.expiryDate = expiryDate;
