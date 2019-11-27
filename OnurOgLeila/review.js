@@ -45,3 +45,9 @@ const saved = localStorage.getItem('reviewListing');
 if (saved) {
     reviewList.innerHTML = saved;
 }
+
+document.getElementById("cancel").addEventListener("click", function(){
+    //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
+    //Funktionen signUp i objektet newUser vil bliver kaldt på
+    window.location.href = "userPage.html"
+});
