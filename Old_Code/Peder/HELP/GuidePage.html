@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guide Page</title>
+</head>
+<body>
+
+<!--- We create a table in which the guide needs to fill the input fields with data in order to create a tour.
+      We assign an attribute for each row in order to create the tour with our function CreateTour() -->
+<div class="container">
+    <h1>Create your tour</h1>
+    <form id="create-tour">
+        <input id="tour-name" type="text" placeholder="Tourname" autocomplete="new-tourname" value=""/>
+        <br>
+        <input id="tour-info" type="text" placeholder="Tour description" autocomplete="new-tourinformation" value=""/>
+        <br>
+        <input id="tour-date" type="text" placeholder="Tour date" autocomplete="new-date" value=""/>
+        <br>
+        <input id="start-time" type="text" placeholder="Start time of tour" autocomplete="new-starttime" value=""/>
+        <br>
+        <input id="tour-duration" type="text" placeholder="Duration of tour" autocomplete="new-duration" value=""/>
+        <br>
+        <input id="meetingpoint" type="text" placeholder="Meetingpoint" autocomplete="new-meetingpoint" value=""/>
+        <br>
+        <input id="tour-price" type="text" placeholder="Price of tour" autocomplete="new-price" value=""/>
+        <br>
+
+        <input id="tour-location" type="text" placeholder="Location" autocomplete="new-location" value=""/>
+        <br>
+        <input id="limit" type="text" placeholder="Amount Limit" autocomplete="new-location" value=""/>
+        <br>
+        <input id="create_btn" type="button" value="Create" onClick="CreateTour()"/>
+        <br>
+
+
+        <!-- We define two input field.
+        In the first field, the user can enter the data, in this case the tour name of the tour we want to be deleted
+        The second input field is a button which on click activates the function deleteTour() -->
+        <h1>Here you can delete your tour</h1>
+        <input id="delete_name" type="text" placeholder="Name of the tour you want to delete" value=""/>
+        <input id="delete_tour" type="button" value="Delete" onClick="deleteTour()"/>
+        <br>
+    </form>
+</div>
+
+</div>
+
+<!--- We create a table for all tours that is already established
+      The attribute (id) assigned for the this table is "table". With the help of the attribute, we assign functions in -->
+<h1> All tours </h1>
+<table id="table" border="1">
+    <!-- The Row Number 0 -->
+    <tr>
+        <th>Tour Name</th>
+        <th>Tour Info</th>
+        <th>Tour Date</th>
+        <th>Start Time</th>
+        <th>Duration</th>
+        <th>Meeting Point</th>
+        <th>Tour price</th>
+        <th>Tour location</th>
+        <th>Limit on participants</th>
+        <th>Participants</th>
+        <th>Click to change information!</th>
+    </tr>
+
+</table>
+</body>
+<script src="GuidePage.js"></script>
+</html>

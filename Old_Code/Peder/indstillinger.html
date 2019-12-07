@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link type="text/css" rel="stylesheet" href="HELP/styles.css">
+    <!-- HTML dokumentet forbindes til vores CSS-dokument-->
+    <style>
+        input{width: 300px}
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="../Voreswebsite.html">Home</a></li>
+</ul>
+    <p> In settings you can delete your user </p>
+
+<input id="clear_users_btn" type="submit" value="Clear user" onClick="clearUser()"/>
+
+<p> "Hej Admin. Her kan du skabe din tur"</p>
+
+<form>
+    <input id="enteredTourName" type="text" placeholder="Enter the name of the tour" autocomplete="new-tourname" value=""/> <br>
+    <input id="enteredTourInfo" type="text" placeholder="Enter the info of info tour" autocomplete="new-tourinfo" value=""/> <br>
+    <input id="tourfunction_btn" type="button" value="Skab" onClick="tours()"/>
+</form>
+
+<p> Her kan du se de forskellige tours</p>
+
+<form>
+    <input id="tour1" type="button" value="Tour 1" onClick="console.log(tours1)"/>
+    <br>
+    <input id="tour2" type="button" value="Tour 2" onClick="console.log(tours2)"/>
+    <br>
+    <input id="tour3" type="button" value="Tour 3" onClick="console.log(tours3)"/>
+</form>
+<input id="book1" type="button" value="Book tour 1" onClick="console.log(tours3)"/>
+<br>
+<p>Book Tour 1:</p>
+<button onclick="myFunction()">Book Tour 1 nu</button>
+
+<p> Antal deltagere i Tour 1:</p> <p id="demo"></p>
+<!-- Når der klikkes på denne knap, vil funktionen clearUser() blive brugt-->
+
+<p>Her kan du tilføje deltagernes navne på tour 1</p>
+<input id="enteredName" type="text" placeholder="Dit navn" autocomplete="new_navn" value=""/>
+<br>
+<input id="name_btn" type="button" value="tilfoj" onClick="tournames()"/>
+<br>
+<input id="name_btn" type="button" value="se alle navne" onClick="hehe()"/>
+<script src="app.js"> </script>
+<!-- I vores script henviser vi til vores js-fil, så clearUser() kan blive brugt-->
+</body>
+</html>
+
+
+
