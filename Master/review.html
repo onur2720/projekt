@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Review - Local Storage</title>
+
+</head>
+<body>
+<div class="review-container">
+    <h3 class="review-container-title">Reviews</h3>
+    <div class="reviews">
+        <div class="review flex items-start justify-start">
+
+            <div class="flex-1">
+                <h3 class="review-author">User</h3>
+                <p class="review-body">First review of some type!</p>
+            </div>
+        </div>
+    </div>
+    <div class="review review-new flex items-start justify-start">
+
+        <div class="flex-1">
+            <h3 class="review-author">User</h3>
+            <form action="#" class="review-form">
+            <textarea
+                    placeholder="Add review for a tour!"
+                    class="review-input"
+            ></textarea>
+                <input type="submit" class="review-submit" value="Reply" />
+            </form>
+        </div>
+    </div>
+</div>
+<input id="cancel" type="button" value="Gå tilbage"/>
+
+<script src="review.js"></script>
+</body>
+</html>

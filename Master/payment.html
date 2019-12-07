@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Payment</title>
+</head>
+<body>
+<form id="register-form">
+
+    <h1>Card Info</h1>
+
+    <h2>Card Number</h2>
+    <input type="text" name="txtUserName" id="betknr" value="" placeholder="Eks: 1698 3423 2672 9845" maxlength="16">
+
+    <h3>Last Use date</h3>
+    <input type="text" name="txtExp" id="betex" value="" placeholder="Eks: 09/20" maxlength="5">
+
+    <h4>Security Code</h4>
+    <input type="text" name="txtControl" id="bettcr" value="" placeholder="Eks: 320" maxlength="3">
+
+    <div id="output"></div>
+    <script>var node = document.createElement("p");
+    node.appendChild(document.createTextNode("Prices: "+JSON.parse(localStorage.getItem("paymentinfo")).tourPrice+ " krones"));
+    document.getElementById("output").appendChild(node);
+
+    </script>
+
+    <input id="rgr_btn" type="button" value="Betal" />
+<br>
+    <input id="cancel" type="button" value="Fortryd"/>
+
+</form>
+<script src="Payment_class.js"></script>
+<script src="User_Class.js"> </script>
+<script src="payment.js"> </script>
+</body>
+</html>
+
+
+
+
