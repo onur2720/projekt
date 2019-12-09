@@ -1,4 +1,4 @@
-//Kommentarer: Peder To variabler dannes, hvis brugeren ønsker at ændre sine informationer
+//Peder: To variabler dannes, der først bruges af programmet, når brugeren ønsker at ændre sine informationer
 let newUsername = document.getElementById('newusername');
 let newPassword = document.getElementById("newpassword");
 let newUser = JSON.parse(localStorage.getItem("currentUser"));
@@ -13,8 +13,8 @@ document.getElementById("changepassword").addEventListener("click", function(){
 document.getElementById("deleteaccount").addEventListener("click", function(){
     newUser.deleteAccount()
 });
-////Kommentarer: Peder To tobeller skabes på html-siden: Den første er for alle ture, og giver muligheden for at booke turerne.
-//Den anden tabel er for alle brugerens bookede ture
+// Peder: To tobeller skabes på html-siden: Den første tabel viser infomationer for alle turene og giver muligheden for at booke turerne.
+//Den anden tabel er kun for brugerens bookede ture og giver mulighed for at slette turen
 let tableArray =[];
 
 for(i=0;i<tours.length;i++){

@@ -1,4 +1,4 @@
-//Kommenteret af Peder: Disse variabler bliver sat til værdien af de indtastede informationer, som guiden skriver inde på HTML-siden for at skabe en ny tour
+//Peder: Disse variabler bliver sat til værdien af de indtastede informationer, som guiden skriver inde på HTML-siden for at skabe en ny tour
 let tourName = document.getElementById('tour-name');
 let tourInfo = document.getElementById('tour-info');
 let tourDate = document.getElementById('tour-date');
@@ -11,7 +11,7 @@ let amountLimit = document.getElementById("limit");
 
 
 var newTour = new Tour("","","","","","","","","","",
-//Kommenteret af Peder: Når guiden trykker på knappen, der opretter en tour, bliver værdierne ændret i objektet newTour, hvor metoden createTourkaldes
+//Peder: Når guiden trykker på knappen, der opretter en tour, bliver værdierne ændret i objektet newTour, hvor metoden createTourkaldes
 document.getElementById("create_tour").addEventListener("click", function(){
 
     newTour.tourName = tourName.value;
@@ -30,7 +30,7 @@ document.getElementById("delete_tour").addEventListener("click",function(){
     newTour.deleteTour()
 });
 
-//Kommenteret af Peder: Vi opretter en tabel ved hjælp af arrays samt et unikt id til hver knap, der indentifere den tilsvarende toru
+//Peder: Vi opretter en tabel ved hjælp af arrays samt et unikt id til hver knap, der indentifere den tilsvarende toru
 let array = JSON.parse(localStorage.getItem("tours"));
 
 let newArray =[];

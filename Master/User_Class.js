@@ -1,10 +1,12 @@
 class User {
     constructor(Username, Password, bookedTours) {
+        // Peder: Et objekt af klassen User har 3 properties. BookedTours er en lang string med alle booket ture.
         this.Username = Username;
         this.Password = Password;
         this.bookedTours = bookedTours;
 
     }
+    // Peder: Sign up bruges for at overføre infomationerne fra et objekt af klassen User til localstorage
     signUp() {
         if (enteredUsername.value.length===0||enteredPassWord.value.length===0){
             alert("Please enter both a Username and Password");
@@ -28,6 +30,7 @@ class User {
             localStorage.setItem("Users", JSON.stringify(allUsers));
             alert("Hey " + enteredUsername.value + ". You have now created a user");
         }
+        //Peder: Login kontroller om brugernavnet og adgangskoden er korret, ellers frembringes en alert
     login() {
         allUsers = JSON.parse(localStorage.getItem("Users"));
         for (var i = 0; i < allUsers.length; i++) {
@@ -41,6 +44,8 @@ class User {
         }
         alert("Please enter your Username and Password correctly")
     }
+    //Peder: Der bruges loops i denne metode, der kontrollerer, at et nyt brugernavn ikke allerede tilhører en anden bruger samt at det opdateret brugernavn bliver sat i
+    //localstorage i nøglen currentUser og Users
     setnewUsername() {
         let oldaccount = JSON.parse(localStorage.getItem("currentUser"));
         let allUsers = JSON.parse(localStorage.getItem("Users"));
@@ -66,6 +71,7 @@ class User {
             }
         }
     }
+    //Peder: Samme metode bruges som setNewUsername. To brugere kan dog have den samme adgangskode
     setnewPassword() {
         let oldaccount = JSON.parse(localStorage.getItem("currentUser"));
         let allUsers = JSON.parse(localStorage.getItem("Users"));
@@ -82,7 +88,7 @@ class User {
         }
     }
 
-
+//Peder: Tjekker om turen overhovedet kan bookes, før brugeren overføres til betalings.
     validate(){
         var info = JSON.parse(localStorage.getItem("currentUser"));
       //link til payment side
@@ -98,7 +104,8 @@ class User {
         window.location = "payment.html"
     }
 
-
+//Peder: Denne metode bruges, efter betalingen er gennemført. Metoden tilføjer brugerens navn til en property af objektet Tour samt værdien af currentParticipants stiger med 1
+    //Samtidigt bliver turens navn tilføjet til brugerens konto under bookedTours
     bookTour() {
         var customerInfo = JSON.parse(localStorage.getItem("currentUser"));
         for (let i = 0; i < tours.length; i++) {
@@ -106,14 +113,14 @@ class User {
                 tours[i].participants += " " + customerInfo.Username;
                 tours[i].currentParticipants += 1;
 
-//Vi pusher det til localstorage, og overskriver den gamle "tours" key
+
                 localStorage.setItem("tours", JSON.stringify(tours));
-//Turens navn bliver tilføjet til brugeres parameter: bookedTOurs
+
                 customerInfo.bookedTours += " " + tour.tourName;
                 localStorage.setItem("currentUser", JSON.stringify(customerInfo));
-//Vi pusher det til localstorage, og overskriver den gamle "currentUser" key
+
                 let allUsers = JSON.parse(localStorage.getItem("Users"));
-//samme loop som brugt før i koden. Sørger for at currentUsers værdier også tilføjes til "Users" i localstorage
+
                 for (i = 0; i < allUsers.length; i++) {
                     if (customerInfo.Username === allUsers[i].Username) {
 
@@ -130,7 +137,7 @@ class User {
 
 
 
-
+//Peder: Delete account går ind og sletter brugeren fra localstorage. Først chekker metoden, om brugeren har nogle ture booket
     deleteAccount() {
         let allUsers = JSON.parse(localStorage.getItem("Users"));
         let newUser = JSON.parse(localStorage.getItem("currentUser"));
@@ -153,14 +160,13 @@ class User {
 
         }
     }
-
+//Metoden sletter en booket tour ved at fjerne brugerens navn fra turens deltagerliste
     deleteBookedTour() {
 
         for(i=0;i<tours.length;i++){
             if(participatingTours[counter].tourName===tours[i].tourName){
                 let  participants = tours[i].participants;
                 let username = JSON.parse(localStorage.getItem("currentUser")).Username;
-                console.log(participants);
                 tours[i].participants = participants.replace(username,"");
                 tours[i].currentParticipants --;
                 localStorage.setItem("tours",JSON.stringify(tours));

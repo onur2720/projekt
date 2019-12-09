@@ -13,6 +13,7 @@ class Tour {
         this.currentParticipants = currentParticipants;
 
     }
+    //Peder: En ny tur skabes ved at først tjekke om en anden tur hedder det samme. Bagefter skubbes det til localstorage
     createTour(){
       var oldTours;
             if (localStorage.getItem("tours") == null) {
@@ -32,7 +33,7 @@ class Tour {
         alert("You have now created the tour");
         document.location.reload()
         }
-
+//Peder: Turen slettes ved brug af .splice() i et loop. Derefter skubbes den opdateret string op til localstorage og siden genindlæses
     deleteTour() {
         let allTours = JSON.parse(localStorage.getItem("tours"));
         let deletedTour = document.getElementById("delete_name");
@@ -47,6 +48,7 @@ class Tour {
         }
             alert("The Tour name doesn't exist")
     }
+    //Peder Metoden henter alle informationerne fra HTML-siden med getElementBYId. Derefter bruges et loop, hvor de nye informationer skubes til localStorage
     changeTourInfo(){
 
         let tourName = document.getElementById('0');
