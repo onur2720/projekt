@@ -5,18 +5,19 @@ constructor(cardNumber, expiryDate, controleNumber) {
         this.expiryDate = expiryDate;
         this.controleNumber = controleNumber;
     }
+    //Code review Peder: Vi skal prøve at implementere en løsning, så paymentinfomationer bliver privat til den konto, der er logget ind
          setItem() {
         const storeObj = {
             cardNumber: document.getElementById('betknr').value,
             expiredDate: document.getElementById('betex').value,
-            controle: document.getElementById('bettcr').value
+            controleNumber: document.getElementById('bettcr').value
         };
         if (this.validateCardInf() === false) {
             return true;
         } else {
-            arrInformation.push(storeObj);
-            localStorage.setItem('paymentInformation', JSON.stringify(arrInformation));
-            alert("The payment was succesfull");
+            var paymentinfo = storeObj;
+            sessionStorage.setItem('paymentInformation', JSON.stringify(paymentinfo));
+            alert("The payment was succesfull. We have also saved your credit card information. Please close the browser before you log out for  the creditcard information to be deleted");
             userObject.bookTour();
             window.location.href = "userPage.html"
         }

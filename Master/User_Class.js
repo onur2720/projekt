@@ -3,6 +3,7 @@ class User {
         this.Username = Username;
         this.Password = Password;
         this.bookedTours = bookedTours;
+
     }
     signUp() {
         if (enteredUsername.value.length===0||enteredPassWord.value.length===0){

@@ -1,3 +1,5 @@
+/* Kommenteret af Peder: Denne javascript fil henter informationerne fra nøglen i localStorage "currenTour" og
+opretter et array. Dette array bliver brugt til at lave en tabel, der giver mulighed for ændringer af informationer i den udvalgte tour*/
 let array = JSON.parse(localStorage.getItem("currentTour"));
 let changetour = new Tour("","", "");
 

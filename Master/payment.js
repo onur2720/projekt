@@ -1,5 +1,24 @@
-var arrInformation = JSON.parse(localStorage.getItem('paymentInformation')) || [];
+var paymentcredintials = JSON.parse(sessionStorage.getItem('paymentInformation')) || [];
+console.log(paymentcredintials);
 
+
+    document.getElementById("betknr").value = "";
+if(paymentcredintials.cardNumber){
+
+    document.getElementById("betknr").value = paymentcredintials.cardNumber
+}
+
+    document.getElementById("betex").value = "";
+if(paymentcredintials.cardNumber) {
+
+    document.getElementById("betex").value = paymentcredintials.expiredDate;
+}
+
+document.getElementById("bettcr").value = "";
+if(paymentcredintials.cardNumber) {
+
+    document.getElementById("bettcr").value = paymentcredintials.controleNumber;
+}
 var tours =  JSON.parse(localStorage.getItem("tours"));
 var tour =  JSON.parse(localStorage.getItem("paymentinfo"));
 var payment = new Paymentinfo("");

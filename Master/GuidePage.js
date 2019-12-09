@@ -1,4 +1,4 @@
-
+//Kommenteret af Peder: Disse variabler bliver sat til værdien af de indtastede informationer, som guiden skriver inde på HTML-siden for at skabe en ny tour
 let tourName = document.getElementById('tour-name');
 let tourInfo = document.getElementById('tour-info');
 let tourDate = document.getElementById('tour-date');
@@ -10,7 +10,8 @@ let tourLocation = document.getElementById('tour-location');
 let amountLimit = document.getElementById("limit");
 
 
-var newTour = new Tour("","","","","","","","","","",0);
+var newTour = new Tour("","","","","","","","","","",
+//Kommenteret af Peder: Når guiden trykker på knappen, der opretter en tour, bliver værdierne ændret i objektet newTour, hvor metoden createTourkaldes
 document.getElementById("create_tour").addEventListener("click", function(){
 
     newTour.tourName = tourName.value;
@@ -29,19 +30,7 @@ document.getElementById("delete_tour").addEventListener("click",function(){
     newTour.deleteTour()
 });
 
-function deleteTour(){
-    let allTours = JSON.parse(localStorage.getItem("tours"));
-    let one= document.getElementById("delete_name");
-
-    for (let i=0;i<allTours.length;i++){
-        if(allTours[i].tourName===one.value){
-            allTours.splice(i,1);
-            localStorage.setItem("tours",JSON.stringify(allTours))
-        }
-    }
-}
-
-
+//Kommenteret af Peder: Vi opretter en tabel ved hjælp af arrays samt et unikt id til hver knap, der indentifere den tilsvarende toru
 let array = JSON.parse(localStorage.getItem("tours"));
 
 let newArray =[];
@@ -62,8 +51,6 @@ for(let i=0;i<array.length;i++){
     newArray.push(info);
 }
 
-
-console.log(newArray);
 table = document.getElementById("table");
 
 for(let i = 0; i < newArray.length; i++)
