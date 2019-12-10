@@ -35,11 +35,9 @@ class User {
         allUsers = JSON.parse(localStorage.getItem("Users"));
         for (var i = 0; i < allUsers.length; i++) {
             if (checkUsername.value === allUsers[i].Username && allUsers[i].Password === checkPassword.value) {
-
                 localStorage.setItem("currentUser", JSON.stringify(allUsers[i]));
                 alert("You have now logged in");
                 window.location.assign("userPage.html");
-                return true
             }
         }
         alert("Please enter your Username and Password correctly")
@@ -67,7 +65,7 @@ class User {
 
 
                 document.location.reload();
-                return true
+
             }
         }
     }

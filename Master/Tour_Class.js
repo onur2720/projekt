@@ -43,7 +43,7 @@ class Tour {
                 localStorage.setItem("tours", JSON.stringify(allTours));
                 alert("You have now deleted the tour");
                 document.location.reload();
-                return true;
+
             }
         }
             alert("The Tour name doesn't exist")

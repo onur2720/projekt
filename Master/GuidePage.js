@@ -10,7 +10,7 @@ let tourLocation = document.getElementById('tour-location');
 let amountLimit = document.getElementById("limit");
 
 
-var newTour = new Tour("","","","","","","","","","",
+var newTour = new Tour("","","","","","","","","","",0);
 //Peder: Når guiden trykker på knappen, der opretter en tour, bliver værdierne ændret i objektet newTour, hvor metoden createTourkaldes
 document.getElementById("create_tour").addEventListener("click", function(){
 
