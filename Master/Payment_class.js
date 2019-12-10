@@ -5,7 +5,8 @@ constructor(cardNumber, expiryDate, controleNumber) {
         this.expiryDate = expiryDate;
         this.controleNumber = controleNumber;
     }
-    //Code review Peder: Vi skal prøve at implementere en løsning, så paymentinfomationer bliver privat til den konto, der er logget ind
+    //Code review Peder: Vi skal prøve at implementere en løsning, så paymentinfomationer bliver privat til den konto, der er logget ind.
+    //Et forslag kan være, at der kommer en ny property på payment, der f.eks. er Id'et på den nuværende bruger
          setItem() {
         const storeObj = {
             cardNumber: document.getElementById('betknr').value,
