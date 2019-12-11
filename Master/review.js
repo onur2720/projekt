@@ -36,7 +36,7 @@ function appendReview (event) {
     localStorage.setItem('reviewListing', reviewList.innerHTML);
 }
 
-submit.addEventListener('click', appendReview, false)
+submit.addEventListener('click', appendReview, false);
 
 // Leila: Check for gemte 'items'
 const saved = localStorage.getItem('reviewListing');

@@ -5,8 +5,9 @@ constructor(cardNumber, expiryDate, controleNumber) {
         this.expiryDate = expiryDate;
         this.controleNumber = controleNumber;
     }
-    //Code review Peder: Vi skal prøve at implementere en løsning, så paymentinfomationer bliver privat til den konto, der er logget ind.
-    //Et forslag kan være, at der kommer en ny property på payment, der f.eks. er Id'et på den nuværende bruger
+    //Code review Peder: Vi skal prøve at implementere en løsning, så paymentinfomationer bliver privat til den konto,
+    // der er logget ind. Et forslag kan være, at der kommer en ny property på payment, der f.eks. er Id'et på den
+    // nuværende bruger
          setItem() {
         const storeObj = {
             cardNumber: document.getElementById('betknr').value,
@@ -18,7 +19,8 @@ constructor(cardNumber, expiryDate, controleNumber) {
         } else {
             var paymentinfo = storeObj;
             sessionStorage.setItem('paymentInformation', JSON.stringify(paymentinfo));
-            alert("The payment was succesfull. We have also saved your credit card information. Please close the browser before you log out for the creditcard information to be deleted");
+            alert("The payment was succesfull. We have also saved your credit card information. Please close the " +
+                "browser before you log out for the creditcard information to be deleted");
             userObject.bookTour();
             window.location.href = "userPage.html"
         }

@@ -1,12 +1,15 @@
 class User {
     constructor(Username, Password, bookedTours) {
-        // Peder: Et objekt af klassen User har 3 properties. BookedTours er en lang string med alle booket ture, da det virker uden problemer med localStorage.
+        // Peder: Et objekt af klassen User har 3 properties. BookedTours er en lang string med alle booket ture, da
+        // dette ikke forårsager problemer med localStorage.
         this.Username = Username;
         this.Password = Password;
         this.bookedTours = bookedTours;
 
     }
     // Peder: Sign up bruges for at overføre infomationerne fra et objekt af klassen User til localstorage
+    // Der bruges newUser.Username = enteredUsername.value på baggrund af, at objektet op indtil dette punkt kun har ""
+    //som værdier til objektets properties
     signUp() {
         if (enteredUsername.value.length===0||enteredPassWord.value.length===0){
             alert("Please enter both a Username and Password");
@@ -30,7 +33,8 @@ class User {
             localStorage.setItem("Users", JSON.stringify(allUsers));
             alert("Hey " + enteredUsername.value + ". You have now created a user");
         }
-        //Peder: Login kontroller om brugernavnet og adgangskoden er korret, ellers frembringes en alert
+        //Peder: Login kontroller om brugernavnet og adgangskoden er korret, ellers frembringes en alert. Der benyttes
+    //return true, da koden ellers vil fremvise begge alerts.
     login() {
         allUsers = JSON.parse(localStorage.getItem("Users"));
         for (var i = 0; i < allUsers.length; i++) {
@@ -43,8 +47,10 @@ class User {
         }
         alert("Please enter your Username and Password correctly")
     }
-    //Peder: Der bruges loops i denne metode, der kontrollerer, at et nyt brugernavn ikke allerede tilhører en anden bruger samt at det opdateret brugernavn bliver sat i
-    //localstorage i nøglen currentUser og Users
+    //Peder: Der bruges loops i denne metode, der kontrollerer, at et nyt brugernavn ikke allerede tilhører
+    // en anden bruger samt at det opdateret brugernavn bliver sat i localstorage i nøglen currentUser og Users.
+    //Årsagen til, at der bruges setItem på to nøgler: currentUser og Users er, at ellers ville ændringen bliver
+    //slettet, hvis en anden bruger logger ind.
     setnewUsername() {
         let oldaccount = JSON.parse(localStorage.getItem("currentUser"));
         let allUsers = JSON.parse(localStorage.getItem("Users"));
@@ -70,7 +76,8 @@ class User {
             }
         }
     }
-    //Peder: Samme metode bruges som setNewUsername. To brugere kan dog have den samme adgangskode
+    //Peder: Samme metode bruges som setNewUsername. To brugere kan dog have den samme adgangskode, så der er en mindre
+    //if-sætning end metoden sernewUsername()
     setnewPassword() {
         let oldaccount = JSON.parse(localStorage.getItem("currentUser"));
         let allUsers = JSON.parse(localStorage.getItem("Users"));
@@ -88,7 +95,6 @@ class User {
     }
 
 //Peder: Tjekker om turen overhovedet kan bookes, før brugeren overføres til betalings.
-    //Vigtige metode, da
     validate(){
         var info = JSON.parse(localStorage.getItem("currentUser"));
       //link til payment side
@@ -104,8 +110,11 @@ class User {
         window.location = "payment.html"
     }
 
-//Peder: Denne metode bruges, efter betalingen er gennemført. Metoden tilføjer brugerens navn til en property af objektet Tour samt værdien af currentParticipants stiger med 1
-    //Samtidigt bliver turens navn tilføjet til brugerens konto under bookedTours
+//Peder: Denne metode bruges, efter betalingen er gennemført. Metoden tilføjer brugerens navn til en property af
+// objektet Tour samt værdien af currentParticipants stiger med 1
+    //Samtidigt bliver turens navn tilføjet til brugerens konto under bookedTours.
+    //Der bruges customerInfo.bookedTours += " " + tour.tourName;, da det er en string, og mellemrum sepererer
+    //forskellige navne
     bookTour() {
         var customerInfo = JSON.parse(localStorage.getItem("currentUser"));
         for (let i = 0; i < tours.length; i++) {

@@ -21,7 +21,8 @@
 
     <div id="output"></div>
     <script>var node = document.createElement("p");
-    node.appendChild(document.createTextNode("Prices: "+JSON.parse(localStorage.getItem("paymentinfo")).tourPrice+ " krones"));
+    node.appendChild(document.createTextNode("Prices: "+JSON.parse(localStorage.getItem("paymentinfo")).tourPrice+
+        " krones"));
     document.getElementById("output").appendChild(node);
 
     </script>

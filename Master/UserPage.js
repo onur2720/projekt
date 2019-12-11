@@ -3,6 +3,9 @@ let newUsername = document.getElementById('newusername');
 let newPassword = document.getElementById("newpassword");
 let newUser = JSON.parse(localStorage.getItem("currentUser"));
 var tours =  JSON.parse(localStorage.getItem("tours"));
+//Peder: Et objekt af klassen User dannes straks, når index.html indlæses. Grunden til dette er, at metodererne af
+// klassen User først blandt andet signUp() ikke kan bruges før et objekt eksisterer.
+
 newUser = new User("","","");
 document.getElementById("changeusername").addEventListener("click", function(){
     newUser.setnewUsername()
@@ -13,8 +16,9 @@ document.getElementById("changepassword").addEventListener("click", function(){
 document.getElementById("deleteaccount").addEventListener("click", function(){
     newUser.deleteAccount()
 });
-// Peder: To tobeller skabes på html-siden: Den første tabel viser infomationer for alle turene og giver muligheden for at booke turerne.
-//Den anden tabel er kun for brugerens bookede ture og giver mulighed for at slette turen. Uddybbende forklaring ses på ChangeTour.
+// Peder: To tobeller skabes på html-siden: Den første tabel viser infomationer for alle turene og giver muligheden
+// for at booke turerne.Den anden tabel er kun for brugerens bookede ture og giver mulighed for at slette turen.
+// Uddybbende forklaring ses på ChangeTour.
 let tableArray =[];
 
 for(i=0;i<tours.length;i++){
