@@ -1,11 +1,12 @@
 class Guide {
-    /*Kommenteret af Peder: Denne klasse har to properties: Username og Password*/
+    //Peder: Denne klasse har to properties: Username og Password
     constructor(guideUsername,guidePassword) {
         this.guideUsername = guideUsername;
         this.guidePassword = guidePassword;
 
     }
-    //Peder: Denne metode bruges til at tjekke om kombinationen af Username og Password er rigtig, så guiden får lov til at logge ind
+    //Peder: Denne metode bruges til at tjekke om kombinationen af Username og Password er rigtig,
+    //så guiden får lov til at logge ind
     //Code-Review Peder: Ikke skalerbart i længden, da en linje skal skrives for hver guide
     checkGuideLogin() {
 

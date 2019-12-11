@@ -1,4 +1,5 @@
-//Peder: Disse variabler bliver sat til værdien af de indtastede informationer, som guiden skriver inde på HTML-siden for at skabe en ny tour
+//Peder: Disse variabler bliver sat til værdien af de indtastede informationer,
+// som guiden skriver inde på HTML-siden for at skabe en ny tour
 let tourName = document.getElementById('tour-name');
 let tourInfo = document.getElementById('tour-info');
 let tourDate = document.getElementById('tour-date');
@@ -11,7 +12,8 @@ let amountLimit = document.getElementById("limit");
 
 
 var newTour = new Tour("","","","","","","","","","",0);
-//Peder: Når guiden trykker på knappen, der opretter en tour, bliver værdierne ændret i objektet newTour, hvor metoden createTourkaldes
+//Peder: Når guiden trykker på knappen, der opretter en tour, bliver værdierne ændret i objektet newTour,
+// hvor metoden createTour() kaldes
 document.getElementById("create_tour").addEventListener("click", function(){
 
     newTour.tourName = tourName.value;
@@ -25,12 +27,15 @@ document.getElementById("create_tour").addEventListener("click", function(){
     newTour.duration = tourDuration.value;
     newTour.createTour()
 });
-
+// Leila: I tilfælde af at delete-knappen benyttes, registrerer eventlistener button-id'et
+// og den udvalgte tur blive slettet ved hjælp af evenlistener
 document.getElementById("delete_tour").addEventListener("click",function(){
     newTour.deleteTour()
 });
 
-//Peder: Vi opretter en tabel ved hjælp af arrays samt et unikt id til hver knap, der indentifere den tilsvarende toru
+//Leila code-review: Vi opretter en table ved hjælp af et forloop, ved en metode som bruger return til at returnere
+//tabel indholdet. Tabel-header kan oprettes i HTML
+//Peder: Vi opretter en tabel ved hjælp af arrays samt et unikt id til hver knap, der indentifere den tilsvarende tour
 let array = JSON.parse(localStorage.getItem("tours"));
 
 let newArray =[];

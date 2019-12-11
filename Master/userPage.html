@@ -6,7 +6,8 @@
 </head>
 <body>
 <div id="output"></div>
-<script>var node = document.createElement("p");
+<script>
+    var node = document.createElement("p");
 node.appendChild(document.createTextNode("Hej "+JSON.parse(localStorage.getItem("currentUser")).Username));
 document.getElementById("output").appendChild(node);
 console.log(JSON.parse(localStorage.getItem("currentUser")).Username)

@@ -2,6 +2,7 @@ const submit = document.querySelector('.review-submit');
 const reviewList = document.querySelector('.reviews');
 const reviewInput = document.querySelector('.review-input');
 
+// Leila: Oprettes template for den fremviste data.
 function template(data) {
     reviewList.insertAdjacentHTML("beforeend", `
   <div class="review flex items-start justify-start">
@@ -13,7 +14,7 @@ function template(data) {
     </div>
   </div>`);
 }
-
+// Leila: Opretter en appendReview ved tilfælde vores event: at der bliver skrevet en kommentar / 'review'.
 function appendReview (event) {
 
     const data = {
@@ -22,31 +23,31 @@ function appendReview (event) {
     };
 
     event.preventDefault();
-    // If the value is nothing just return
+    // Leila: Hvis ikke der er nogen værdi fremskrives return
     if (reviewInput.value.length < 1) return;
 
-    // Insert new template into DOM
+    // Indsæt ny template i DOM
     template(data);
 
-    // Reset textrea value
+    // Leila: Vi nulstiller værdien i textarea
     reviewInput.value = "";
 
-    // Save the list to localStorage
+    // Leila: Gem listen i localStorage
     localStorage.setItem('reviewListing', reviewList.innerHTML);
 }
 
 submit.addEventListener('click', appendReview, false)
 
-// Check for saved wishlist items
+// Leila: Check for gemte 'items'
 const saved = localStorage.getItem('reviewListing');
 
-// If there are any saved items, update our list
+// Leila: I tilfælde af nyt gemt indhold / 'item', opdateres listen.
 if (saved) {
     reviewList.innerHTML = saved;
 }
 
 document.getElementById("cancel").addEventListener("click", function(){
-    //newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
-    //Funktionen signUp i objektet newUser vil bliver kaldt på
+    //Leila: newUsers brugernanvn og Password bliver ændret til de værdier, brugeren har skrevet i felterne
+    //Leila: Funktionen signUp i objektet newUser vil bliver kaldt på
     window.location.href = "userPage.html"
 });
