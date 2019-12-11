@@ -1,3 +1,4 @@
+// Leila: Klasse for Tour oprettes ved brug af constructor
 class Tour {
     constructor(tourName, tourInfo, startTime, tourDate, duration, meetingPoint, tourPrice, tourLocation, amountLimit, participants, currentParticipants) {
         this.tourName = tourName;
@@ -33,7 +34,9 @@ class Tour {
         alert("You have now created the tour");
         document.location.reload()
         }
-//Peder: Turen slettes ved brug af .splice() i et loop. Derefter skubbes den opdateret string op til localstorage og siden genindlæses
+//Peder: Turen slettes ved brug af .splice() i et loop.
+//Derefter skubbes den opdateret string op til localstorage og siden genindlæses
+
     deleteTour() {
         let allTours = JSON.parse(localStorage.getItem("tours"));
         let deletedTour = document.getElementById("delete_name");
@@ -48,7 +51,8 @@ class Tour {
         }
             alert("The Tour name doesn't exist")
     }
-    //Peder Metoden henter alle informationerne fra HTML-siden med getElementBYId. Derefter bruges et loop, hvor de nye informationer skubes til localStorage
+    //Peder: Metoden henter alle informationerne fra HTML-siden med getElementBYId.
+    // Derefter bruges et loop, hvor de nye informationer skubes til localStorage
     changeTourInfo(){
 
         let tourName = document.getElementById('0');
