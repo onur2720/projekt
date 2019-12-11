@@ -98,7 +98,7 @@ commit 0a2d303b78e7541b40a308a3cd6142f2ff46c695
 Author: Peder <peder0210@gmail.com>
 Date:   Sat Dec 7 19:11:29 2019 +0100
 
-    Old code was added
+    Old code was added.
 
 commit 4330aa22c084157077e0c3f06b18e1140401d491
 Author: Peder <peder0210@gmail.com>
