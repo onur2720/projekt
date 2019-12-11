@@ -1,3 +1,4 @@
+// Leila: Tour class oprettes ved hjælp af constructor
 class Tour {
     constructor(tourName, tourInfo, startTime, tourDate, duration, meetingPoint, tourPrice, tourLocation, amountLimit, participants, currentParticipants) {
         this.tourName = tourName;
