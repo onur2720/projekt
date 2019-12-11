@@ -6,8 +6,8 @@ class Guide {
 
     }
     //Peder: Denne metode bruges til at tjekke om kombinationen af Username og Password er rigtig,
-    //så guiden får lov til at logge ind
-    //Code-Review Peder: Ikke skalerbart i længden, da en linje skal skrives for hver guide
+    //Der bruges && for at kontrollere begge værdier er korrete og  || da metoden skal bruges til mere end en guide.
+    //Code-Review: Ikke skalerbart i længden, da en linje skal skrives for hver guide
     checkGuideLogin() {
 
         let enteredGuideName = document.getElementById('enteredGuideName');

@@ -1,6 +1,6 @@
 class User {
     constructor(Username, Password, bookedTours) {
-        // Peder: Et objekt af klassen User har 3 properties. BookedTours er en lang string med alle booket ture.
+        // Peder: Et objekt af klassen User har 3 properties. BookedTours er en lang string med alle booket ture, da det virker uden problemer med localStorage.
         this.Username = Username;
         this.Password = Password;
         this.bookedTours = bookedTours;
@@ -87,6 +87,7 @@ class User {
     }
 
 //Peder: Tjekker om turen overhovedet kan bookes, før brugeren overføres til betalings.
+    //Vigtige metode, da
     validate(){
         var info = JSON.parse(localStorage.getItem("currentUser"));
       //link til payment side
@@ -135,7 +136,9 @@ class User {
 
 
 
-//Peder: Delete account går ind og sletter brugeren fra localstorage. Først chekker metoden, om brugeren har nogle ture booket
+//Peder: Delete account går ind og sletter brugeren fra localstorage. Først chekker metoden, om brugeren har nogle ture booket.
+    //Der bruges en if sætning (participatingTours.length > 0, da hvis længden er 1 eller over, betyder det, at brugeren har booket ture, hvilket resultere ri en alvorlig bug,
+    //hvor ikke alle informationer om brugeren slettes.
     deleteAccount() {
         let allUsers = JSON.parse(localStorage.getItem("Users"));
         let newUser = JSON.parse(localStorage.getItem("currentUser"));

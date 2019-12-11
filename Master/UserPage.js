@@ -14,7 +14,7 @@ document.getElementById("deleteaccount").addEventListener("click", function(){
     newUser.deleteAccount()
 });
 // Peder: To tobeller skabes på html-siden: Den første tabel viser infomationer for alle turene og giver muligheden for at booke turerne.
-//Den anden tabel er kun for brugerens bookede ture og giver mulighed for at slette turen
+//Den anden tabel er kun for brugerens bookede ture og giver mulighed for at slette turen. Uddybbende forklaring ses på ChangeTour.
 let tableArray =[];
 
 for(i=0;i<tours.length;i++){

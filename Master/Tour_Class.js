@@ -1,4 +1,3 @@
-// Leila: Klasse for Tour oprettes ved brug af constructor
 class Tour {
     constructor(tourName, tourInfo, startTime, tourDate, duration, meetingPoint, tourPrice, tourLocation, amountLimit, participants, currentParticipants) {
         this.tourName = tourName;
@@ -14,7 +13,9 @@ class Tour {
         this.currentParticipants = currentParticipants;
 
     }
-    //Peder: En ny tur skabes ved at først tjekke om en anden tur hedder det samme. Bagefter skubbes det til localstorage
+    //Peder: En ny tur skabes ved at først tjekke om en anden tur hedder det samme. Vi har valgt at bruge at loops for at opnå dette.
+    // Bagefter skubbes det til localstorage med nøglen "tours".
+    // Årsagen til at vi laver en if og else statement er, at metoden ikke fungere, hvis der bruges getItem. og nøglen ikke eksisterer i localStorage
     createTour(){
       var oldTours;
             if (localStorage.getItem("tours") == null) {
@@ -34,9 +35,9 @@ class Tour {
         alert("You have now created the tour");
         document.location.reload()
         }
-//Peder: Turen slettes ved brug af .splice() i et loop.
-//Derefter skubbes den opdateret string op til localstorage og siden genindlæses
-
+//Peder: Turen slettes ved brug af .splice() i et loop, da alle ture er i et array
+// . Derefter skubbes den opdateret string op til localstorage og siden genindlæses.
+    //Metoden virker uden reload() i localstorage, men brugeren kan ikke se ændringerne på html-siden
     deleteTour() {
         let allTours = JSON.parse(localStorage.getItem("tours"));
         let deletedTour = document.getElementById("delete_name");
@@ -51,8 +52,8 @@ class Tour {
         }
             alert("The Tour name doesn't exist")
     }
-    //Peder: Metoden henter alle informationerne fra HTML-siden med getElementBYId.
-    // Derefter bruges et loop, hvor de nye informationer skubes til localStorage
+    //Peder Metoden henter alle informationerne fra HTML-siden med getElementBYId. Derefter bruges et loop, hvor de nye informationer skubes til localStorage.
+    //Vi har valgt at ændre alle properties i objektet, da metoden ikke kan vide, om guiden ændre alle informationer eller kun en enkelt.
     changeTourInfo(){
 
         let tourName = document.getElementById('0');

@@ -35,7 +35,8 @@ document.getElementById("delete_tour").addEventListener("click",function(){
 
 //Leila code-review: Vi opretter en table ved hjælp af et forloop, ved en metode som bruger return til at returnere
 //tabel indholdet. Tabel-header kan oprettes i HTML
-//Peder: Vi opretter en tabel ved hjælp af arrays samt et unikt id til hver knap, der indentifere den tilsvarende tour
+//Peder: Vi opretter en tabel ved hjælp af arrays samt et unikt id til hver knap, der indentifere den tilsvarende tour.
+//En mere uddybende forklaring af tabeller står i ChangeTour.js
 let array = JSON.parse(localStorage.getItem("tours"));
 
 let newArray =[];
