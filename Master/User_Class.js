@@ -38,6 +38,7 @@ class User {
                 localStorage.setItem("currentUser", JSON.stringify(allUsers[i]));
                 alert("You have now logged in");
                 window.location.assign("userPage.html");
+                return true
             }
         }
         alert("Please enter your Username and Password correctly")

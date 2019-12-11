@@ -18,7 +18,7 @@ constructor(cardNumber, expiryDate, controleNumber) {
         } else {
             var paymentinfo = storeObj;
             sessionStorage.setItem('paymentInformation', JSON.stringify(paymentinfo));
-            alert("The payment was succesfull. We have also saved your credit card information. Please close the browser before you log out for  the creditcard information to be deleted");
+            alert("The payment was succesfull. We have also saved your credit card information. Please close the browser before you log out for the creditcard information to be deleted");
             userObject.bookTour();
             window.location.href = "userPage.html"
         }
