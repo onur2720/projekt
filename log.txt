@@ -1,0 +1,926 @@
+commit 82a466764e6b897e27784a33f9b84d82dfacb40b
+Author: Peder <peder0210@gmail.com>
+Date:   Wed Dec 11 18:31:42 2019 +0100
+
+    Final update. This was a fun journey :D
+
+commit da287299dd7d4786640ce714e10819ef7c30bacf
+Author: Peder <peder0210@gmail.com>
+Date:   Wed Dec 11 11:52:31 2019 +0100
+
+    Fixed bug in delete method
+
+commit 67dbdbabb3fcf0b17b094c9b377abf98d312f467
+Author: Peder <peder0210@gmail.com>
+Date:   Wed Dec 11 11:48:11 2019 +0100
+
+    Fixed bug in login method
+
+commit da2e3f54ad8e8b375f6c35036eed9411cb1088d9
+Author: Peder <peder0210@gmail.com>
+Date:   Wed Dec 11 11:43:26 2019 +0100
+
+    added readme
+
+commit 7993409df5d670aeab2fa751f8dedb66fe76ab17
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Dec 11 11:42:05 2019 +0100
+
+    Kommentarer
+
+commit 1dcbb4a26550873d11c73ebe996abbbc0b4b2bca
+Author: Peder <peder0210@gmail.com>
+Date:   Wed Dec 11 11:41:05 2019 +0100
+
+    Small bugs fixed
+
+commit f7ad5668513c9089ad935ac132d26e04629addb5
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Dec 11 11:12:30 2019 +0100
+
+    Kommentar-rettelse
+
+commit f73e92790a00111fdb6bc4014b1d5891e7e61071
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Dec 11 11:07:52 2019 +0100
+
+    Kommentar og code-review
+
+commit 5940feaac2d12680d8e7ca85c7cd6c0602b2c5d0
+Author: onur2720 <54842876+onur2720@users.noreply.github.com>
+Date:   Wed Dec 11 10:27:54 2019 +0100
+
+    Nyeste read me
+
+commit 3ac1ff2d18779d3727d8862e58ff54d1a97068d0
+Author: Peder <peder0210@gmail.com>
+Date:   Tue Dec 10 22:02:29 2019 +0100
+
+    Small bugs fixed
+
+commit a80f0ef6ca51d9d37a3a8426c3b07a4b456b7330
+Author: Peder <peder0210@gmail.com>
+Date:   Tue Dec 10 21:44:04 2019 +0100
+
+    Small bugs fixed
+
+commit e34e8ca87a34bef643de117d2d0523a7cc00d953
+Author: Peder <peder0210@gmail.com>
+Date:   Mon Dec 9 21:53:38 2019 +0100
+
+    Comments added
+
+commit 925483d89718528c493416c29d6b8495c63e3186
+Author: Peder <peder0210@gmail.com>
+Date:   Mon Dec 9 18:40:42 2019 +0100
+
+    Code review
+
+commit 50dea8a7d5126f329c6273ca58fc6f37ad217969
+Author: Peder <peder0210@gmail.com>
+Date:   Sat Dec 7 19:22:57 2019 +0100
+
+    Deleted old stuff
+
+commit 2525189ce73e52a145ecf8c1638d0fb383f7149f
+Author: Peder0210 <55102034+Peder0210@users.noreply.github.com>
+Date:   Sat Dec 7 19:17:52 2019 +0100
+
+    Add files via upload
+
+commit 195f62ed5d4fb022191515d5a134eec934e48f20
+Author: Peder0210 <55102034+Peder0210@users.noreply.github.com>
+Date:   Sat Dec 7 19:15:24 2019 +0100
+
+    Add files via upload
+
+commit 0a2d303b78e7541b40a308a3cd6142f2ff46c695
+Author: Peder <peder0210@gmail.com>
+Date:   Sat Dec 7 19:11:29 2019 +0100
+
+    Old code was added
+
+commit 4330aa22c084157077e0c3f06b18e1140401d491
+Author: Peder <peder0210@gmail.com>
+Date:   Sat Dec 7 19:10:35 2019 +0100
+
+    Old code was added
+
+commit 3a2b5e2b897e7c9791f95e5688f0cde7b761ef9c
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Mon Dec 2 11:29:50 2019 +0100
+
+    Booking Class
+
+commit 50375415f92d4db23532c59310a88fe01bd15479
+Author: Peder <peder0210@gmail.com>
+Date:   Wed Nov 27 11:12:02 2019 +0100
+
+    Button to go back in reviews was added
+
+commit 15f7717b7108f55d52defbc32183680facc6be35
+Author: Peder <peder0210@gmail.com>
+Date:   Wed Nov 27 11:09:06 2019 +0100
+
+    Cancel button improved
+
+commit dac52feb19fa336896567072fdaf0f9971cf3ca7
+Author: Peder <peder0210@gmail.com>
+Date:   Tue Nov 26 22:11:45 2019 +0100
+
+    Payment intergrated succesful
+
+commit c580654695e6620ad64c376c2adc18dc28d4d7fe
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Tue Nov 26 11:57:53 2019 +0100
+
+    Commit af Henriettes forsøg igen
+
+commit 405c80217ac1df122bf835e543ea0a6520a2b442
+Merge: f5be008 fe20baf
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Tue Nov 26 11:53:25 2019 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit f5be0088197c590f832b5a6997b3e2aa3d6b6eee
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Tue Nov 26 11:53:06 2019 +0100
+
+    Commit af Henriettes forsøg
+
+commit fe20baf486f91ccf02592dd8634a5594ff81ebb1
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Tue Nov 26 10:32:49 2019 +0100
+
+    Review() gets currentUser from localStorage
+
+commit 82a2a878ad6eabe2bbb36d13a16faa206fcc8aab
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Tue Nov 26 00:09:40 2019 +0100
+
+    Review() finished - LET
+
+commit b53333d946f62b22e5733712f79a3940e6e7c225
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Nov 25 11:03:11 2019 +0100
+
+    Vores website
+
+commit 5bfe537b26525d77b40ec750346bd26f06beac75
+Merge: c2ec68c 928769e
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Nov 25 11:02:24 2019 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit c2ec68c542c94c9dac92faa20e16b435a85ef0d9
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Nov 25 11:01:48 2019 +0100
+
+    Vores website
+
+commit 928769eca0cebe7f378225e933d3e1851e10d510
+Author: Peder <peder0210@gmail.com>
+Date:   Sun Nov 24 19:42:18 2019 +0100
+
+    Fixet bug i method i klassen Usen
+
+commit 4a7aaf9cc30ee93e05650466ac0524ea145cab77
+Merge: 7dd4f74 c8cc7a4
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Sun Nov 24 18:23:35 2019 +0100
+
+    Merge branch 'master' of https://github.com/onur2720/projekt
+
+commit c8cc7a42b4e7b84e470b46e027485bcb54377b16
+Author: Peder <peder0210@gmail.com>
+Date:   Sun Nov 24 16:21:49 2019 +0100
+
+    Leila og Onur. Tilf'j reviews og payment
+
+commit ba674ff34a2577fc77d15df092d5c33fa59a5d5f
+Author: Peder <peder0210@gmail.com>
+Date:   Sun Nov 24 16:16:47 2019 +0100
+
+    Class User is complete
+
+commit a91b51d313630cbc4769cde540e4814459cb5c37
+Merge: d67744d 507dcdc
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 22 23:21:51 2019 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 7dd4f7436c98b1e5ab3ed5effb4da45daa10e8cb
+Merge: 52c5d7d 507dcdc
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Nov 22 21:16:40 2019 +0100
+
+    Merge branch 'master' of https://github.com/onur2720/projekt
+
+commit 507dcdc879f76d9b8a842005fd57c531f255df78
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Fri Nov 22 21:15:28 2019 +0100
+
+    DFVDF
+
+commit d67744d697a176564195ba08e9dbbe9268427088
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 22 20:13:47 2019 +0100
+
+    Class User is complete
+
+commit 79c55622e23f5b92c7a672e6fe1003373f73fd40
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 22 18:57:48 2019 +0100
+
+    Expanded Methods in the Class User
+
+commit cf9957513063707d5b07c1fab7844f07d8df89df
+Merge: 7dd26a2 08a382a
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 22 18:57:29 2019 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 08a382a689d086d6d42c93645240377b3fb39052
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Fri Nov 22 14:31:09 2019 +0100
+
+    guidepage efter mødet med Isabella
+
+commit 7dd26a2fe8fe97bd8451b57b8a7fc89d16f42de9
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 22 11:53:38 2019 +0100
+
+    Expanded Methods in the Class User
+
+commit 3c90c8b87d950c0e35e18704995a00d12509692f
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 22 10:38:27 2019 +0100
+
+    h
+
+commit 92d952bc03a8dc863c06e58af1511ec6a415484b
+Merge: cc5ac39 780b9b7
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 22 10:37:45 2019 +0100
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       FINAL/GuidePage.js
+
+commit cc5ac39503c5b79d847c3be82e844fc47615e8a5
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 22 10:37:34 2019 +0100
+
+    Merge branch 'master' of C:\Users\peder\WebstormProjects\test\projekt with conflicts.
+
+commit 780b9b7eeac60228ce825d8dbaf943da16adafb3
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Tue Nov 19 12:07:55 2019 +0100
+
+    boolean conditions added - let
+
+commit 36112106492b206e9badf87e497717f40a68cbbd
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Mon Nov 18 11:58:58 2019 +0100
+
+    kommenteret - LET
+
+commit 59a994d3797220af7fbc2f23bee4788acf09fb34
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Mon Nov 18 10:18:45 2019 +0100
+
+    kommenteret - LET
+
+commit 52c5d7d47e0049405fda69239e0d1f1eab9341e1
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Sun Nov 17 19:49:52 2019 +0100
+
+    Vores website
+
+commit 471e7ff27b47251382bd8dc6da0b5058eb7600eb
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Sun Nov 17 19:48:38 2019 +0100
+
+    Vores website
+
+commit 38c20768e224eb81c2378d19c13efe334396c0ad
+Merge: bb37e0a f8feacf
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Sun Nov 17 19:41:20 2019 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit bb37e0a3cb9167604ec2d122afcc7d457da052d1
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Sun Nov 17 19:38:07 2019 +0100
+
+    Vores website
+
+commit c449140699a3a64f2e6bfc736a69595454dc28c4
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Sun Nov 17 15:23:29 2019 +0100
+
+    Vores website
+
+commit f8feacf01bb48a975067fc4344d0638cd2c64625
+Author: Peder <peder0210@gmail.com>
+Date:   Sun Nov 17 15:23:03 2019 +0100
+
+    h
+
+commit 7533f782150dd3dd00b9124f26173711a45c6844
+Merge: fdc08b9 349077d
+Author: Peder <peder0210@gmail.com>
+Date:   Sun Nov 17 14:02:09 2019 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit fdc08b9c57ed81392999bc3d55276a419fbc5401
+Author: Peder <peder0210@gmail.com>
+Date:   Sun Nov 17 14:01:43 2019 +0100
+
+    h
+
+commit 349077d241e0966efe885dbf399d8d81fc4d4bb2
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Sun Nov 17 13:51:17 2019 +0100
+
+    Koden er kommenteret - LET
+
+commit 2a6a652f0834944313e3c78a9f55067a0fa60343
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Sun Nov 17 13:38:34 2019 +0100
+
+    Kommenteret koden, undtagen Peders del.
+
+commit 0930df8ae67ee0b6a718bae41f3fb17abf529906
+Author: Peder <peder0210@gmail.com>
+Date:   Sun Nov 17 12:06:15 2019 +0100
+
+    h
+
+commit d20ec4015fbf97fa6aa322f30526d556cb9f194c
+Author: Peder <peder0210@gmail.com>
+Date:   Sat Nov 16 21:35:04 2019 +0100
+
+    h
+
+commit 47b9b974401d54b375951d745e7390c11203ce43
+Merge: 30d5a23 750b6b1
+Author: Peder <peder0210@gmail.com>
+Date:   Sat Nov 16 19:15:42 2019 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 30d5a23c0a6d0c0e5a555cab202659911aacc512
+Author: Peder <peder0210@gmail.com>
+Date:   Sat Nov 16 19:13:24 2019 +0100
+
+    h
+
+commit b44f7afd08d92c958f96bd67d07c6262c030ef05
+Merge: a7cb203 750b6b1
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Nov 15 21:21:50 2019 +0100
+
+    Merge branch 'master' of https://github.com/onur2720/projekt
+
+commit a7cb203d295e169fbdd4443443c66be37581be95
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Nov 15 21:21:37 2019 +0100
+
+    Vores website
+
+commit 750b6b1b1c19b85ef4bd70283e079dd03efad601
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Thu Nov 14 16:41:17 2019 +0100
+
+    review added (men det ser ikke særlig pænt ud :/ )
+
+commit ea261d60ca3ef2acacaf0dc242ce6b3b881215f9
+Author: Peder <peder0210@gmail.com>
+Date:   Thu Nov 14 14:45:21 2019 +0100
+
+    g
+
+commit 21e88fde5b19da0a04f9074db6961c1a7ea13ec5
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Thu Nov 14 11:42:46 2019 +0100
+
+    vi gør det !!
+
+commit a4d29a17fe142286365a3285410339e07e6ae80a
+Author: Peder <peder0210@gmail.com>
+Date:   Thu Nov 14 11:40:25 2019 +0100
+
+    g
+
+commit 7b3dc9bd0e6f900637c401d161cafcf40ae0f52f
+Merge: 7e95f4d 591db09
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Wed Nov 13 11:51:51 2019 +0100
+
+    Merge branch 'master' of https://github.com/onur2720/projekt
+
+commit 591db092f30cbcdf981b324d9898b351f67daaec
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Nov 13 10:37:27 2019 +0100
+
+    All files attached correctly
+
+commit 7e95f4d41ecbe0e5c492d74a00202f3c2e9f26fa
+Merge: 6777104 8613d2d
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Wed Nov 13 09:18:18 2019 +0100
+
+    Merge branch 'master' of https://github.com/onur2720/projekt
+
+commit 8613d2d491bfc9fa784c1eb906f4e9db7e23c974
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Nov 13 09:17:34 2019 +0100
+
+    All files are attached
+
+commit 9d04107659dd3a0076916548f77d32cf582deea6
+Merge: 4bdafe9 d09fd5a
+Author: Peder0210 <55102034+Peder0210@users.noreply.github.com>
+Date:   Tue Nov 12 10:56:01 2019 +0100
+
+    Merge pull request #3 from onur2720/test
+    
+    Test
+
+commit d09fd5a2dc3558006c63bba4d499a485285084d3
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Mon Nov 11 15:04:40 2019 +0100
+
+    Last edits from sunday
+
+commit 4bdafe9a9ac86223507f7a02eb9120c6afa8ac55
+Author: Peder <peder0210@gmail.com>
+Date:   Sun Nov 10 23:51:47 2019 +0100
+
+    g
+
+commit a6a96074ffadc3881ea121c9c698d9009ec51062
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Sun Nov 10 14:48:49 2019 +0100
+
+    Last edits from sunday
+
+commit d36a0d3867f8850e88d0ce8ffbb21dae5f0a12d9
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Fri Nov 8 15:32:06 2019 +0100
+
+    Last edits from friday
+
+commit d6f40b1edb12fa0c4d8e063b4d55966d0cad117c
+Merge: 352dc19 e585da7
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 8 14:07:59 2019 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 67daa2a555e7f4aacbda2bc2b5dd5f42022f867c
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Fri Nov 8 14:02:13 2019 +0100
+
+    Last edits from friday
+
+commit 352dc1933a7392bca2f6cd329a369637673cefe5
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 8 13:29:34 2019 +0100
+
+    g
+
+commit 677710436a01b35b0654a29109788cb3ad2997f0
+Merge: 4be24eb e585da7
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Nov 8 09:41:04 2019 +0100
+
+    Merge branch 'master' of https://github.com/onur2720/projekt
+
+commit 4be24eb89e52010640661dcd27a82b474517626c
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Nov 8 09:40:56 2019 +0100
+
+    Vores website
+
+commit e585da7f8a222ac0d26255bd9f285fdec5ebb8fd
+Author: LeilaTaran <54849075+LeilaTaran@users.noreply.github.com>
+Date:   Tue Nov 5 11:44:04 2019 +0100
+
+    Dum fil skal ikke bruges
+
+commit aee97ef3dd74c8f8cc3b875834b2c97e25abd3b9
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Tue Nov 5 10:53:16 2019 +0100
+
+    tours and calendar
+
+commit 0cf88f704aa4453c10337120b9e9ffe9027ae7d0
+Merge: 46685d4 3e9f8e5
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Fri Nov 1 13:48:31 2019 +0100
+
+    Merge remote-tracking branch 'origin/master' into test
+
+commit f7e5d43c4f250e5e94f88afe30d4104513e1f5e2
+Author: Peder <peder0210@gmail.com>
+Date:   Fri Nov 1 13:45:48 2019 +0100
+
+    j
+
+commit 5280ac0c525a5d28a8d2f0d116b0080f78c688f2
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Nov 1 12:14:52 2019 +0100
+
+    Hej med jer
+
+commit 4c756cd424cec9cb71584c1f819fae1085eee03c
+Merge: 1bc8080 34130bd
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Sun Oct 27 18:57:50 2019 +0300
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 1bc8080002f199c8d0e2235d4adf830717fe1849
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Sun Oct 27 18:55:08 2019 +0300
+
+    Vores website
+
+commit 46685d46015d9bb09a286c3c3ab408c903907a19
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Oct 23 15:54:03 2019 +0200
+
+    Table and button created!!!
+
+commit 34130bd2417ed1dd1ec2e8d1495d3ef14a32e9dc
+Author: Peder <peder0210@gmail.com>
+Date:   Wed Oct 23 15:03:49 2019 +0200
+
+    j
+
+commit b816695d30464a5722f2f73b5dd9fd207aabb70d
+Merge: 048facc 3e9f8e5
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Wed Oct 23 13:57:01 2019 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 048facc1fcbfe21d6c72c1cc7bf65e51b8ef2a9f
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Wed Oct 23 13:56:31 2019 +0200
+
+    Vores website
+
+commit 20f06a469dacc9179ae56ea099fbeb97d310c215
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Wed Oct 23 13:55:34 2019 +0200
+
+    Vores website
+
+commit 3bb1ff54a2158301ab249862877fdb548c4be000
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Oct 23 12:59:09 2019 +0200
+
+    Table created
+
+commit c2e33affd10188804d91e35a74ba9865d5b141c8
+Merge: b7f6732 5736c55
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Oct 23 11:54:59 2019 +0200
+
+    merge branches
+
+commit 3e9f8e5572939731d6dab8fa5960f8d605ffa9a4
+Merge: 13e51fe 5736c55
+Author: LeilaTaran <54849075+LeilaTaran@users.noreply.github.com>
+Date:   Wed Oct 23 11:42:53 2019 +0200
+
+    Merge pull request #2 from onur2720/test
+    
+    Test
+
+commit b7f6732fe0df5f0c757a29db6b9f6f98be821696
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Oct 23 11:41:46 2019 +0200
+
+    test directory
+
+commit 5736c55d26d9db8a07bd6e7a153a27ee86d3e11f
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Wed Oct 23 08:47:55 2019 +0200
+
+    hhh
+
+commit e355ec107d1a06288d017ed95536a8d6b632aa9b
+Merge: d976298 13e51fe
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Sat Oct 19 17:21:20 2019 +0200
+
+    Merge branch 'master' of https://github.com/onur2720/projekt
+    
+     Conflicts:
+    	Voreswebsite.html
+
+commit d976298843990836998881afffaa9122e42221fa
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Sat Oct 19 17:21:01 2019 +0200
+
+    Vores website
+
+commit d815d055b6df529878ee9da264786031212e90a9
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Fri Oct 18 11:42:03 2019 +0200
+
+    hhh
+
+commit 20c521ddd9d9db2cf1d7e6e4b44c03aea0ea2fb2
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Tue Oct 15 13:19:02 2019 +0200
+
+    hhh
+
+commit 0fae87896cb10af5b7f338f0698ba73d1fa520c7
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Tue Oct 15 13:17:14 2019 +0200
+
+    test directory
+
+commit 353552a3822b3cb3db50433b9c7eb16fc95366f1
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Tue Oct 15 10:15:32 2019 +0200
+
+    test directory
+
+commit d144474594ae1626892e1542a8c7ca2821aebbe4
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Tue Oct 15 09:53:06 2019 +0200
+
+    test directory
+
+commit 519cf2587b65a68effc845aa01748558ed1a9111
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Tue Oct 15 09:52:22 2019 +0200
+
+    test directory
+
+commit 13e51fe87c90c1b611d9a01d111951dca4c3873e
+Merge: 6e58b9b 8dcd1c0
+Author: Peder0210 <55102034+Peder0210@users.noreply.github.com>
+Date:   Tue Oct 15 09:43:29 2019 +0200
+
+    Merge pull request #1 from onur2720/test
+    
+    Test
+
+commit 8dcd1c0411721327d27496fcc297b58e40a837a4
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Tue Oct 15 09:41:54 2019 +0200
+
+    henriette tester push
+
+commit d36408939f4700a16e673a02808575aa118cd5e6
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Tue Oct 15 08:57:40 2019 +0200
+
+    henriette tester push
+
+commit 6e58b9b19a8f94874b8830a093af8cb88067554d
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Tue Oct 15 01:29:04 2019 +0200
+
+    calendar
+
+commit 47438105b410b84c96efce4057178fcf57b91805
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Mon Oct 14 20:06:51 2019 +0200
+
+    henriette tester push
+
+commit b5e5d71dfa9ed6721b83ab37e16627df02e4ce76
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Mon Oct 14 19:58:05 2019 +0200
+
+    henriette tester push
+
+commit 8914ba4485437270bc974a1d048f4fe3df51c979
+Merge: 02cca1c 718760a
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Oct 14 13:12:37 2019 +0200
+
+    Merge branch 'master' of https://github.com/onur2720/projekt
+    
+     Conflicts:
+    	Voreswebsite.html
+
+commit 02cca1c5004b1f922c986dbc83d0130265bbb5fd
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Oct 14 13:12:21 2019 +0200
+
+    Vores website
+
+commit 718760a3969f68ef0ea905ce716af918b0f1fc93
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Mon Oct 14 13:11:26 2019 +0200
+
+    tour template
+
+commit e5db2e638763b6959ceb2babb10c29826a110a57
+Merge: eb7c4e4 d202639
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Mon Oct 14 13:10:44 2019 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit d20263928360510e661a73c4a846a47f12ac4b60
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Mon Oct 14 13:09:52 2019 +0200
+
+    henriette tester push
+
+commit b9725ffc7e123dd9047f88b7633f4ffd77c8abf0
+Merge: fc9ad19 0b6b9d2
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Oct 14 11:35:08 2019 +0200
+
+    Merge branch 'master' of https://github.com/onur2720/projekt
+    
+     Conflicts:
+    	Vores website.html
+
+commit fc9ad19f631de37c1ef99840810df6fb559818cb
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Oct 14 11:34:54 2019 +0200
+
+    Vores website
+
+commit 0b6b9d2371824ef9fbe8651b88700f1a975f1bf6
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Mon Oct 14 11:31:27 2019 +0200
+
+    henriette tester push
+
+commit 311c8c7cefc79af6031469f5141e55ed144a2818
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Oct 14 09:41:46 2019 +0200
+
+    Vores website
+
+commit 735164dcda53395223d469cb942c4bd8d0139634
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Oct 14 09:40:10 2019 +0200
+
+    Vores website
+
+commit 3fa5afadf38b0a87fb64e58b017e1fb27a8e5dad
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Oct 14 09:37:40 2019 +0200
+
+    Vores website
+
+commit 4d602aa3ace7a20837f0e8f910b7d9cb8ba035bd
+Merge: 504de5e a8ab082
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Mon Oct 14 09:26:33 2019 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit a8ab08298befd63155ab4a996bf40d78b3f7bcd3
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Mon Oct 14 09:23:22 2019 +0200
+
+    henriette tester push
+
+commit eb7c4e49a8a9e56b0319703094cc5393fe964703
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Oct 9 17:23:47 2019 +0200
+
+    tour template
+
+commit 4f4160bd0ee58a2a52ad5c5a7c41fdff7c3bf3bd
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Wed Oct 9 17:18:43 2019 +0200
+
+    henriette tester push
+
+commit b908a67e48d02e2b0fffd75f5eee2bdba2564dfd
+Merge: 918e6ae bc057ff
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Wed Oct 9 17:16:13 2019 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 918e6ae4a1a2ca86d4a7e057e2eba6ce483c7161
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Wed Oct 9 17:15:27 2019 +0200
+
+    henriette tester push
+
+commit bc057ff2ae67d41e79b5a3525a25e9aac8967337
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Oct 9 15:43:51 2019 +0200
+
+    tour template
+
+commit 43cc6733875daf411419cb39b43fb2a335a042a9
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Wed Oct 9 14:30:44 2019 +0200
+
+    tour template
+
+commit dce7ac55ed26c6bbc7194407653932ee9518158e
+Author: LeilaTaran <54849075+LeilaTaran@users.noreply.github.com>
+Date:   Wed Oct 9 13:56:04 2019 +0200
+
+    Create README.md
+
+commit 04488d783ab27a8c733473e0680256bafbb9237a
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Wed Oct 9 13:12:33 2019 +0200
+
+    henriette tester push
+
+commit fba86f420658d664820f7526192029d82695ca4c
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Wed Oct 9 13:08:23 2019 +0200
+
+    henriette tester push
+
+commit 88d7c47b916b7d0bbb44ab7c076765f87d53850d
+Author: JonasArem <joar19ab@student.cbs.dk>
+Date:   Fri Sep 20 14:56:34 2019 +0200
+
+    please
+
+commit 504de5e6545acbff95ff96678216641df537d8c2
+Merge: 3298d5b ccedd21
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Sep 20 14:49:46 2019 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ccedd212bc91c27ea1f1cecdaa5fc97b4641721e
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Fri Sep 20 14:49:30 2019 +0200
+
+    ændret2
+
+commit 3298d5bbeaeeb45e99a0c651ca74811c2e3f39df
+Merge: f9a9b57 3acd882
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Sep 20 14:49:13 2019 +0200
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       index.html
+
+commit f9a9b57491833ed83c8ec76f0ded1b9de8b65367
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Sep 20 14:49:10 2019 +0200
+
+    Merge branch 'master' of /Users/onurmikail/Documents/WebstormProjects/projekt with conflicts.
+
+commit 3acd882eeee51ab6f6bfc2f38589c0a77ed32291
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Fri Sep 20 14:48:46 2019 +0200
+
+    ændret
+
+commit 5c151b4bf2861a9dfd71c4e591515fa1ece68886
+Author: Leila <nuta19ab@student.cbs.dk>
+Date:   Fri Sep 20 14:46:10 2019 +0200
+
+    ændret
+
+commit 96174fea0030167ba789fff11d823bbdc981f5d6
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Sep 20 14:42:02 2019 +0200
+
+    endret
+
+commit 1881614119fc2fcf38fbb43414e27671e2fbfa15
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Fri Sep 20 14:40:20 2019 +0200
+
+    henriette tester push
+
+commit 2bb828adc8db1f877cf05ad18d43ff4c70f079b0
+Author: Peder0210 <peder0210@gmail.com>
+Date:   Fri Sep 20 14:38:32 2019 +0200
+
+    henriette tester push
+
+commit 1f6c60605770b3c77987d77fe570ccebb15368d6
+Author: Onur Karakus <onka19ab@student.cbs.dk>
+Date:   Fri Sep 20 14:33:47 2019 +0200
+
+    henriette setter opp git
