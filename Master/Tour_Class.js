@@ -27,7 +27,7 @@ class Tour {
             for(let i=0;i<oldTours.length;i++){
                 if (newTour.tourName===oldTours[i].tourName){
                     alert("the Tour's name cannot be called the same as another tour");
-                    return true;
+                    return true
                 }
             }
 
@@ -48,7 +48,7 @@ class Tour {
                 localStorage.setItem("tours", JSON.stringify(allTours));
                 alert("You have now deleted the tour");
                 document.location.reload();
-
+                return true
             }
         }
             alert("The Tour name doesn't exist")
